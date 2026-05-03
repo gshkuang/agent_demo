@@ -186,7 +186,7 @@ class RetrievalStrategies:
         return sorted_results[:top_k]
     
     @staticmethod
-    def metadata_filter(query, vector_store, bm25_index, metadata_store, top_k=5):
+    def metadata_filter(query, query_vec, vector_store, bm25_index, metadata_store, top_k=5):
         """
         元数据预过滤 + 向量检索
         从查询中提取股票代码，先过滤再检索
@@ -203,10 +203,6 @@ class RetrievalStrategies:
             }
             
             if filtered_docs:
-                # 在过滤后的文档中检索
-                query_vec = np.random.randn(len(list(vector_store.vectors.values())[0]))
-                query_vec = query_vec / np.linalg.norm(query_vec)
-                
                 scores = []
                 for doc_id, vec in filtered_docs.items():
                     vec_norm = vec / np.linalg.norm(vec)
@@ -217,7 +213,7 @@ class RetrievalStrategies:
                 return scores[:top_k]
         
         # 无过滤条件，回退到纯向量检索
-        return vector_store.search(np.random.randn(768), top_k)
+        return vector_store.search(query_vec, top_k)
 
 
 # ============== 评估指标 ==============
@@ -259,19 +255,22 @@ def run_retrieval_benchmark():
     demo_path = os.path.expanduser("~/Desktop/agent_demo")
     docs = {}
     
-    # 加载Markdown文档
-    for md_file in Path(demo_path).glob("*.md"):
+    # 加载Markdown文档（新路径）
+    analysis_dir = Path(demo_path) / "data" / "analysis"
+    for md_file in analysis_dir.glob("*.md"):
         with open(md_file, 'r', encoding='utf-8') as f:
             docs[md_file.stem] = f.read()
     
-    # 加载JSON数据（简化）
-    json_dir = Path(demo_path) / "mx_data" / "output"
+    # 加载JSON数据（新路径）
+    json_dir = Path(demo_path) / "data" / "financial" / "mx_data" / "output"
     if json_dir.exists():
-        for json_file in list(json_dir.glob("*_raw.json"))[:10]:
+        for json_file in list(json_dir.glob("*_raw.json"))[:20]:
             try:
                 with open(json_file, 'r', encoding='utf-8') as f:
                     data = json.load(f)
-                docs[json_file.stem] = json.dumps(data, ensure_ascii=False, indent=2)[:2000]
+                # 提取文本内容用于embedding
+                text = json.dumps(data, ensure_ascii=False, indent=2)
+                docs[json_file.stem] = text[:3000]  # 限制长度
             except:
                 pass
     
@@ -282,16 +281,18 @@ def run_retrieval_benchmark():
     bm25 = SimpleBM25()
     bm25.fit(docs)
     
+    # 使用真实BGE模型生成向量
+    print("\n🔧 加载BGE模型生成真实向量...")
+    from sentence_transformers import SentenceTransformer
+    bge_model = SentenceTransformer("/tmp/models/BAAI/bge-large-zh-v1___5")
+    
     vector_store = SimpleVectorStore()
-    np.random.seed(42)
     for doc_id, text in docs.items():
-        # 模拟向量（实际应使用真实Embedding）
-        vec = np.random.randn(768)
-        vec = vec / np.linalg.norm(vec)
+        vec = bge_model.encode(text, normalize_embeddings=True)
         vector_store.add(doc_id, vec.tolist(), text)
     
     print("  BM25索引构建完成")
-    print("  向量索引构建完成")
+    print("  向量索引构建完成（真实BGE语义向量）")
     
     # 测试查询
     queries = [
@@ -303,6 +304,8 @@ def run_retrieval_benchmark():
         {"query": "板块轮动 涨停", "relevant": ["sector_rotation_20260418_review"], "category": "分析文档"},
         {"query": "贝贝虾 评分", "relevant": ["5stocks-beibeixia-maomao-analysis_20260421"], "category": "分析文档"},
         {"query": "回测系统 爬取", "relevant": ["四虾回测系统-数据爬取与回测_2026-05-02"], "category": "技术文档"},
+        {"query": "苏大维格 资产负债率", "relevant": ["mx_data_三安光电,苏大维格,科瑞技术,华如科技_ROE_资产负债率_经营现金流_raw"], "category": "财务指标"},
+        {"query": "华如科技 经营现金流", "relevant": ["mx_data_三安光电,苏大维格,科瑞技术,华如科技_ROE_资产负债率_经营现金流_raw"], "category": "财务指标"},
     ]
     
     # 测试策略
@@ -325,9 +328,8 @@ def run_retrieval_benchmark():
         latencies = []
         
         for q in queries:
-            # 模拟查询向量
-            q_vec = np.random.randn(768)
-            q_vec = q_vec / np.linalg.norm(q_vec)
+            # 使用BGE生成真实查询向量
+            q_vec = bge_model.encode(q["query"], normalize_embeddings=True)
             
             # 执行检索
             start = time.time()

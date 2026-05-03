@@ -47,18 +47,38 @@ class ModelScore:
     avg_similarity: float
 
 
-# ============== 模拟Embedding模型 ==============
+# ============== 真实Embedding模型 ==============
+
+class BgeEmbeddingModel:
+    """本地BGE模型 - 真实语义向量"""
+    
+    def __init__(self, model_path: str = "/tmp/models/BAAI/bge-large-zh-v1___5"):
+        from sentence_transformers import SentenceTransformer
+        self.model = SentenceTransformer(model_path)
+        self.model_name = "bge-large-zh-v1.5"
+        self.dim = 1024
+    
+    def embed(self, text: str) -> Tuple[List[float], float]:
+        start = time.time()
+        vector = self.model.encode(text, normalize_embeddings=True)
+        latency = (time.time() - start) * 1000
+        return vector.tolist(), latency
+    
+    def embed_batch(self, texts: List[str]) -> Tuple[List[List[float]], float]:
+        start = time.time()
+        vectors = self.model.encode(texts, normalize_embeddings=True)
+        latency = (time.time() - start) * 1000
+        return vectors.tolist(), latency
+
 
 class MockEmbeddingModel:
     """
-    模拟Embedding模型行为
-    实际生产环境应替换为真实模型API
+    模拟Embedding模型行为（用于对比测试）
     """
     
     MODELS = {
         "text-embedding-3-small": {"dim": 1536, "speed": 50},
         "text-embedding-3-large": {"dim": 3072, "speed": 30},
-        "bge-large-zh": {"dim": 1024, "speed": 40},
         "m3e-base": {"dim": 768, "speed": 60},
         "bce-embedding-base": {"dim": 768, "speed": 55},
     }
@@ -71,10 +91,6 @@ class MockEmbeddingModel:
         self.speed = self.MODELS[model_name]["speed"]
     
     def embed(self, text: str) -> Tuple[List[float], float]:
-        """
-        生成模拟嵌入向量
-        使用文本哈希确保相同文本产生相同向量
-        """
         start = time.time()
         
         # 模拟延迟（ms）
@@ -92,7 +108,6 @@ class MockEmbeddingModel:
         return vector.tolist(), latency
     
     def embed_batch(self, texts: List[str]) -> Tuple[List[List[float]], float]:
-        """批量嵌入"""
         vectors = []
         total_latency = 0
         for text in texts:
@@ -288,16 +303,23 @@ def run_embedding_benchmark():
     queries = [q for q in queries if q["relevant_docs"]]
     print(f"✅ 有效查询数: {len(queries)}")
     
-    # 测试的模型
-    models = ["text-embedding-3-small", "bge-large-zh", "m3e-base"]
+    # 测试的模型：真实BGE + 模拟模型对比
+    models = [
+        ("bge-large-zh-v1.5", "real"),
+        ("text-embedding-3-small", "mock"),
+        ("m3e-base", "mock"),
+    ]
     results = {}
     
-    for model_name in models:
+    for model_name, model_type in models:
         print(f"\n{'='*60}")
-        print(f"🧪 测试模型: {model_name}")
+        print(f"🧪 测试模型: {model_name} ({model_type})")
         print("=" * 60)
         
-        model = MockEmbeddingModel(model_name)
+        if model_type == "real":
+            model = BgeEmbeddingModel()
+        else:
+            model = MockEmbeddingModel(model_name)
         store = VectorStore()
         
         # 1. 嵌入所有文档
@@ -352,6 +374,7 @@ def run_embedding_benchmark():
         # 3. 汇总结果
         result = {
             "model": model_name,
+            "type": model_type,
             "dimension": model.dim,
             "num_docs": len(chunks),
             "recall_at_k": {k: sum(v)/len(v) for k, v in recall_scores.items()},
@@ -373,10 +396,10 @@ def run_embedding_benchmark():
     print("\n" + "=" * 80)
     print("📊 模型对比汇总")
     print("=" * 80)
-    print(f"{'模型':<25} {'维度':>6} {'R@1':>8} {'R@5':>8} {'MRR':>8} {'NDCG@5':>8} {'延迟(ms)':>10}")
-    print("-" * 80)
+    print(f"{'模型':<25} {'类型':>6} {'维度':>6} {'R@1':>8} {'R@5':>8} {'MRR':>8} {'NDCG@5':>8} {'延迟(ms)':>10}")
+    print("-" * 90)
     for name, r in results.items():
-        print(f"{name:<25} {r['dimension']:>6} {r['recall_at_k'][1]:>8.3f} {r['recall_at_k'][5]:>8.3f} {r['mrr']:>8.3f} {r['ndcg_at_k'][5]:>8.3f} {r['avg_query_latency_ms']:>10.1f}")
+        print(f"{name:<25} {r.get('type', 'mock'):>6} {r['dimension']:>6} {r['recall_at_k'][1]:>8.3f} {r['recall_at_k'][5]:>8.3f} {r['mrr']:>8.3f} {r['ndcg_at_k'][5]:>8.3f} {r['avg_query_latency_ms']:>10.1f}")
     
     # 保存结果
     output_path = os.path.expanduser("~/Desktop/rag-experiments/embedding/results")
