@@ -19,6 +19,10 @@ agent_demo/
 │   │   └── mx_data/           # 东方财富数据
 │   │       └── output/        # 原始数据文件（JSON/Excel/txt）
 │   └── raw/                   # 原始数据（待处理）
+├── memory/                    # Agent记忆系统
+│   ├── README.md
+│   ├── __init__.py
+│   └── memory_system.py       # 分层记忆架构实现
 └── rag-experiments/           # RAG实验项目
     ├── README.md
     ├── chunking/              # 文本分块实验
@@ -72,14 +76,16 @@ agent_demo/
 
 详见 [rag-experiments/README.md](./rag-experiments/README.md)
 
-### 核心结论
+### 核心结论（真实BGE模型）
 
 | 模块 | 最佳方案 | 关键指标 |
 |------|---------|---------|
 | 文本分块 | 递归分块 / 结构化感知 | 边界质量100% |
-| 向量嵌入 | m3e-base | MRR 0.203，延迟17.3ms |
-| 检索策略 | BM25 | Recall@5 50% |
-| 端到端评估 | structured + m3e-base + BM25 | 忠实度100% |
+| 向量嵌入 | **bge-large-zh-v1.5** | R@5=1.0, MRR=1.0 |
+| 检索策略 | **混合RRF** | R@1=0.5, MRR=0.52 |
+| 端到端评估 | recursive + bge-large-zh + hybrid_rrf | 忠实度100%, 延迟1989ms |
+
+> **2026-05-03更新**: 已接入真实BGE语义向量（本地部署），Mock模型结果已归档。
 
 ## 快速开始
 
@@ -104,9 +110,49 @@ cd ../evaluation
 python3 evaluation_framework.py
 ```
 
+## Agent记忆实验（进行中）
+
+基于阿里云文章《AI Agent记忆机制详解》的方法论，为agent_demo增加记忆能力：
+
+### 记忆系统设计
+
+```
+┌─────────────────────────────────────────┐
+│  Agent Memory Architecture              │
+├─────────────────────────────────────────┤
+│  短期记忆 (Working Memory)               │
+│  ├── 当前会话上下文                       │
+│  └── 运行时缓存                          │
+├─────────────────────────────────────────┤
+│  长期记忆 (Long-term Memory)             │
+│  ├── 向量存储 (BGE语义检索)               │
+│  ├── 结构化存储 (SQLite/JSON)            │
+│  └── 知识图谱 (实体关系)                  │
+├─────────────────────────────────────────┤
+│  元记忆 (Meta Memory)                    │
+│  ├── 反思日志                            │
+│  └── 任务执行模式                         │
+└─────────────────────────────────────────┘
+```
+
+### 关键技术选型
+
+| 记忆类型 | 技术方案 | 状态 |
+|---------|---------|------|
+| 向量检索 | BGE-large-zh + FAISS | ✅ 已部署 |
+| 结构化存储 | SQLite + JSON | 🔄 待实现 |
+| 知识图谱 | 轻量级实体关系抽取 | 🔄 待实现 |
+| 记忆压缩 | LLM摘要 + 遗忘曲线 | 🔄 待实现 |
+
+### 参考资源
+- [AI Agent记忆机制详解-阿里云](https://developer.aliyun.com/article/1714493)
+- [Agent记忆机制-知乎](https://zhuanlan.zhihu.com/p/2033633355338657966)
+
 ## 后续计划
 
-- [ ] 接入真实Embedding API（OpenAI/BGE）
+- [x] 接入真实Embedding模型（BGE本地部署）
+- [ ] 构建Agent记忆系统（向量+结构化+图谱）
+- [ ] 实现记忆压缩与遗忘机制
 - [ ] 构建更大规模金融QA评测集
 - [ ] 测试其他Agent能力（代码生成、数据分析等）
 - [ ] 领域微调实验
