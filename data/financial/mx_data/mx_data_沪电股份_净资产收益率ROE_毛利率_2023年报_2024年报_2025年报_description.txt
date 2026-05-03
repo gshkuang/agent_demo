@@ -1,0 +1,8 @@
+金融数据查询结果说明
+========================================
+查询内容: 沪电股份 净资产收益率ROE 毛利率 2023年报 2024年报 2025年报
+数据文件路径: /Users/guangshengkuang/.qclaw/workspace/mx_data/mx_data_沪电股份_净资产收益率ROE_毛利率_2023年报_2024年报_2025年报.xlsx
+描述文件路径: /Users/guangshengkuang/.qclaw/workspace/mx_data/mx_data_沪电股份_净资产收益率ROE_毛利率_2023年报_2024年报_2025年报_description.txt
+数据行数: 6
+表数量: 2
+Sheet 列表: 沪电股份(002463.SZ)的净资产收益率ROE、销售毛利率, 沪电股份(H5245.HK)(最新年结日12-31)的净资产收益率ROE(摊薄)(%)

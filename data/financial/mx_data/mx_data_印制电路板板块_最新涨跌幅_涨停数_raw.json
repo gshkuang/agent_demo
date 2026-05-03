@@ -1,0 +1,386 @@
+{
+  "success": true,
+  "status": 0,
+  "code": 0,
+  "message": "ok",
+  "data": {
+    "requestId": null,
+    "message": "OK",
+    "status": 0,
+    "code": 0,
+    "data": {
+      "protocolType": "SEARCH_DATA",
+      "id": "c925e8ff-7347-4daf-9cb5-4156df48e864",
+      "refSeq": null,
+      "keyEntityList": null,
+      "searchDataResultDTO": {
+        "questionId": "a54c3299-caf8-4241-8e3e-dec36e7372b6",
+        "dataTableDTOList": [
+          {
+            "code": "90.BK1340",
+            "entityName": "印制电路板",
+            "table": {
+              "326808": [
+                "2.852%",
+                "2%",
+                "-1.592%",
+                "3.562%",
+                "2.587%"
+              ],
+              "headName": [
+                "2026-04-17(日)",
+                "2026-04-16(日)",
+                "2026-04-15(日)",
+                "2026-04-14(日)",
+                "2026-04-13(日)"
+              ]
+            },
+            "rawTable": {
+              "326808": [
+                "0.028524780545",
+                "0.019999173547",
+                "-0.015917732096",
+                "0.0356208366",
+                "0.025865543284"
+              ],
+              "headName": [
+                "2026-04-17",
+                "2026-04-16",
+                "2026-04-15",
+                "2026-04-14",
+                "2026-04-13"
+              ]
+            },
+            "truncateRawTable": {},
+            "nameMap": {
+              "326808": "涨跌幅(算数平均)",
+              "headNameSub": "数据来源"
+            },
+            "headNameMap": {},
+            "field": {
+              "returnCode": "326808",
+              "returnName": "涨跌幅(算数平均)",
+              "classCode": "007121",
+              "checkedRelatedIndicators": false,
+              "startDate": "2026-04-19 00:00:00",
+              "endDate": "2026-04-19 00:00:00",
+              "fuzzy": true,
+              "dateGranularity": "DAY",
+              "defineType": 0,
+              "isLoopN": false,
+              "fixedParamValue": "IsHistory=0,Period=1",
+              "isGroup": false,
+              "returnSourceCode": "ZDFSSPJ",
+              "returnSourceName": "涨跌幅(算数平均)_板块_序列",
+              "graph": "0",
+              "unit": "1",
+              "tableType": "20",
+              "unitName": "100%",
+              "unitDesc": "100%"
+            },
+            "macroAttributeExcelMap": {},
+            "fieldSet": [
+              {
+                "returnCode": "326808",
+                "returnName": "涨跌幅(算数平均)",
+                "classCode": "007121",
+                "checkedRelatedIndicators": false,
+                "startDate": "2026-04-19 00:00:00",
+                "endDate": "2026-04-19 00:00:00",
+                "fuzzy": true,
+                "dateGranularity": "DAY",
+                "defineType": 0,
+                "isLoopN": false,
+                "fixedParamValue": "IsHistory=0,Period=1",
+                "isGroup": false,
+                "returnSourceCode": "ZDFSSPJ",
+                "returnSourceName": "涨跌幅(算数平均)_板块_序列",
+                "graph": "0",
+                "unit": "1",
+                "tableType": "20",
+                "unitName": "100%",
+                "unitDesc": "100%"
+              }
+            ],
+            "dataTableType": "NORM_TABLE",
+            "rowInfo": {},
+            "colInfo": {},
+            "indicatorOrder": [
+              "326808"
+            ],
+            "tipFlags": [],
+            "dataType": "数据浏览器",
+            "title": "印制电路板的涨跌幅(算数平均)",
+            "hasThumbnail": true,
+            "indicatorLimited": false,
+            "dataPositionEnum": "MetricLeftTimeTop",
+            "orderCol": {},
+            "jumpUrlList": [
+              {
+                "choiceUrl": "EM://stockdatacenter?type=browser&modType=BLOCK&code=90.BK1340&indId=100000000021306|121:GetLatestDay|469:0|261:108:%:%",
+                "typeName": "板块数据浏览器"
+              }
+            ],
+            "dataTypeEnum": "DATA_BROWSER",
+            "dateRuleSet": [],
+            "freqConvert": false,
+            "deleteInfo": [],
+            "macroCodeMap": {},
+            "entityTagDTO": {
+              "entityId": "BK1340",
+              "entityType": "BLOCK",
+              "entityTypeCode": "1",
+              "entityTypeName": "财富通行业板块3级",
+              "classCode": "005002",
+              "className": "行业板块",
+              "fullName": "印制电路板",
+              "secuCode": "BK1340",
+              "market": "90",
+              "correct": false,
+              "hasKLine": false,
+              "valuation": false
+            },
+            "entityTagDTOList": [
+              {
+                "entityId": "BK1340",
+                "entityType": "BLOCK",
+                "entityTypeCode": "1",
+                "entityTypeName": "财富通行业板块3级",
+                "classCode": "005002",
+                "className": "行业板块",
+                "fullName": "印制电路板",
+                "secuCode": "BK1340",
+                "market": "90",
+                "correct": false,
+                "hasKLine": true,
+                "valuation": false
+              }
+            ],
+            "indexTable": false,
+            "edbThirdData": false,
+            "dataUpdate": {
+              "2026-04-17": false
+            },
+            "supportsTimeSeries": false,
+            "estimatedTokens": 0,
+            "summaryTips": {
+              "periodicalReport": null
+            },
+            "nestEntityListMap": {},
+            "excelTimeTruncate": false,
+            "frontendEntityName": "",
+            "frontendEntityCode": "",
+            "frontendTitle": "",
+            "frontendDesc": "",
+            "indicatorCount": 0,
+            "fieldParameterStr": "",
+            "tdayEnum": "TDAY"
+          },
+          {
+            "code": "90.BK1340",
+            "entityName": "印制电路板",
+            "table": {
+              "100000000019292": [
+                "1",
+                "1",
+                "1",
+                "1",
+                "1"
+              ],
+              "headName": [
+                "2026-04-17",
+                "2026-04-16",
+                "2026-04-15",
+                "2026-04-14",
+                "2026-04-13"
+              ]
+            },
+            "rawTable": {
+              "100000000019292": [
+                "1",
+                "1",
+                "1",
+                "1",
+                "1"
+              ],
+              "headName": [
+                "2026-04-17",
+                "2026-04-16",
+                "2026-04-15",
+                "2026-04-14",
+                "2026-04-13"
+              ]
+            },
+            "truncateRawTable": {},
+            "nameMap": {
+              "100000000019292": "涨停家数",
+              "headNameSub": "数据来源"
+            },
+            "headNameMap": {},
+            "field": {
+              "returnCode": "100000000019292",
+              "returnName": "涨停家数",
+              "classCode": "007109",
+              "checkedRelatedIndicators": false,
+              "startDate": "2026-04-19 00:00:00",
+              "endDate": "2026-04-19 00:00:00",
+              "fuzzy": true,
+              "dateGranularity": "DAY",
+              "defineType": 0,
+              "isLoopN": false,
+              "fixedParamValue": "IsHistory=0",
+              "quantType": "9",
+              "isGroup": false,
+              "returnSourceCode": "HIGHSTOC",
+              "returnSourceName": "涨停家数",
+              "graph": "1",
+              "unit": "0",
+              "tableType": "1"
+            },
+            "entityCodes": [
+              "90.BK1340"
+            ],
+            "macroAttributeExcelMap": {},
+            "fieldSet": [
+              {
+                "returnCode": "100000000019292",
+                "returnName": "涨停家数",
+                "classCode": "007109",
+                "checkedRelatedIndicators": false,
+                "startDate": "2026-04-19 00:00:00",
+                "endDate": "2026-04-19 00:00:00",
+                "fuzzy": true,
+                "dateGranularity": "DAY",
+                "defineType": 0,
+                "isLoopN": false,
+                "fixedParamValue": "IsHistory=0",
+                "quantType": "9",
+                "isGroup": false,
+                "returnSourceCode": "HIGHSTOC",
+                "returnSourceName": "涨停家数",
+                "graph": "1",
+                "unit": "0",
+                "tableType": "1"
+              }
+            ],
+            "dataTableType": "NORM_TABLE",
+            "rowInfo": {},
+            "colInfo": {},
+            "indicatorOrder": [
+              "100000000019292"
+            ],
+            "tipFlags": [],
+            "dataType": "数据浏览器",
+            "title": "印制电路板的涨停家数",
+            "hasThumbnail": true,
+            "indicatorLimited": false,
+            "dataPositionEnum": "MetricLeftTimeTop",
+            "orderCol": {},
+            "jumpUrlList": [
+              {
+                "choiceUrl": "EM://stockdatacenter?type=browser&modType=BLOCK&code=90.BK1340&indId=100000000019292|121:2026-04-13,100000000019292|121:2026-04-14,100000000019292|121:2026-04-15,100000000019292|121:2026-04-16,100000000019292|121:2026-04-17",
+                "typeName": "板块数据浏览器"
+              }
+            ],
+            "dataTypeEnum": "DATA_BROWSER",
+            "dateRuleSet": [],
+            "freqConvert": false,
+            "deleteInfo": [],
+            "macroCodeMap": {},
+            "entityTagDTO": {
+              "entityId": "BK1340",
+              "entityType": "BLOCK",
+              "entityTypeCode": "1",
+              "entityTypeName": "财富通行业板块3级",
+              "classCode": "005002",
+              "className": "行业板块",
+              "fullName": "印制电路板",
+              "secuCode": "BK1340",
+              "market": "90",
+              "correct": false,
+              "hasKLine": false,
+              "valuation": false
+            },
+            "entityTagDTOList": [
+              {
+                "entityId": "BK1340",
+                "entityType": "BLOCK",
+                "entityTypeCode": "1",
+                "entityTypeName": "财富通行业板块3级",
+                "classCode": "005002",
+                "className": "行业板块",
+                "fullName": "印制电路板",
+                "secuCode": "BK1340",
+                "market": "90",
+                "correct": false,
+                "hasKLine": true,
+                "valuation": false
+              }
+            ],
+            "indexTable": false,
+            "edbThirdData": false,
+            "dataUpdate": {
+              "2026-04-17": false
+            },
+            "supportsTimeSeries": false,
+            "estimatedTokens": 0,
+            "summaryTips": {
+              "periodicalReport": null
+            },
+            "nestEntityListMap": {},
+            "excelTimeTruncate": false,
+            "frontendEntityName": "",
+            "frontendEntityCode": "",
+            "frontendTitle": "",
+            "frontendDesc": "",
+            "indicatorCount": 0,
+            "fieldParameterStr": "",
+            "tdayEnum": "NORMAL"
+          }
+        ],
+        "condition": {
+          "search_data_task_0": [
+            "印制电路板",
+            "涨跌幅(算数平均)涨停家数",
+            "2026-04-19至2026-04-19"
+          ]
+        },
+        "entityTagDTOList": [
+          {
+            "entityId": "BK1340",
+            "entityType": "BLOCK",
+            "entityTypeCode": "1",
+            "entityTypeName": "财富通行业板块3级",
+            "classCode": "005002",
+            "className": "行业板块",
+            "fullName": "印制电路板",
+            "secuCode": "BK1340",
+            "market": "90",
+            "correct": false,
+            "hasKLine": false,
+            "valuation": false
+          },
+          {
+            "entityId": "BK1340",
+            "entityType": "BLOCK",
+            "entityTypeCode": "1",
+            "entityTypeName": "财富通行业板块3级",
+            "classCode": "005002",
+            "className": "行业板块",
+            "fullName": "印制电路板",
+            "secuCode": "BK1340",
+            "market": "90",
+            "correct": false,
+            "hasKLine": false,
+            "valuation": false
+          }
+        ]
+      },
+      "entityName": null,
+      "message": null,
+      "tableTruncated": false
+    },
+    "stack": null
+  },
+  "requestId": "c7539d55888c4e4b8b5c94338c381db8"
+}

@@ -1,0 +1,8 @@
+金融数据查询结果说明
+========================================
+查询内容: 沪电股份002463 收盘价 涨跌幅 市盈率TTM 市净率 2026年4月17日
+数据文件路径: /Users/guangshengkuang/.qclaw/workspace/mx_data/mx_data_沪电股份002463_收盘价_涨跌幅_市盈率TTM_市净率_2026年4月17日.xlsx
+描述文件路径: /Users/guangshengkuang/.qclaw/workspace/mx_data/mx_data_沪电股份002463_收盘价_涨跌幅_市盈率TTM_市净率_2026年4月17日_description.txt
+数据行数: 1
+表数量: 1
+Sheet 列表: 沪电股份(002463.SZ)的市盈率PE(TTM)、市净率PB等

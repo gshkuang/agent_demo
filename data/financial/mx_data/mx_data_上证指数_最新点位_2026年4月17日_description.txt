@@ -1,0 +1,8 @@
+金融数据查询结果说明
+========================================
+查询内容: 上证指数 最新点位 2026年4月17日
+数据文件路径: /Users/guangshengkuang/.qclaw/workspace/mx_data/mx_data_上证指数_最新点位_2026年4月17日.xlsx
+描述文件路径: /Users/guangshengkuang/.qclaw/workspace/mx_data/mx_data_上证指数_最新点位_2026年4月17日_description.txt
+数据行数: 1
+表数量: 1
+Sheet 列表: 上证指数(000001.SH)的收盘价

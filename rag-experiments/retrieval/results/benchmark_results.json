@@ -1,0 +1,42 @@
+{
+  "纯向量检索": {
+    "strategy": "纯向量检索",
+    "avg_recall@1": 0.0,
+    "avg_recall@5": 0.25,
+    "avg_precision@5": 0.05,
+    "avg_mrr": 0.09375,
+    "avg_latency_ms": 0.033736228942871094
+  },
+  "纯BM25检索": {
+    "strategy": "纯BM25检索",
+    "avg_recall@1": 0.25,
+    "avg_recall@5": 0.5,
+    "avg_precision@5": 0.1,
+    "avg_mrr": 0.3541666666666667,
+    "avg_latency_ms": 0.018715858459472656
+  },
+  "混合检索(RRF)": {
+    "strategy": "混合检索(RRF)",
+    "avg_recall@1": 0.125,
+    "avg_recall@5": 0.125,
+    "avg_precision@5": 0.025,
+    "avg_mrr": 0.125,
+    "avg_latency_ms": 0.05283951759338379
+  },
+  "混合检索(线性, α=0.5)": {
+    "strategy": "混合检索(线性, α=0.5)",
+    "avg_recall@1": 0.125,
+    "avg_recall@5": 0.25,
+    "avg_precision@5": 0.05,
+    "avg_mrr": 0.16666666666666666,
+    "avg_latency_ms": 0.07659196853637695
+  },
+  "混合检索(线性, α=0.7)": {
+    "strategy": "混合检索(线性, α=0.7)",
+    "avg_recall@1": 0.0,
+    "avg_recall@5": 0.125,
+    "avg_precision@5": 0.025,
+    "avg_mrr": 0.03125,
+    "avg_latency_ms": 0.07808208465576172
+  }
+}

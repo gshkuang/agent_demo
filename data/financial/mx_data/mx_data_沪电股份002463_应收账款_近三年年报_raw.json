@@ -1,0 +1,1686 @@
+{
+  "success": true,
+  "status": 0,
+  "code": 0,
+  "message": "ok",
+  "data": {
+    "requestId": null,
+    "message": "OK",
+    "status": 0,
+    "code": 0,
+    "data": {
+      "protocolType": "SEARCH_DATA",
+      "id": "92137686-a82a-4ebb-9b94-6e9c5fbd684a",
+      "refSeq": null,
+      "keyEntityList": null,
+      "searchDataResultDTO": {
+        "questionId": "e633f6a3-9444-423a-94a6-34978e806e9e",
+        "dataTableDTOList": [
+          {
+            "code": "H5245.HK",
+            "entityName": "沪电股份(H5245.HK)(最新年结日12-31)",
+            "table": {
+              "100000000046598": [
+                "60.97亿港元",
+                "43.67亿港元",
+                "29.72亿港元"
+              ],
+              "headName": [
+                "2025年报",
+                "2024年报",
+                "2023年报"
+              ]
+            },
+            "rawTable": {
+              "100000000046598": [
+                "6097326703.350239",
+                "4366672066.00147",
+                "2972109421.553265"
+              ],
+              "headName": [
+                "2025年报",
+                "2024年报",
+                "2023年报"
+              ]
+            },
+            "truncateRawTable": {},
+            "nameMap": {
+              "100000000046598": "应收账款及票据",
+              "headNameSub": "数据来源"
+            },
+            "headNameMap": {},
+            "field": {
+              "returnCode": "100000000046598",
+              "returnName": "应收账款及票据",
+              "classCode": "007101",
+              "checkedRelatedIndicators": false,
+              "startDate": "2023-04-19 00:00:00",
+              "endDate": "2026-04-19 00:00:00",
+              "fuzzy": false,
+              "dateGranularity": "YEAR",
+              "defineType": -1,
+              "isLoopN": false,
+              "fixedParamValue": "type=1,CurType=4",
+              "quantType": "1",
+              "isGroup": false,
+              "returnSourceCode": "ARNR",
+              "returnSourceName": "应收账款及票据",
+              "graph": "1",
+              "unit": "1",
+              "tableType": "1",
+              "unitName": "元",
+              "unitDesc": "101:元:元"
+            },
+            "entityCodes": [
+              "H5245.HK"
+            ],
+            "macroAttributeExcelMap": {},
+            "fieldSet": [
+              {
+                "returnCode": "100000000046598",
+                "returnName": "应收账款及票据",
+                "classCode": "007101",
+                "checkedRelatedIndicators": false,
+                "startDate": "2023-04-19 00:00:00",
+                "endDate": "2026-04-19 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "YEAR",
+                "defineType": -1,
+                "isLoopN": false,
+                "fixedParamValue": "type=1,CurType=4",
+                "quantType": "1",
+                "isGroup": false,
+                "returnSourceCode": "ARNR",
+                "returnSourceName": "应收账款及票据",
+                "graph": "1",
+                "unit": "1",
+                "tableType": "1",
+                "unitName": "元",
+                "unitDesc": "101:元:元"
+              }
+            ],
+            "dataTableType": "NORM_TABLE",
+            "rowInfo": {},
+            "colInfo": {},
+            "indicatorOrder": [
+              "100000000046598"
+            ],
+            "tipFlags": [],
+            "dataType": "数据浏览器",
+            "title": "沪电股份(H5245.HK)(最新年结日12-31)的应收账款及票据",
+            "hasThumbnail": true,
+            "indicatorLimited": false,
+            "dataPositionEnum": "MetricLeftTimeTop",
+            "orderCol": {},
+            "jumpUrlList": [
+              {
+                "choiceUrl": "EM://stockdatacenter?type=browser&modType=STOCK&code=H5245.HK&indId=100000000046598|100:2023-12-31|115:1|453:4,100000000046598|100:2024-12-31|115:1|453:4,100000000046598|100:2025-12-31|115:1|453:4",
+                "typeName": "股票数据浏览器"
+              }
+            ],
+            "dataTypeEnum": "DATA_BROWSER",
+            "dateRuleSet": [],
+            "freqConvert": false,
+            "deleteInfo": [],
+            "macroCodeMap": {},
+            "entityTagDTO": {
+              "entityId": "1004487962",
+              "entityType": "SEC",
+              "entityTypeCode": "058001003001",
+              "entityTypeName": "H股",
+              "classCode": "002003",
+              "className": "港股",
+              "fullName": "沪电股份",
+              "secuCode": "H5245",
+              "marketChar": ".HK",
+              "correct": false,
+              "hasKLine": false,
+              "valuation": false
+            },
+            "entityTagDTOList": [
+              {
+                "entityId": "1004487962",
+                "entityType": "SEC",
+                "entityTypeCode": "058001003001",
+                "entityTypeName": "H股",
+                "classCode": "002003",
+                "className": "港股",
+                "fullName": "沪电股份",
+                "secuCode": "H5245",
+                "marketChar": ".HK",
+                "correct": false,
+                "hasKLine": false,
+                "valuation": false
+              }
+            ],
+            "indexTable": false,
+            "edbThirdData": false,
+            "dataUpdate": {
+              "2025年报": false
+            },
+            "supportsTimeSeries": false,
+            "estimatedTokens": 0,
+            "summaryTips": {
+              "periodicalReport": null
+            },
+            "nestEntityListMap": {},
+            "excelTimeTruncate": false,
+            "frontendEntityName": "",
+            "frontendEntityCode": "",
+            "frontendTitle": "",
+            "frontendDesc": "",
+            "indicatorCount": 0,
+            "fieldParameterStr": "",
+            "tdayEnum": "NORMAL"
+          },
+          {
+            "code": "002463.SZ",
+            "entityName": "账龄",
+            "table": {
+              "headName": [
+                "应收账款金额(元)",
+                "占总应收款比例(%)",
+                "提取的坏账准备(元)",
+                "坏账准备计提比例(%)"
+              ],
+              "按账龄": [
+                "",
+                "",
+                "",
+                ""
+              ],
+              "0": [
+                "55.99亿",
+                "100.00%",
+                "-",
+                "-"
+              ],
+              "1": [
+                "7.402万",
+                "0%",
+                "-",
+                "-"
+              ],
+              "3": [
+                "55.99亿",
+                "100.00%",
+                "9211万",
+                "1.64%"
+              ],
+              "按坏账计提方法": [
+                "",
+                "",
+                "",
+                ""
+              ],
+              "4": [
+                "3.706亿",
+                "6.62%",
+                "3706万",
+                "10.00%"
+              ],
+              "5": [
+                "52.29亿",
+                "93.38%",
+                "5505万",
+                "1.05%"
+              ]
+            },
+            "rawTable": {
+              "headName": [
+                "应收账款金额(元)",
+                "占总应收款比例(%)",
+                "提取的坏账准备(元)",
+                "坏账准备计提比例(%)"
+              ],
+              "按账龄": [
+                "",
+                "",
+                "",
+                ""
+              ],
+              "0": [
+                "5599193500",
+                "100",
+                "-",
+                "-"
+              ],
+              "1": [
+                "74018",
+                "0",
+                "-",
+                "-"
+              ],
+              "3": [
+                "5599267518",
+                "100",
+                "92107273",
+                "1.64"
+              ],
+              "按坏账计提方法": [
+                "",
+                "",
+                "",
+                ""
+              ],
+              "4": [
+                "370573726",
+                "6.62",
+                "37057373",
+                "10"
+              ],
+              "5": [
+                "5228693792",
+                "93.38",
+                "55049900",
+                "1.05"
+              ]
+            },
+            "truncateRawTable": {},
+            "nameMap": {
+              "headName": "headName",
+              "0": "1年以内",
+              "1": "1-2年",
+              "3": "合计",
+              "4": "按单项计提坏账准备",
+              "5": "按组合计提坏账准备"
+            },
+            "headNameMap": {},
+            "field": {
+              "returnCode": "RPT_CUSTOM_F9_BASICINFO_SKBD_JOIN_BDSK_FN_ARSN",
+              "returnName": "应收账款账龄结构",
+              "classCode": "007202",
+              "checkedRelatedIndicators": false,
+              "startDate": "2023-04-19 00:00:00",
+              "endDate": "2026-04-19 00:00:00",
+              "fuzzy": false,
+              "dateGranularity": "YEAR",
+              "defineType": -1,
+              "isLoopN": false,
+              "isGroup": false,
+              "returnSourceCode": "SECUCODE,SECURITY_NAME_ABBR,;IS_MAXREPORTDATE,REPORT_DATE,REPORT_TYPE_CODE,REPORT_TYPE,REPORTDATE,AGEING_TYPE,RANK_NUM,STD_AGEING_NAME,ACCOUNTS_RECE,ACCOUNTS_RECE_RATIO,BADDEBT_PROVISION,BADDEBT_PROVISION_RATIO",
+              "returnSourceName": "证券代码（带后缀）,证券简称,是否最新报告期,报告期,报告期类型,报表类型,报告期(文字),账龄类型,排序,账龄,应收账款金额,占总应收款比例,提取的坏账准备,坏账准备计提比例",
+              "tableType": "10"
+            },
+            "macroAttributeExcelMap": {},
+            "fieldSet": [
+              {
+                "returnCode": "RPT_CUSTOM_F9_BASICINFO_SKBD_JOIN_BDSK_FN_ARSN",
+                "returnName": "应收账款账龄结构",
+                "classCode": "007202",
+                "checkedRelatedIndicators": false,
+                "startDate": "2023-04-19 00:00:00",
+                "endDate": "2026-04-19 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "YEAR",
+                "defineType": -1,
+                "isLoopN": false,
+                "isGroup": false,
+                "returnSourceCode": "SECUCODE,SECURITY_NAME_ABBR,;IS_MAXREPORTDATE,REPORT_DATE,REPORT_TYPE_CODE,REPORT_TYPE,REPORTDATE,AGEING_TYPE,RANK_NUM,STD_AGEING_NAME,ACCOUNTS_RECE,ACCOUNTS_RECE_RATIO,BADDEBT_PROVISION,BADDEBT_PROVISION_RATIO",
+                "returnSourceName": "证券代码（带后缀）,证券简称,是否最新报告期,报告期,报告期类型,报表类型,报告期(文字),账龄类型,排序,账龄,应收账款金额,占总应收款比例,提取的坏账准备,坏账准备计提比例",
+                "tableType": "10"
+              }
+            ],
+            "dataTableType": "F10_TABLE",
+            "inputTitle": "沪电股份(002463.SZ)应收账款账龄结构(2025年年报)",
+            "rowInfo": {},
+            "colInfo": {},
+            "indicatorOrder": [
+              "按账龄",
+              "0",
+              "1",
+              "3",
+              "按坏账计提方法",
+              "4",
+              "5"
+            ],
+            "tipFlags": [],
+            "hasThumbnail": true,
+            "indicatorLimited": false,
+            "dataPositionEnum": "MetricLeftTimeTop",
+            "orderCol": {},
+            "jumpUrlList": [
+              {
+                "choiceUrl": "https://choicewzp2.eastmoney.com/stock/cn/f9/index.html#/ReceivableAccountAge?securitycode=002463.SZ",
+                "typeName": "F9深度资料",
+                "securityName": "沪电股份"
+              }
+            ],
+            "dataTypeEnum": "F9",
+            "dateRuleSet": [],
+            "freqConvert": false,
+            "deleteInfo": [],
+            "macroCodeMap": {},
+            "entityTagDTO": {
+              "entityId": "1000006938",
+              "entityType": "SEC",
+              "entityTypeCode": "058001001",
+              "entityTypeName": "A股",
+              "classCode": "002001",
+              "className": "沪深京股票",
+              "fullName": "沪电股份",
+              "secuCode": "002463",
+              "market": "0",
+              "marketChar": ".SZ",
+              "correct": false,
+              "hasKLine": false,
+              "valuation": false
+            },
+            "entityTagDTOList": [
+              {
+                "entityId": "1000006938",
+                "entityType": "SEC",
+                "entityTypeCode": "058001001",
+                "entityTypeName": "A股",
+                "classCode": "002001",
+                "className": "沪深京股票",
+                "fullName": "沪电股份",
+                "secuCode": "002463",
+                "market": "0",
+                "marketChar": ".SZ",
+                "correct": false,
+                "hasKLine": false,
+                "valuation": false
+              }
+            ],
+            "indexTable": false,
+            "edbThirdData": false,
+            "dataUpdate": {},
+            "supportsTimeSeries": false,
+            "estimatedTokens": 0,
+            "summaryTips": {
+              "periodicalReport": null
+            },
+            "nestEntityListMap": {},
+            "excelTimeTruncate": false,
+            "frontendEntityName": "沪电股份",
+            "frontendEntityCode": "002463.SZ",
+            "frontendTitle": "应收账款账龄结构(2025年年报)",
+            "frontendDesc": "",
+            "indicatorCount": 0,
+            "fieldParameterStr": "",
+            "tdayEnum": "NORMAL"
+          },
+          {
+            "code": "002463.SZ",
+            "entityName": "账龄",
+            "table": {
+              "headName": [
+                "应收账款金额(元)",
+                "占总应收款比例(%)",
+                "提取的坏账准备(元)",
+                "坏账准备计提比例(%)"
+              ],
+              "按账龄": [
+                "",
+                "",
+                "",
+                ""
+              ],
+              "0": [
+                "44.65亿",
+                "99.97%",
+                "-",
+                "-"
+              ],
+              "1": [
+                "141万",
+                "0.030%",
+                "-",
+                "-"
+              ],
+              "2": [
+                "13.64万",
+                "0%",
+                "-",
+                "-"
+              ],
+              "3": [
+                "44.66亿",
+                "100.00%",
+                "8552万",
+                "1.91%"
+              ],
+              "按坏账计提方法": [
+                "",
+                "",
+                "",
+                ""
+              ],
+              "4": [
+                "3.77亿",
+                "8.44%",
+                "3770万",
+                "10.00%"
+              ],
+              "5": [
+                "40.89亿",
+                "91.56%",
+                "4783万",
+                "1.17%"
+              ]
+            },
+            "rawTable": {
+              "headName": [
+                "应收账款金额(元)",
+                "占总应收款比例(%)",
+                "提取的坏账准备(元)",
+                "坏账准备计提比例(%)"
+              ],
+              "按账龄": [
+                "",
+                "",
+                "",
+                ""
+              ],
+              "0": [
+                "4464515971",
+                "99.97",
+                "-",
+                "-"
+              ],
+              "1": [
+                "1410017",
+                "0.03",
+                "-",
+                "-"
+              ],
+              "2": [
+                "136378",
+                "0",
+                "-",
+                "-"
+              ],
+              "3": [
+                "4466062366",
+                "100",
+                "85522144",
+                "1.91"
+              ],
+              "按坏账计提方法": [
+                "",
+                "",
+                "",
+                ""
+              ],
+              "4": [
+                "376955987",
+                "8.44",
+                "37695599",
+                "10"
+              ],
+              "5": [
+                "4089106379",
+                "91.56",
+                "47826545",
+                "1.17"
+              ]
+            },
+            "truncateRawTable": {},
+            "nameMap": {
+              "headName": "headName",
+              "0": "1年以内",
+              "1": "1-2年",
+              "2": "2年以上",
+              "3": "合计",
+              "4": "按单项计提坏账准备",
+              "5": "按组合计提坏账准备"
+            },
+            "headNameMap": {},
+            "field": {
+              "returnCode": "RPT_CUSTOM_F9_BASICINFO_SKBD_JOIN_BDSK_FN_ARSN",
+              "returnName": "应收账款账龄结构",
+              "classCode": "007202",
+              "checkedRelatedIndicators": false,
+              "startDate": "2023-04-19 00:00:00",
+              "endDate": "2026-04-19 00:00:00",
+              "fuzzy": false,
+              "dateGranularity": "YEAR",
+              "defineType": -1,
+              "isLoopN": false,
+              "isGroup": false,
+              "returnSourceCode": "SECUCODE,SECURITY_NAME_ABBR,;IS_MAXREPORTDATE,REPORT_DATE,REPORT_TYPE_CODE,REPORT_TYPE,REPORTDATE,AGEING_TYPE,RANK_NUM,STD_AGEING_NAME,ACCOUNTS_RECE,ACCOUNTS_RECE_RATIO,BADDEBT_PROVISION,BADDEBT_PROVISION_RATIO",
+              "returnSourceName": "证券代码（带后缀）,证券简称,是否最新报告期,报告期,报告期类型,报表类型,报告期(文字),账龄类型,排序,账龄,应收账款金额,占总应收款比例,提取的坏账准备,坏账准备计提比例",
+              "tableType": "10"
+            },
+            "macroAttributeExcelMap": {},
+            "fieldSet": [
+              {
+                "returnCode": "RPT_CUSTOM_F9_BASICINFO_SKBD_JOIN_BDSK_FN_ARSN",
+                "returnName": "应收账款账龄结构",
+                "classCode": "007202",
+                "checkedRelatedIndicators": false,
+                "startDate": "2023-04-19 00:00:00",
+                "endDate": "2026-04-19 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "YEAR",
+                "defineType": -1,
+                "isLoopN": false,
+                "isGroup": false,
+                "returnSourceCode": "SECUCODE,SECURITY_NAME_ABBR,;IS_MAXREPORTDATE,REPORT_DATE,REPORT_TYPE_CODE,REPORT_TYPE,REPORTDATE,AGEING_TYPE,RANK_NUM,STD_AGEING_NAME,ACCOUNTS_RECE,ACCOUNTS_RECE_RATIO,BADDEBT_PROVISION,BADDEBT_PROVISION_RATIO",
+                "returnSourceName": "证券代码（带后缀）,证券简称,是否最新报告期,报告期,报告期类型,报表类型,报告期(文字),账龄类型,排序,账龄,应收账款金额,占总应收款比例,提取的坏账准备,坏账准备计提比例",
+                "tableType": "10"
+              }
+            ],
+            "dataTableType": "F10_TABLE",
+            "inputTitle": "沪电股份(002463.SZ)应收账款账龄结构(2025年中报)",
+            "rowInfo": {},
+            "colInfo": {},
+            "indicatorOrder": [
+              "按账龄",
+              "0",
+              "1",
+              "2",
+              "3",
+              "按坏账计提方法",
+              "4",
+              "5"
+            ],
+            "tipFlags": [],
+            "hasThumbnail": true,
+            "indicatorLimited": false,
+            "dataPositionEnum": "MetricLeftTimeTop",
+            "orderCol": {},
+            "jumpUrlList": [
+              {
+                "choiceUrl": "https://choicewzp2.eastmoney.com/stock/cn/f9/index.html#/ReceivableAccountAge?securitycode=002463.SZ",
+                "typeName": "F9深度资料",
+                "securityName": "沪电股份"
+              }
+            ],
+            "dataTypeEnum": "F9",
+            "dateRuleSet": [],
+            "freqConvert": false,
+            "deleteInfo": [],
+            "macroCodeMap": {},
+            "entityTagDTO": {
+              "entityId": "1000006938",
+              "entityType": "SEC",
+              "entityTypeCode": "058001001",
+              "entityTypeName": "A股",
+              "classCode": "002001",
+              "className": "沪深京股票",
+              "fullName": "沪电股份",
+              "secuCode": "002463",
+              "market": "0",
+              "marketChar": ".SZ",
+              "correct": false,
+              "hasKLine": false,
+              "valuation": false
+            },
+            "entityTagDTOList": [
+              {
+                "entityId": "1000006938",
+                "entityType": "SEC",
+                "entityTypeCode": "058001001",
+                "entityTypeName": "A股",
+                "classCode": "002001",
+                "className": "沪深京股票",
+                "fullName": "沪电股份",
+                "secuCode": "002463",
+                "market": "0",
+                "marketChar": ".SZ",
+                "correct": false,
+                "hasKLine": false,
+                "valuation": false
+              }
+            ],
+            "indexTable": false,
+            "edbThirdData": false,
+            "dataUpdate": {},
+            "supportsTimeSeries": false,
+            "estimatedTokens": 0,
+            "summaryTips": {
+              "periodicalReport": null
+            },
+            "nestEntityListMap": {},
+            "excelTimeTruncate": false,
+            "frontendEntityName": "沪电股份",
+            "frontendEntityCode": "002463.SZ",
+            "frontendTitle": "应收账款账龄结构(2025年中报)",
+            "frontendDesc": "",
+            "indicatorCount": 0,
+            "fieldParameterStr": "",
+            "tdayEnum": "NORMAL"
+          },
+          {
+            "code": "002463.SZ",
+            "entityName": "账龄",
+            "table": {
+              "headName": [
+                "应收账款金额(元)",
+                "占总应收款比例(%)",
+                "提取的坏账准备(元)",
+                "坏账准备计提比例(%)"
+              ],
+              "按账龄": [
+                "",
+                "",
+                "",
+                ""
+              ],
+              "0": [
+                "40.91亿",
+                "99.96%",
+                "-",
+                "-"
+              ],
+              "1": [
+                "134.9万",
+                "0.030%",
+                "-",
+                "-"
+              ],
+              "2": [
+                "11.96万",
+                "0%",
+                "-",
+                "-"
+              ],
+              "3": [
+                "40.93亿",
+                "100.00%",
+                "4919万",
+                "1.20%"
+              ],
+              "按坏账计提方法": [
+                "",
+                "",
+                "",
+                ""
+              ],
+              "4": [
+                "1.938亿",
+                "4.73%",
+                "1938万",
+                "10.00%"
+              ],
+              "5": [
+                "38.99亿",
+                "95.27%",
+                "2981万",
+                "0.76%"
+              ]
+            },
+            "rawTable": {
+              "headName": [
+                "应收账款金额(元)",
+                "占总应收款比例(%)",
+                "提取的坏账准备(元)",
+                "坏账准备计提比例(%)"
+              ],
+              "按账龄": [
+                "",
+                "",
+                "",
+                ""
+              ],
+              "0": [
+                "4091131741",
+                "99.96",
+                "-",
+                "-"
+              ],
+              "1": [
+                "1348773",
+                "0.03",
+                "-",
+                "-"
+              ],
+              "2": [
+                "119579",
+                "0",
+                "-",
+                "-"
+              ],
+              "3": [
+                "4092600093",
+                "100",
+                "49187397",
+                "1.2"
+              ],
+              "按坏账计提方法": [
+                "",
+                "",
+                "",
+                ""
+              ],
+              "4": [
+                "193775796",
+                "4.73",
+                "19377580",
+                "10"
+              ],
+              "5": [
+                "3898824297",
+                "95.27",
+                "29809817",
+                "0.76"
+              ]
+            },
+            "truncateRawTable": {},
+            "nameMap": {
+              "headName": "headName",
+              "0": "1年以内",
+              "1": "1-2年",
+              "2": "2年以上",
+              "3": "合计",
+              "4": "按单项计提坏账准备",
+              "5": "按组合计提坏账准备"
+            },
+            "headNameMap": {},
+            "field": {
+              "returnCode": "RPT_CUSTOM_F9_BASICINFO_SKBD_JOIN_BDSK_FN_ARSN",
+              "returnName": "应收账款账龄结构",
+              "classCode": "007202",
+              "checkedRelatedIndicators": false,
+              "startDate": "2023-04-19 00:00:00",
+              "endDate": "2026-04-19 00:00:00",
+              "fuzzy": false,
+              "dateGranularity": "YEAR",
+              "defineType": -1,
+              "isLoopN": false,
+              "isGroup": false,
+              "returnSourceCode": "SECUCODE,SECURITY_NAME_ABBR,;IS_MAXREPORTDATE,REPORT_DATE,REPORT_TYPE_CODE,REPORT_TYPE,REPORTDATE,AGEING_TYPE,RANK_NUM,STD_AGEING_NAME,ACCOUNTS_RECE,ACCOUNTS_RECE_RATIO,BADDEBT_PROVISION,BADDEBT_PROVISION_RATIO",
+              "returnSourceName": "证券代码（带后缀）,证券简称,是否最新报告期,报告期,报告期类型,报表类型,报告期(文字),账龄类型,排序,账龄,应收账款金额,占总应收款比例,提取的坏账准备,坏账准备计提比例",
+              "tableType": "10"
+            },
+            "macroAttributeExcelMap": {},
+            "fieldSet": [
+              {
+                "returnCode": "RPT_CUSTOM_F9_BASICINFO_SKBD_JOIN_BDSK_FN_ARSN",
+                "returnName": "应收账款账龄结构",
+                "classCode": "007202",
+                "checkedRelatedIndicators": false,
+                "startDate": "2023-04-19 00:00:00",
+                "endDate": "2026-04-19 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "YEAR",
+                "defineType": -1,
+                "isLoopN": false,
+                "isGroup": false,
+                "returnSourceCode": "SECUCODE,SECURITY_NAME_ABBR,;IS_MAXREPORTDATE,REPORT_DATE,REPORT_TYPE_CODE,REPORT_TYPE,REPORTDATE,AGEING_TYPE,RANK_NUM,STD_AGEING_NAME,ACCOUNTS_RECE,ACCOUNTS_RECE_RATIO,BADDEBT_PROVISION,BADDEBT_PROVISION_RATIO",
+                "returnSourceName": "证券代码（带后缀）,证券简称,是否最新报告期,报告期,报告期类型,报表类型,报告期(文字),账龄类型,排序,账龄,应收账款金额,占总应收款比例,提取的坏账准备,坏账准备计提比例",
+                "tableType": "10"
+              }
+            ],
+            "dataTableType": "F10_TABLE",
+            "inputTitle": "沪电股份(002463.SZ)应收账款账龄结构(2024年年报)",
+            "rowInfo": {},
+            "colInfo": {},
+            "indicatorOrder": [
+              "按账龄",
+              "0",
+              "1",
+              "2",
+              "3",
+              "按坏账计提方法",
+              "4",
+              "5"
+            ],
+            "tipFlags": [],
+            "hasThumbnail": true,
+            "indicatorLimited": false,
+            "dataPositionEnum": "MetricLeftTimeTop",
+            "orderCol": {},
+            "jumpUrlList": [
+              {
+                "choiceUrl": "https://choicewzp2.eastmoney.com/stock/cn/f9/index.html#/ReceivableAccountAge?securitycode=002463.SZ",
+                "typeName": "F9深度资料",
+                "securityName": "沪电股份"
+              }
+            ],
+            "dataTypeEnum": "F9",
+            "dateRuleSet": [],
+            "freqConvert": false,
+            "deleteInfo": [],
+            "macroCodeMap": {},
+            "entityTagDTO": {
+              "entityId": "1000006938",
+              "entityType": "SEC",
+              "entityTypeCode": "058001001",
+              "entityTypeName": "A股",
+              "classCode": "002001",
+              "className": "沪深京股票",
+              "fullName": "沪电股份",
+              "secuCode": "002463",
+              "market": "0",
+              "marketChar": ".SZ",
+              "correct": false,
+              "hasKLine": false,
+              "valuation": false
+            },
+            "entityTagDTOList": [
+              {
+                "entityId": "1000006938",
+                "entityType": "SEC",
+                "entityTypeCode": "058001001",
+                "entityTypeName": "A股",
+                "classCode": "002001",
+                "className": "沪深京股票",
+                "fullName": "沪电股份",
+                "secuCode": "002463",
+                "market": "0",
+                "marketChar": ".SZ",
+                "correct": false,
+                "hasKLine": false,
+                "valuation": false
+              }
+            ],
+            "indexTable": false,
+            "edbThirdData": false,
+            "dataUpdate": {},
+            "supportsTimeSeries": false,
+            "estimatedTokens": 0,
+            "summaryTips": {
+              "periodicalReport": null
+            },
+            "nestEntityListMap": {},
+            "excelTimeTruncate": false,
+            "frontendEntityName": "沪电股份",
+            "frontendEntityCode": "002463.SZ",
+            "frontendTitle": "应收账款账龄结构(2024年年报)",
+            "frontendDesc": "",
+            "indicatorCount": 0,
+            "fieldParameterStr": "",
+            "tdayEnum": "NORMAL"
+          },
+          {
+            "code": "002463.SZ",
+            "entityName": "账龄",
+            "table": {
+              "headName": [
+                "应收账款金额(元)",
+                "占总应收款比例(%)",
+                "提取的坏账准备(元)",
+                "坏账准备计提比例(%)"
+              ],
+              "按账龄": [
+                "",
+                "",
+                "",
+                ""
+              ],
+              "0": [
+                "26.76亿",
+                "99.97%",
+                "-",
+                "-"
+              ],
+              "1": [
+                "73.51万",
+                "0.030%",
+                "-",
+                "-"
+              ],
+              "2": [
+                "18.43万",
+                "0.010%",
+                "-",
+                "-"
+              ],
+              "3": [
+                "26.76亿",
+                "100.00%",
+                "3920万",
+                "1.46%"
+              ],
+              "按坏账计提方法": [
+                "",
+                "",
+                "",
+                ""
+              ],
+              "4": [
+                "2.137亿",
+                "7.99%",
+                "2137万",
+                "10.00%"
+              ],
+              "5": [
+                "24.63亿",
+                "92.01%",
+                "1783万",
+                "0.72%"
+              ]
+            },
+            "rawTable": {
+              "headName": [
+                "应收账款金额(元)",
+                "占总应收款比例(%)",
+                "提取的坏账准备(元)",
+                "坏账准备计提比例(%)"
+              ],
+              "按账龄": [
+                "",
+                "",
+                "",
+                ""
+              ],
+              "0": [
+                "2675562988",
+                "99.97",
+                "-",
+                "-"
+              ],
+              "1": [
+                "735097",
+                "0.03",
+                "-",
+                "-"
+              ],
+              "2": [
+                "184343",
+                "0.01",
+                "-",
+                "-"
+              ],
+              "3": [
+                "2676482428",
+                "100",
+                "39202932",
+                "1.46"
+              ],
+              "按坏账计提方法": [
+                "",
+                "",
+                "",
+                ""
+              ],
+              "4": [
+                "213721323",
+                "7.99",
+                "21372133",
+                "10"
+              ],
+              "5": [
+                "2462761105",
+                "92.01",
+                "17830799",
+                "0.72"
+              ]
+            },
+            "truncateRawTable": {},
+            "nameMap": {
+              "headName": "headName",
+              "0": "1年以内",
+              "1": "1-2年",
+              "2": "2-3年",
+              "3": "合计",
+              "4": "按单项计提坏账准备",
+              "5": "按组合计提坏账准备"
+            },
+            "headNameMap": {},
+            "field": {
+              "returnCode": "RPT_CUSTOM_F9_BASICINFO_SKBD_JOIN_BDSK_FN_ARSN",
+              "returnName": "应收账款账龄结构",
+              "classCode": "007202",
+              "checkedRelatedIndicators": false,
+              "startDate": "2023-04-19 00:00:00",
+              "endDate": "2026-04-19 00:00:00",
+              "fuzzy": false,
+              "dateGranularity": "YEAR",
+              "defineType": -1,
+              "isLoopN": false,
+              "isGroup": false,
+              "returnSourceCode": "SECUCODE,SECURITY_NAME_ABBR,;IS_MAXREPORTDATE,REPORT_DATE,REPORT_TYPE_CODE,REPORT_TYPE,REPORTDATE,AGEING_TYPE,RANK_NUM,STD_AGEING_NAME,ACCOUNTS_RECE,ACCOUNTS_RECE_RATIO,BADDEBT_PROVISION,BADDEBT_PROVISION_RATIO",
+              "returnSourceName": "证券代码（带后缀）,证券简称,是否最新报告期,报告期,报告期类型,报表类型,报告期(文字),账龄类型,排序,账龄,应收账款金额,占总应收款比例,提取的坏账准备,坏账准备计提比例",
+              "tableType": "10"
+            },
+            "macroAttributeExcelMap": {},
+            "fieldSet": [
+              {
+                "returnCode": "RPT_CUSTOM_F9_BASICINFO_SKBD_JOIN_BDSK_FN_ARSN",
+                "returnName": "应收账款账龄结构",
+                "classCode": "007202",
+                "checkedRelatedIndicators": false,
+                "startDate": "2023-04-19 00:00:00",
+                "endDate": "2026-04-19 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "YEAR",
+                "defineType": -1,
+                "isLoopN": false,
+                "isGroup": false,
+                "returnSourceCode": "SECUCODE,SECURITY_NAME_ABBR,;IS_MAXREPORTDATE,REPORT_DATE,REPORT_TYPE_CODE,REPORT_TYPE,REPORTDATE,AGEING_TYPE,RANK_NUM,STD_AGEING_NAME,ACCOUNTS_RECE,ACCOUNTS_RECE_RATIO,BADDEBT_PROVISION,BADDEBT_PROVISION_RATIO",
+                "returnSourceName": "证券代码（带后缀）,证券简称,是否最新报告期,报告期,报告期类型,报表类型,报告期(文字),账龄类型,排序,账龄,应收账款金额,占总应收款比例,提取的坏账准备,坏账准备计提比例",
+                "tableType": "10"
+              }
+            ],
+            "dataTableType": "F10_TABLE",
+            "inputTitle": "沪电股份(002463.SZ)应收账款账龄结构(2024年中报)",
+            "rowInfo": {},
+            "colInfo": {},
+            "indicatorOrder": [
+              "按账龄",
+              "0",
+              "1",
+              "2",
+              "3",
+              "按坏账计提方法",
+              "4",
+              "5"
+            ],
+            "tipFlags": [],
+            "hasThumbnail": true,
+            "indicatorLimited": false,
+            "dataPositionEnum": "MetricLeftTimeTop",
+            "orderCol": {},
+            "jumpUrlList": [
+              {
+                "choiceUrl": "https://choicewzp2.eastmoney.com/stock/cn/f9/index.html#/ReceivableAccountAge?securitycode=002463.SZ",
+                "typeName": "F9深度资料",
+                "securityName": "沪电股份"
+              }
+            ],
+            "dataTypeEnum": "F9",
+            "dateRuleSet": [],
+            "freqConvert": false,
+            "deleteInfo": [],
+            "macroCodeMap": {},
+            "entityTagDTO": {
+              "entityId": "1000006938",
+              "entityType": "SEC",
+              "entityTypeCode": "058001001",
+              "entityTypeName": "A股",
+              "classCode": "002001",
+              "className": "沪深京股票",
+              "fullName": "沪电股份",
+              "secuCode": "002463",
+              "market": "0",
+              "marketChar": ".SZ",
+              "correct": false,
+              "hasKLine": false,
+              "valuation": false
+            },
+            "entityTagDTOList": [
+              {
+                "entityId": "1000006938",
+                "entityType": "SEC",
+                "entityTypeCode": "058001001",
+                "entityTypeName": "A股",
+                "classCode": "002001",
+                "className": "沪深京股票",
+                "fullName": "沪电股份",
+                "secuCode": "002463",
+                "market": "0",
+                "marketChar": ".SZ",
+                "correct": false,
+                "hasKLine": false,
+                "valuation": false
+              }
+            ],
+            "indexTable": false,
+            "edbThirdData": false,
+            "dataUpdate": {},
+            "supportsTimeSeries": false,
+            "estimatedTokens": 0,
+            "summaryTips": {
+              "periodicalReport": null
+            },
+            "nestEntityListMap": {},
+            "excelTimeTruncate": false,
+            "frontendEntityName": "沪电股份",
+            "frontendEntityCode": "002463.SZ",
+            "frontendTitle": "应收账款账龄结构(2024年中报)",
+            "frontendDesc": "",
+            "indicatorCount": 0,
+            "fieldParameterStr": "",
+            "tdayEnum": "NORMAL"
+          },
+          {
+            "code": "002463.SZ",
+            "entityName": "账龄",
+            "table": {
+              "headName": [
+                "应收账款金额(元)",
+                "占总应收款比例(%)",
+                "提取的坏账准备(元)",
+                "坏账准备计提比例(%)"
+              ],
+              "按账龄": [
+                "",
+                "",
+                "",
+                ""
+              ],
+              "0": [
+                "27.14亿",
+                "99.85%",
+                "-",
+                "-"
+              ],
+              "1": [
+                "396.5万",
+                "0.15%",
+                "-",
+                "-"
+              ],
+              "2": [
+                "3.928万",
+                "0%",
+                "-",
+                "-"
+              ],
+              "3": [
+                "27.18亿",
+                "100.00%",
+                "3061万",
+                "1.13%"
+              ],
+              "按坏账计提方法": [
+                "",
+                "",
+                "",
+                ""
+              ],
+              "4": [
+                "1.17亿",
+                "4.30%",
+                "1170万",
+                "10.00%"
+              ],
+              "5": [
+                "26.01亿",
+                "95.70%",
+                "1892万",
+                "0.73%"
+              ]
+            },
+            "rawTable": {
+              "headName": [
+                "应收账款金额(元)",
+                "占总应收款比例(%)",
+                "提取的坏账准备(元)",
+                "坏账准备计提比例(%)"
+              ],
+              "按账龄": [
+                "",
+                "",
+                "",
+                ""
+              ],
+              "0": [
+                "2713741908",
+                "99.85",
+                "-",
+                "-"
+              ],
+              "1": [
+                "3965475",
+                "0.15",
+                "-",
+                "-"
+              ],
+              "2": [
+                "39283",
+                "0",
+                "-",
+                "-"
+              ],
+              "3": [
+                "2717746666",
+                "100",
+                "30613742",
+                "1.13"
+              ],
+              "按坏账计提方法": [
+                "",
+                "",
+                "",
+                ""
+              ],
+              "4": [
+                "116963736",
+                "4.3",
+                "11696374",
+                "10"
+              ],
+              "5": [
+                "2600782930",
+                "95.7",
+                "18917368",
+                "0.73"
+              ]
+            },
+            "truncateRawTable": {},
+            "nameMap": {
+              "headName": "headName",
+              "0": "1年以内",
+              "1": "1-2年",
+              "2": "2-3年",
+              "3": "合计",
+              "4": "按单项计提坏账准备",
+              "5": "按组合计提坏账准备"
+            },
+            "headNameMap": {},
+            "field": {
+              "returnCode": "RPT_CUSTOM_F9_BASICINFO_SKBD_JOIN_BDSK_FN_ARSN",
+              "returnName": "应收账款账龄结构",
+              "classCode": "007202",
+              "checkedRelatedIndicators": false,
+              "startDate": "2023-04-19 00:00:00",
+              "endDate": "2026-04-19 00:00:00",
+              "fuzzy": false,
+              "dateGranularity": "YEAR",
+              "defineType": -1,
+              "isLoopN": false,
+              "isGroup": false,
+              "returnSourceCode": "SECUCODE,SECURITY_NAME_ABBR,;IS_MAXREPORTDATE,REPORT_DATE,REPORT_TYPE_CODE,REPORT_TYPE,REPORTDATE,AGEING_TYPE,RANK_NUM,STD_AGEING_NAME,ACCOUNTS_RECE,ACCOUNTS_RECE_RATIO,BADDEBT_PROVISION,BADDEBT_PROVISION_RATIO",
+              "returnSourceName": "证券代码（带后缀）,证券简称,是否最新报告期,报告期,报告期类型,报表类型,报告期(文字),账龄类型,排序,账龄,应收账款金额,占总应收款比例,提取的坏账准备,坏账准备计提比例",
+              "tableType": "10"
+            },
+            "macroAttributeExcelMap": {},
+            "fieldSet": [
+              {
+                "returnCode": "RPT_CUSTOM_F9_BASICINFO_SKBD_JOIN_BDSK_FN_ARSN",
+                "returnName": "应收账款账龄结构",
+                "classCode": "007202",
+                "checkedRelatedIndicators": false,
+                "startDate": "2023-04-19 00:00:00",
+                "endDate": "2026-04-19 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "YEAR",
+                "defineType": -1,
+                "isLoopN": false,
+                "isGroup": false,
+                "returnSourceCode": "SECUCODE,SECURITY_NAME_ABBR,;IS_MAXREPORTDATE,REPORT_DATE,REPORT_TYPE_CODE,REPORT_TYPE,REPORTDATE,AGEING_TYPE,RANK_NUM,STD_AGEING_NAME,ACCOUNTS_RECE,ACCOUNTS_RECE_RATIO,BADDEBT_PROVISION,BADDEBT_PROVISION_RATIO",
+                "returnSourceName": "证券代码（带后缀）,证券简称,是否最新报告期,报告期,报告期类型,报表类型,报告期(文字),账龄类型,排序,账龄,应收账款金额,占总应收款比例,提取的坏账准备,坏账准备计提比例",
+                "tableType": "10"
+              }
+            ],
+            "dataTableType": "F10_TABLE",
+            "inputTitle": "沪电股份(002463.SZ)应收账款账龄结构(2023年年报)",
+            "rowInfo": {},
+            "colInfo": {},
+            "indicatorOrder": [
+              "按账龄",
+              "0",
+              "1",
+              "2",
+              "3",
+              "按坏账计提方法",
+              "4",
+              "5"
+            ],
+            "tipFlags": [],
+            "hasThumbnail": true,
+            "indicatorLimited": false,
+            "dataPositionEnum": "MetricLeftTimeTop",
+            "orderCol": {},
+            "jumpUrlList": [
+              {
+                "choiceUrl": "https://choicewzp2.eastmoney.com/stock/cn/f9/index.html#/ReceivableAccountAge?securitycode=002463.SZ",
+                "typeName": "F9深度资料",
+                "securityName": "沪电股份"
+              }
+            ],
+            "dataTypeEnum": "F9",
+            "dateRuleSet": [],
+            "freqConvert": false,
+            "deleteInfo": [],
+            "macroCodeMap": {},
+            "entityTagDTO": {
+              "entityId": "1000006938",
+              "entityType": "SEC",
+              "entityTypeCode": "058001001",
+              "entityTypeName": "A股",
+              "classCode": "002001",
+              "className": "沪深京股票",
+              "fullName": "沪电股份",
+              "secuCode": "002463",
+              "market": "0",
+              "marketChar": ".SZ",
+              "correct": false,
+              "hasKLine": false,
+              "valuation": false
+            },
+            "entityTagDTOList": [
+              {
+                "entityId": "1000006938",
+                "entityType": "SEC",
+                "entityTypeCode": "058001001",
+                "entityTypeName": "A股",
+                "classCode": "002001",
+                "className": "沪深京股票",
+                "fullName": "沪电股份",
+                "secuCode": "002463",
+                "market": "0",
+                "marketChar": ".SZ",
+                "correct": false,
+                "hasKLine": false,
+                "valuation": false
+              }
+            ],
+            "indexTable": false,
+            "edbThirdData": false,
+            "dataUpdate": {},
+            "supportsTimeSeries": false,
+            "estimatedTokens": 0,
+            "summaryTips": {
+              "periodicalReport": null
+            },
+            "nestEntityListMap": {},
+            "excelTimeTruncate": false,
+            "frontendEntityName": "沪电股份",
+            "frontendEntityCode": "002463.SZ",
+            "frontendTitle": "应收账款账龄结构(2023年年报)",
+            "frontendDesc": "",
+            "indicatorCount": 0,
+            "fieldParameterStr": "",
+            "tdayEnum": "NORMAL"
+          },
+          {
+            "code": "002463.SZ",
+            "entityName": "账龄",
+            "table": {
+              "headName": [
+                "应收账款金额(元)",
+                "占总应收款比例(%)",
+                "提取的坏账准备(元)",
+                "坏账准备计提比例(%)"
+              ],
+              "按账龄": [
+                "",
+                "",
+                "",
+                ""
+              ],
+              "0": [
+                "18.88亿",
+                "99.78%",
+                "-",
+                "-"
+              ],
+              "1": [
+                "423.7万",
+                "0.22%",
+                "-",
+                "-"
+              ],
+              "2": [
+                "18.92亿",
+                "100.00%",
+                "3613万",
+                "1.91%"
+              ]
+            },
+            "rawTable": {
+              "headName": [
+                "应收账款金额(元)",
+                "占总应收款比例(%)",
+                "提取的坏账准备(元)",
+                "坏账准备计提比例(%)"
+              ],
+              "按账龄": [
+                "",
+                "",
+                "",
+                ""
+              ],
+              "0": [
+                "1887928660",
+                "99.78",
+                "-",
+                "-"
+              ],
+              "1": [
+                "4237279",
+                "0.22",
+                "-",
+                "-"
+              ],
+              "2": [
+                "1892165939",
+                "100",
+                "36131071",
+                "1.91"
+              ]
+            },
+            "truncateRawTable": {},
+            "nameMap": {
+              "headName": "headName",
+              "0": "1年以内",
+              "1": "1-2年",
+              "2": "合计"
+            },
+            "headNameMap": {},
+            "field": {
+              "returnCode": "RPT_CUSTOM_F9_BASICINFO_SKBD_JOIN_BDSK_FN_ARSN",
+              "returnName": "应收账款账龄结构",
+              "classCode": "007202",
+              "checkedRelatedIndicators": false,
+              "startDate": "2023-04-19 00:00:00",
+              "endDate": "2026-04-19 00:00:00",
+              "fuzzy": false,
+              "dateGranularity": "YEAR",
+              "defineType": -1,
+              "isLoopN": false,
+              "isGroup": false,
+              "returnSourceCode": "SECUCODE,SECURITY_NAME_ABBR,;IS_MAXREPORTDATE,REPORT_DATE,REPORT_TYPE_CODE,REPORT_TYPE,REPORTDATE,AGEING_TYPE,RANK_NUM,STD_AGEING_NAME,ACCOUNTS_RECE,ACCOUNTS_RECE_RATIO,BADDEBT_PROVISION,BADDEBT_PROVISION_RATIO",
+              "returnSourceName": "证券代码（带后缀）,证券简称,是否最新报告期,报告期,报告期类型,报表类型,报告期(文字),账龄类型,排序,账龄,应收账款金额,占总应收款比例,提取的坏账准备,坏账准备计提比例",
+              "tableType": "10"
+            },
+            "macroAttributeExcelMap": {},
+            "fieldSet": [
+              {
+                "returnCode": "RPT_CUSTOM_F9_BASICINFO_SKBD_JOIN_BDSK_FN_ARSN",
+                "returnName": "应收账款账龄结构",
+                "classCode": "007202",
+                "checkedRelatedIndicators": false,
+                "startDate": "2023-04-19 00:00:00",
+                "endDate": "2026-04-19 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "YEAR",
+                "defineType": -1,
+                "isLoopN": false,
+                "isGroup": false,
+                "returnSourceCode": "SECUCODE,SECURITY_NAME_ABBR,;IS_MAXREPORTDATE,REPORT_DATE,REPORT_TYPE_CODE,REPORT_TYPE,REPORTDATE,AGEING_TYPE,RANK_NUM,STD_AGEING_NAME,ACCOUNTS_RECE,ACCOUNTS_RECE_RATIO,BADDEBT_PROVISION,BADDEBT_PROVISION_RATIO",
+                "returnSourceName": "证券代码（带后缀）,证券简称,是否最新报告期,报告期,报告期类型,报表类型,报告期(文字),账龄类型,排序,账龄,应收账款金额,占总应收款比例,提取的坏账准备,坏账准备计提比例",
+                "tableType": "10"
+              }
+            ],
+            "dataTableType": "F10_TABLE",
+            "inputTitle": "沪电股份(002463.SZ)应收账款账龄结构(2023年中报)",
+            "rowInfo": {},
+            "colInfo": {},
+            "indicatorOrder": [
+              "按账龄",
+              "0",
+              "1",
+              "2"
+            ],
+            "tipFlags": [],
+            "hasThumbnail": true,
+            "indicatorLimited": false,
+            "dataPositionEnum": "MetricLeftTimeTop",
+            "orderCol": {},
+            "jumpUrlList": [
+              {
+                "choiceUrl": "https://choicewzp2.eastmoney.com/stock/cn/f9/index.html#/ReceivableAccountAge?securitycode=002463.SZ",
+                "typeName": "F9深度资料",
+                "securityName": "沪电股份"
+              }
+            ],
+            "dataTypeEnum": "F9",
+            "dateRuleSet": [],
+            "freqConvert": false,
+            "deleteInfo": [],
+            "macroCodeMap": {},
+            "entityTagDTO": {
+              "entityId": "1000006938",
+              "entityType": "SEC",
+              "entityTypeCode": "058001001",
+              "entityTypeName": "A股",
+              "classCode": "002001",
+              "className": "沪深京股票",
+              "fullName": "沪电股份",
+              "secuCode": "002463",
+              "market": "0",
+              "marketChar": ".SZ",
+              "correct": false,
+              "hasKLine": false,
+              "valuation": false
+            },
+            "entityTagDTOList": [
+              {
+                "entityId": "1000006938",
+                "entityType": "SEC",
+                "entityTypeCode": "058001001",
+                "entityTypeName": "A股",
+                "classCode": "002001",
+                "className": "沪深京股票",
+                "fullName": "沪电股份",
+                "secuCode": "002463",
+                "market": "0",
+                "marketChar": ".SZ",
+                "correct": false,
+                "hasKLine": false,
+                "valuation": false
+              }
+            ],
+            "indexTable": false,
+            "edbThirdData": false,
+            "dataUpdate": {},
+            "supportsTimeSeries": false,
+            "estimatedTokens": 0,
+            "summaryTips": {
+              "periodicalReport": null
+            },
+            "nestEntityListMap": {},
+            "excelTimeTruncate": false,
+            "frontendEntityName": "沪电股份",
+            "frontendEntityCode": "002463.SZ",
+            "frontendTitle": "应收账款账龄结构(2023年中报)",
+            "frontendDesc": "",
+            "indicatorCount": 0,
+            "fieldParameterStr": "",
+            "tdayEnum": "NORMAL"
+          }
+        ],
+        "condition": {
+          "search_data_task_1": [
+            "沪电股份",
+            "应收账款账龄结构",
+            "2023-04-19至2026-04-19"
+          ],
+          "search_data_task_0": [
+            "沪电股份",
+            "应收账款及票据",
+            "2023-04-19至2026-04-19"
+          ]
+        },
+        "entityTagDTOList": [
+          {
+            "entityId": "1004487962",
+            "entityType": "SEC",
+            "entityTypeCode": "058001003001",
+            "entityTypeName": "H股",
+            "classCode": "002003",
+            "className": "港股",
+            "fullName": "沪电股份",
+            "secuCode": "H5245",
+            "marketChar": ".HK",
+            "correct": false,
+            "hasKLine": false,
+            "valuation": false
+          },
+          {
+            "entityId": "1000006938",
+            "entityType": "SEC",
+            "entityTypeCode": "058001001",
+            "entityTypeName": "A股",
+            "classCode": "002001",
+            "className": "沪深京股票",
+            "fullName": "沪电股份",
+            "secuCode": "002463",
+            "market": "0",
+            "marketChar": ".SZ",
+            "correct": false,
+            "hasKLine": false,
+            "valuation": false
+          },
+          {
+            "entityId": "1000006938",
+            "entityType": "SEC",
+            "entityTypeCode": "058001001",
+            "entityTypeName": "A股",
+            "classCode": "002001",
+            "className": "沪深京股票",
+            "fullName": "沪电股份",
+            "secuCode": "002463",
+            "market": "0",
+            "marketChar": ".SZ",
+            "correct": false,
+            "hasKLine": false,
+            "valuation": false
+          },
+          {
+            "entityId": "1000006938",
+            "entityType": "SEC",
+            "entityTypeCode": "058001001",
+            "entityTypeName": "A股",
+            "classCode": "002001",
+            "className": "沪深京股票",
+            "fullName": "沪电股份",
+            "secuCode": "002463",
+            "market": "0",
+            "marketChar": ".SZ",
+            "correct": false,
+            "hasKLine": false,
+            "valuation": false
+          },
+          {
+            "entityId": "1000006938",
+            "entityType": "SEC",
+            "entityTypeCode": "058001001",
+            "entityTypeName": "A股",
+            "classCode": "002001",
+            "className": "沪深京股票",
+            "fullName": "沪电股份",
+            "secuCode": "002463",
+            "market": "0",
+            "marketChar": ".SZ",
+            "correct": false,
+            "hasKLine": false,
+            "valuation": false
+          },
+          {
+            "entityId": "1000006938",
+            "entityType": "SEC",
+            "entityTypeCode": "058001001",
+            "entityTypeName": "A股",
+            "classCode": "002001",
+            "className": "沪深京股票",
+            "fullName": "沪电股份",
+            "secuCode": "002463",
+            "market": "0",
+            "marketChar": ".SZ",
+            "correct": false,
+            "hasKLine": false,
+            "valuation": false
+          },
+          {
+            "entityId": "1000006938",
+            "entityType": "SEC",
+            "entityTypeCode": "058001001",
+            "entityTypeName": "A股",
+            "classCode": "002001",
+            "className": "沪深京股票",
+            "fullName": "沪电股份",
+            "secuCode": "002463",
+            "market": "0",
+            "marketChar": ".SZ",
+            "correct": false,
+            "hasKLine": false,
+            "valuation": false
+          }
+        ]
+      },
+      "entityName": null,
+      "message": null,
+      "tableTruncated": false
+    },
+    "stack": null
+  },
+  "requestId": "21384b0e07a04dcfab55a66016bceab8"
+}

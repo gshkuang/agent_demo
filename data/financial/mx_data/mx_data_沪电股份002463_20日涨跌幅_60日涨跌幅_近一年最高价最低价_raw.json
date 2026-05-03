@@ -1,0 +1,662 @@
+{
+  "success": true,
+  "status": 0,
+  "code": 0,
+  "message": "ok",
+  "data": {
+    "requestId": null,
+    "message": "OK",
+    "status": 0,
+    "code": 0,
+    "data": {
+      "protocolType": "SEARCH_DATA",
+      "id": "604dda7f-ad6a-4539-8662-11a069a35ba0",
+      "refSeq": null,
+      "keyEntityList": null,
+      "searchDataResultDTO": {
+        "questionId": "33983c10-df22-4c5d-9809-fd9c6ddb1d84",
+        "dataTableDTOList": [
+          {
+            "code": "002463.SZ",
+            "entityName": "沪电股份(002463.SZ)",
+            "table": {
+              "100000000006290": [
+                "33.65%",
+                "84.29%"
+              ],
+              "headName": [
+                "2026-01-05至2026-04-17",
+                "2025-01-02至2025-12-31"
+              ]
+            },
+            "rawTable": {
+              "100000000006290": [
+                "33.65266183",
+                "84.28751576"
+              ],
+              "headName": [
+                "2026-01-05至2026-04-17",
+                "2025-01-02至2025-12-31"
+              ]
+            },
+            "truncateRawTable": {},
+            "nameMap": {
+              "100000000006290": "区间涨跌幅",
+              "headNameSub": "数据来源"
+            },
+            "headNameMap": {},
+            "field": {
+              "returnCode": "100000000006290",
+              "returnName": "区间涨跌幅",
+              "classCode": "007101",
+              "checkedRelatedIndicators": false,
+              "startDate": "2025-04-19 00:00:00",
+              "endDate": "2026-04-19 00:00:00",
+              "fuzzy": false,
+              "dateGranularity": "YEAR",
+              "defineType": -1,
+              "isLoopN": false,
+              "fixedParamValue": "AdjustFlag=1",
+              "quantType": "1",
+              "isGroup": false,
+              "returnSourceCode": "PCTCHANGE",
+              "returnSourceName": "区间涨跌幅",
+              "graph": "2",
+              "unit": "1",
+              "tableType": "1",
+              "unitName": "%",
+              "unitDesc": "108:%:%"
+            },
+            "entityCodes": [
+              "002463.SZ"
+            ],
+            "macroAttributeExcelMap": {},
+            "fieldSet": [
+              {
+                "returnCode": "100000000006290",
+                "returnName": "区间涨跌幅",
+                "classCode": "007101",
+                "checkedRelatedIndicators": false,
+                "startDate": "2025-04-19 00:00:00",
+                "endDate": "2026-04-19 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "YEAR",
+                "defineType": -1,
+                "isLoopN": false,
+                "fixedParamValue": "AdjustFlag=1",
+                "quantType": "1",
+                "isGroup": false,
+                "returnSourceCode": "PCTCHANGE",
+                "returnSourceName": "区间涨跌幅",
+                "graph": "2",
+                "unit": "1",
+                "tableType": "1",
+                "unitName": "%",
+                "unitDesc": "108:%:%"
+              }
+            ],
+            "dataTableType": "NORM_TABLE",
+            "rowInfo": {},
+            "colInfo": {},
+            "indicatorOrder": [
+              "100000000006290"
+            ],
+            "tipFlags": [],
+            "dataType": "数据浏览器",
+            "title": "沪电股份(002463.SZ)的区间涨跌幅",
+            "hasThumbnail": true,
+            "indicatorLimited": false,
+            "dataPositionEnum": "MetricLeftTimeTop",
+            "orderCol": {},
+            "jumpUrlList": [
+              {
+                "choiceUrl": "EM://stockdatacenter?type=browser&modType=STOCK&code=002463.SZ&indId=100000000006290|513:1|102:2025-12-31|101:2025-01-02,100000000006290|513:1|102:2026-04-17|101:2026-01-05",
+                "typeName": "股票数据浏览器"
+              }
+            ],
+            "dataTypeEnum": "DATA_BROWSER",
+            "dateRuleSet": [],
+            "freqConvert": false,
+            "deleteInfo": [],
+            "macroCodeMap": {},
+            "entityTagDTO": {
+              "entityId": "1000006938",
+              "entityType": "SEC",
+              "entityTypeCode": "058001001",
+              "entityTypeName": "A股",
+              "classCode": "002001",
+              "className": "沪深京股票",
+              "fullName": "沪电股份",
+              "secuCode": "002463",
+              "market": "0",
+              "marketChar": ".SZ",
+              "correct": false,
+              "hasKLine": false,
+              "valuation": false
+            },
+            "entityTagDTOList": [
+              {
+                "entityId": "1000006938",
+                "entityType": "SEC",
+                "entityTypeCode": "058001001",
+                "entityTypeName": "A股",
+                "classCode": "002001",
+                "className": "沪深京股票",
+                "fullName": "沪电股份",
+                "secuCode": "002463",
+                "market": "0",
+                "marketChar": ".SZ",
+                "correct": false,
+                "hasKLine": true,
+                "valuation": false
+              }
+            ],
+            "indexTable": false,
+            "edbThirdData": false,
+            "dataUpdate": {
+              "2026-01-05至2026-04-17": false
+            },
+            "supportsTimeSeries": false,
+            "estimatedTokens": 0,
+            "summaryTips": {
+              "periodicalReport": null
+            },
+            "nestEntityListMap": {},
+            "excelTimeTruncate": false,
+            "frontendEntityName": "",
+            "frontendEntityCode": "",
+            "frontendTitle": "",
+            "frontendDesc": "",
+            "indicatorCount": 0,
+            "fieldParameterStr": "",
+            "tdayEnum": "NORMAL"
+          },
+          {
+            "code": "002463.SZ",
+            "entityName": "沪电股份(002463.SZ)",
+            "table": {
+              "326386": [
+                "75.33元",
+                "69.5元",
+                "64.98元",
+                "67.17元",
+                "67.5元",
+                "59.56元",
+                "64元",
+                "58.14元",
+                "50.1元",
+                "41.98元",
+                "30.56元",
+                "28.35元",
+                "23.58元"
+              ],
+              "326339": [
+                "99.38元",
+                "93.96元",
+                "85.8元",
+                "79.45元",
+                "77.74元",
+                "74元",
+                "83.12元",
+                "84.45元",
+                "70元",
+                "58.59元",
+                "45.9元",
+                "32.45元",
+                "33.47元"
+              ],
+              "headName": [
+                "2026-04-17(月)",
+                "2026-03-31(月)",
+                "2026-02-27(月)",
+                "2026-01-30(月)",
+                "2025-12-31(月)",
+                "2025-11-28(月)",
+                "2025-10-31(月)",
+                "2025-09-30(月)",
+                "2025-08-29(月)",
+                "2025-07-31(月)",
+                "2025-06-30(月)",
+                "2025-05-30(月)",
+                "2025-04-30(月)"
+              ]
+            },
+            "rawTable": {
+              "326386": [
+                "75.33",
+                "69.5",
+                "64.98",
+                "67.17",
+                "67.5",
+                "59.56",
+                "64.0",
+                "58.14",
+                "50.1",
+                "41.98",
+                "30.56",
+                "28.35",
+                "23.58"
+              ],
+              "326339": [
+                "99.38",
+                "93.96",
+                "85.8",
+                "79.45",
+                "77.74",
+                "74.0",
+                "83.12",
+                "84.45",
+                "70.0",
+                "58.59",
+                "45.9",
+                "32.45",
+                "33.47"
+              ],
+              "headName": [
+                "2026-04-17",
+                "2026-03-31",
+                "2026-02-27",
+                "2026-01-30",
+                "2025-12-31",
+                "2025-11-28",
+                "2025-10-31",
+                "2025-09-30",
+                "2025-08-29",
+                "2025-07-31",
+                "2025-06-30",
+                "2025-05-30",
+                "2025-04-30"
+              ]
+            },
+            "truncateRawTable": {},
+            "nameMap": {
+              "326386": "最低价",
+              "headNameSub": "数据来源",
+              "326339": "最高价"
+            },
+            "headNameMap": {},
+            "field": {
+              "returnCode": "326386",
+              "returnName": "最低价",
+              "classCode": "007121",
+              "checkedRelatedIndicators": false,
+              "startDate": "2025-04-19 00:00:00",
+              "endDate": "2026-04-19 00:00:00",
+              "fuzzy": false,
+              "dateGranularity": "MONTH",
+              "defineType": -1,
+              "isLoopN": false,
+              "fixedParamValue": "AdjustFlag=1,CurType=2,Period=3",
+              "isGroup": false,
+              "returnSourceCode": "LOW",
+              "returnSourceName": "最低价(全品种)_序列",
+              "graph": "0",
+              "unit": "2",
+              "tableType": "20",
+              "unitName": "元",
+              "unitDesc": "元"
+            },
+            "entityCodes": [
+              "002463.SZ"
+            ],
+            "macroAttributeExcelMap": {},
+            "fieldSet": [
+              {
+                "returnCode": "326386",
+                "returnName": "最低价",
+                "classCode": "007121",
+                "checkedRelatedIndicators": false,
+                "startDate": "2025-04-19 00:00:00",
+                "endDate": "2026-04-19 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "MONTH",
+                "defineType": -1,
+                "isLoopN": false,
+                "fixedParamValue": "AdjustFlag=1,CurType=2,Period=3",
+                "isGroup": false,
+                "returnSourceCode": "LOW",
+                "returnSourceName": "最低价(全品种)_序列",
+                "graph": "0",
+                "unit": "2",
+                "tableType": "20",
+                "unitName": "元",
+                "unitDesc": "元"
+              },
+              {
+                "returnCode": "326339",
+                "returnName": "最高价",
+                "classCode": "007121",
+                "checkedRelatedIndicators": false,
+                "startDate": "2025-04-19 00:00:00",
+                "endDate": "2026-04-19 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "MONTH",
+                "defineType": -1,
+                "isLoopN": false,
+                "fixedParamValue": "AdjustFlag=1,CurType=2,Period=3",
+                "isGroup": false,
+                "returnSourceCode": "HIGH",
+                "returnSourceName": "最高价(全品种)_序列",
+                "graph": "0",
+                "unit": "2",
+                "tableType": "20",
+                "unitName": "元",
+                "unitDesc": "元"
+              }
+            ],
+            "dataTableType": "NORM_TABLE",
+            "rowInfo": {},
+            "colInfo": {},
+            "indicatorOrder": [
+              "326386",
+              "326339"
+            ],
+            "tipFlags": [],
+            "dataType": "数据浏览器",
+            "title": "沪电股份(002463.SZ)的最低价、最高价",
+            "hasThumbnail": true,
+            "indicatorLimited": false,
+            "dataPositionEnum": "MetricLeftTimeTop",
+            "orderCol": {},
+            "jumpUrlList": [
+              {
+                "choiceUrl": "EM://stockdatacenter?type=browser&modType=STOCK&code=002463.SZ&indId=100000000001095|121:GetLatestDay|513:1,100000000001094|121:GetLatestDay|513:1",
+                "typeName": "股票数据浏览器"
+              }
+            ],
+            "dataTypeEnum": "DATA_BROWSER",
+            "dateRuleSet": [],
+            "freqConvert": false,
+            "deleteInfo": [],
+            "macroCodeMap": {},
+            "entityTagDTO": {
+              "entityId": "1000006938",
+              "entityType": "SEC",
+              "entityTypeCode": "058001001",
+              "entityTypeName": "A股",
+              "classCode": "002001",
+              "className": "沪深京股票",
+              "fullName": "沪电股份",
+              "secuCode": "002463",
+              "market": "0",
+              "marketChar": ".SZ",
+              "correct": false,
+              "hasKLine": false,
+              "valuation": false
+            },
+            "entityTagDTOList": [
+              {
+                "entityId": "1000006938",
+                "entityType": "SEC",
+                "entityTypeCode": "058001001",
+                "entityTypeName": "A股",
+                "classCode": "002001",
+                "className": "沪深京股票",
+                "fullName": "沪电股份",
+                "secuCode": "002463",
+                "market": "0",
+                "marketChar": ".SZ",
+                "correct": false,
+                "hasKLine": true,
+                "valuation": false
+              }
+            ],
+            "indexTable": false,
+            "edbThirdData": false,
+            "dataUpdate": {
+              "2026-04-17": false
+            },
+            "supportsTimeSeries": false,
+            "estimatedTokens": 0,
+            "summaryTips": {
+              "periodicalReport": null
+            },
+            "nestEntityListMap": {},
+            "excelTimeTruncate": false,
+            "frontendEntityName": "",
+            "frontendEntityCode": "",
+            "frontendTitle": "",
+            "frontendDesc": "",
+            "indicatorCount": 0,
+            "fieldParameterStr": "",
+            "tdayEnum": "TDAY"
+          },
+          {
+            "code": "002463.SZ",
+            "entityName": "沪电股份(002463.SZ)",
+            "table": {
+              "100000000006268": [
+                "99.38"
+              ],
+              "100000000006299": [
+                "2026-04-17"
+              ],
+              "headName": [
+                "2025-04-21至2026-04-17"
+              ]
+            },
+            "rawTable": {
+              "100000000006268": [
+                "99.38"
+              ],
+              "100000000006299": [
+                "2026-04-17"
+              ],
+              "headName": [
+                "2025-04-21至2026-04-17"
+              ]
+            },
+            "truncateRawTable": {},
+            "nameMap": {
+              "100000000006268": "区间最高价",
+              "headNameSub": "数据来源",
+              "100000000006299": "区间最高价日"
+            },
+            "headNameMap": {},
+            "field": {
+              "returnCode": "100000000006268",
+              "returnName": "区间最高价",
+              "classCode": "007101",
+              "checkedRelatedIndicators": false,
+              "startDate": "2025-04-19 00:00:00",
+              "endDate": "2026-04-19 00:00:00",
+              "fuzzy": false,
+              "dateGranularity": "YEAR",
+              "defineType": -1,
+              "isLoopN": false,
+              "fixedParamValue": "AdjustFlag=3",
+              "quantType": "1",
+              "isGroup": false,
+              "returnSourceCode": "HIGH",
+              "returnSourceName": "区间最高价",
+              "graph": "2",
+              "unit": "1",
+              "tableType": "1"
+            },
+            "entityCodes": [
+              "002463.SZ"
+            ],
+            "macroAttributeExcelMap": {},
+            "fieldSet": [
+              {
+                "returnCode": "100000000006268",
+                "returnName": "区间最高价",
+                "classCode": "007101",
+                "checkedRelatedIndicators": false,
+                "startDate": "2025-04-19 00:00:00",
+                "endDate": "2026-04-19 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "YEAR",
+                "defineType": -1,
+                "isLoopN": false,
+                "fixedParamValue": "AdjustFlag=3",
+                "quantType": "1",
+                "isGroup": false,
+                "returnSourceCode": "HIGH",
+                "returnSourceName": "区间最高价",
+                "graph": "2",
+                "unit": "1",
+                "tableType": "1"
+              },
+              {
+                "returnCode": "100000000006299",
+                "returnName": "区间最高价日",
+                "classCode": "007101",
+                "checkedRelatedIndicators": false,
+                "startDate": "2025-04-19 00:00:00",
+                "endDate": "2026-04-19 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "YEAR",
+                "defineType": -1,
+                "isLoopN": false,
+                "fixedParamValue": "AdjustFlag=3",
+                "quantType": "1",
+                "isGroup": false,
+                "returnSourceCode": "HIGHDATE",
+                "returnSourceName": "区间最高价日",
+                "graph": "0",
+                "unit": "0",
+                "tableType": "1"
+              }
+            ],
+            "dataTableType": "NORM_TABLE",
+            "rowInfo": {},
+            "colInfo": {},
+            "indicatorOrder": [
+              "100000000006268",
+              "100000000006299"
+            ],
+            "tipFlags": [],
+            "dataType": "数据浏览器",
+            "title": "沪电股份(002463.SZ)的区间最高价、区间最高价日",
+            "hasThumbnail": true,
+            "indicatorLimited": false,
+            "dataPositionEnum": "MetricLeftTimeTop",
+            "orderCol": {},
+            "jumpUrlList": [
+              {
+                "choiceUrl": "EM://stockdatacenter?type=browser&modType=STOCK&code=002463.SZ&indId=100000000006268|513:3|102:2026-04-17|101:2025-04-21,100000000006299|513:3|102:2026-04-17|101:2025-04-21",
+                "typeName": "股票数据浏览器"
+              }
+            ],
+            "dataTypeEnum": "DATA_BROWSER",
+            "dateRuleSet": [],
+            "freqConvert": false,
+            "deleteInfo": [],
+            "macroCodeMap": {},
+            "entityTagDTO": {
+              "entityId": "1000006938",
+              "entityType": "SEC",
+              "entityTypeCode": "058001001",
+              "entityTypeName": "A股",
+              "classCode": "002001",
+              "className": "沪深京股票",
+              "fullName": "沪电股份",
+              "secuCode": "002463",
+              "market": "0",
+              "marketChar": ".SZ",
+              "correct": false,
+              "hasKLine": false,
+              "valuation": false
+            },
+            "entityTagDTOList": [
+              {
+                "entityId": "1000006938",
+                "entityType": "SEC",
+                "entityTypeCode": "058001001",
+                "entityTypeName": "A股",
+                "classCode": "002001",
+                "className": "沪深京股票",
+                "fullName": "沪电股份",
+                "secuCode": "002463",
+                "market": "0",
+                "marketChar": ".SZ",
+                "correct": false,
+                "hasKLine": true,
+                "valuation": false
+              }
+            ],
+            "indexTable": false,
+            "edbThirdData": false,
+            "dataUpdate": {
+              "2025-04-21至2026-04-17": false
+            },
+            "supportsTimeSeries": false,
+            "estimatedTokens": 0,
+            "summaryTips": {
+              "periodicalReport": null
+            },
+            "nestEntityListMap": {},
+            "excelTimeTruncate": false,
+            "frontendEntityName": "",
+            "frontendEntityCode": "",
+            "frontendTitle": "",
+            "frontendDesc": "",
+            "indicatorCount": 0,
+            "fieldParameterStr": "",
+            "tdayEnum": "NORMAL"
+          }
+        ],
+        "condition": {
+          "search_data_task_1": [
+            "沪电股份",
+            "区间涨跌幅最低价区间最高价区间最高价日最高价",
+            "2025-04-19至2026-04-19"
+          ]
+        },
+        "entityTagDTOList": [
+          {
+            "entityId": "1000006938",
+            "entityType": "SEC",
+            "entityTypeCode": "058001001",
+            "entityTypeName": "A股",
+            "classCode": "002001",
+            "className": "沪深京股票",
+            "fullName": "沪电股份",
+            "secuCode": "002463",
+            "market": "0",
+            "marketChar": ".SZ",
+            "correct": false,
+            "hasKLine": false,
+            "valuation": false
+          },
+          {
+            "entityId": "1000006938",
+            "entityType": "SEC",
+            "entityTypeCode": "058001001",
+            "entityTypeName": "A股",
+            "classCode": "002001",
+            "className": "沪深京股票",
+            "fullName": "沪电股份",
+            "secuCode": "002463",
+            "market": "0",
+            "marketChar": ".SZ",
+            "correct": false,
+            "hasKLine": false,
+            "valuation": false
+          },
+          {
+            "entityId": "1000006938",
+            "entityType": "SEC",
+            "entityTypeCode": "058001001",
+            "entityTypeName": "A股",
+            "classCode": "002001",
+            "className": "沪深京股票",
+            "fullName": "沪电股份",
+            "secuCode": "002463",
+            "market": "0",
+            "marketChar": ".SZ",
+            "correct": false,
+            "hasKLine": false,
+            "valuation": false
+          }
+        ]
+      },
+      "entityName": null,
+      "message": null,
+      "tableTruncated": false
+    },
+    "stack": null
+  },
+  "requestId": "cc1e9e52c4544c378d332814060e6f5a"
+}

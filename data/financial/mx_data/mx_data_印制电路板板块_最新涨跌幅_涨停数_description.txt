@@ -1,0 +1,8 @@
+金融数据查询结果说明
+========================================
+查询内容: 印制电路板板块 最新涨跌幅 涨停数
+数据文件路径: /Users/guangshengkuang/.qclaw/workspace/mx_data/mx_data_印制电路板板块_最新涨跌幅_涨停数.xlsx
+描述文件路径: /Users/guangshengkuang/.qclaw/workspace/mx_data/mx_data_印制电路板板块_最新涨跌幅_涨停数_description.txt
+数据行数: 10
+表数量: 2
+Sheet 列表: 印制电路板的涨跌幅(算数平均), 印制电路板的涨停家数

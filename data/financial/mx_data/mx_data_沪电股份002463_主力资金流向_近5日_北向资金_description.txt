@@ -1,0 +1,8 @@
+金融数据查询结果说明
+========================================
+查询内容: 沪电股份002463 主力资金流向 近5日 北向资金
+数据文件路径: /Users/guangshengkuang/.qclaw/workspace/mx_data/mx_data_沪电股份002463_主力资金流向_近5日_北向资金.xlsx
+描述文件路径: /Users/guangshengkuang/.qclaw/workspace/mx_data/mx_data_沪电股份002463_主力资金流向_近5日_北向资金_description.txt
+数据行数: 8
+表数量: 2
+Sheet 列表: 沪电股份(002463.SZ)的(区间)主力净流入资金、(区间)资金净流入天数等, 沪电股份(002463.SZ)的超大单流出资金、大单流入资金等

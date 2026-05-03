@@ -1,0 +1,769 @@
+{
+  "success": true,
+  "status": 0,
+  "code": 0,
+  "message": "ok",
+  "data": {
+    "requestId": null,
+    "message": "OK",
+    "status": 0,
+    "code": 0,
+    "data": {
+      "protocolType": "SEARCH_DATA",
+      "id": "e91f9c3c-0d5c-4f34-a7bd-4a514cb5fd33",
+      "refSeq": null,
+      "keyEntityList": null,
+      "searchDataResultDTO": {
+        "questionId": "0cf6a270-966e-404a-9405-2e4071903483",
+        "dataTableDTOList": [
+          {
+            "code": "002463.SZ",
+            "entityName": "沪电股份(002463.SZ)",
+            "table": {
+              "100000000044473": [
+                "46.46%",
+                "43.81%",
+                "38.65%"
+              ],
+              "headName": [
+                "2025年报",
+                "2024年报",
+                "2023年报"
+              ]
+            },
+            "rawTable": {
+              "100000000044473": [
+                "46.45735134400",
+                "43.808015559500",
+                "38.653390774900"
+              ],
+              "headName": [
+                "2025年报",
+                "2024年报",
+                "2023年报"
+              ]
+            },
+            "truncateRawTable": {},
+            "nameMap": {
+              "100000000044473": "资产负债率",
+              "headNameSub": "数据来源"
+            },
+            "headNameMap": {},
+            "field": {
+              "returnCode": "100000000044473",
+              "returnName": "资产负债率",
+              "classCode": "007101",
+              "checkedRelatedIndicators": false,
+              "startDate": "2023-01-01 00:00:00",
+              "endDate": "2023-12-31 00:00:00",
+              "fuzzy": false,
+              "dateGranularity": "FISCAL_YEAR",
+              "defineType": -1,
+              "isLoopN": false,
+              "fixedParamValue": "Type=1",
+              "quantType": "1",
+              "isGroup": false,
+              "returnSourceCode": "DEBTTOASSETS2",
+              "returnSourceName": "资产负债率",
+              "graph": "2",
+              "unit": "1",
+              "tableType": "1",
+              "unitName": "%",
+              "unitDesc": "10802:%:%"
+            },
+            "entityCodes": [
+              "002463.SZ"
+            ],
+            "macroAttributeExcelMap": {},
+            "fieldSet": [
+              {
+                "returnCode": "100000000044473",
+                "returnName": "资产负债率",
+                "classCode": "007101",
+                "checkedRelatedIndicators": false,
+                "startDate": "2023-01-01 00:00:00",
+                "endDate": "2025-12-31 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "FISCAL_YEAR",
+                "defineType": -1,
+                "isLoopN": false,
+                "fixedParamValue": "Type=1",
+                "quantType": "1",
+                "isGroup": false,
+                "returnSourceCode": "DEBTTOASSETS2",
+                "returnSourceName": "资产负债率",
+                "graph": "2",
+                "unit": "1",
+                "tableType": "1",
+                "unitName": "%",
+                "unitDesc": "10802:%:%"
+              }
+            ],
+            "dataTableType": "NORM_TABLE",
+            "rowInfo": {},
+            "colInfo": {},
+            "indicatorOrder": [
+              "100000000044473"
+            ],
+            "tipFlags": [],
+            "dataType": "数据浏览器",
+            "title": "沪电股份(002463.SZ)的资产负债率",
+            "hasThumbnail": true,
+            "indicatorLimited": false,
+            "dataPositionEnum": "MetricLeftTimeTop",
+            "orderCol": {},
+            "jumpUrlList": [
+              {
+                "choiceUrl": "EM://stockdatacenter?type=browser&modType=STOCK&code=002463.SZ&indId=100000000044473|115:1|100:2023-12-31,100000000044473|115:1|100:2024-12-31,100000000044473|115:1|100:2025-12-31",
+                "typeName": "股票数据浏览器"
+              }
+            ],
+            "dataTypeEnum": "DATA_BROWSER",
+            "dateRuleSet": [],
+            "freqConvert": false,
+            "deleteInfo": [],
+            "macroCodeMap": {},
+            "entityTagDTO": {
+              "entityId": "1000006938",
+              "entityType": "SEC",
+              "entityTypeCode": "058001001",
+              "entityTypeName": "A股",
+              "classCode": "002001",
+              "className": "沪深京股票",
+              "fullName": "沪电股份",
+              "secuCode": "002463",
+              "market": "0",
+              "marketChar": ".SZ",
+              "correct": false,
+              "hasKLine": false,
+              "valuation": false
+            },
+            "entityTagDTOList": [
+              {
+                "entityId": "1000006938",
+                "entityType": "SEC",
+                "entityTypeCode": "058001001",
+                "entityTypeName": "A股",
+                "classCode": "002001",
+                "className": "沪深京股票",
+                "fullName": "沪电股份",
+                "secuCode": "002463",
+                "market": "0",
+                "marketChar": ".SZ",
+                "correct": false,
+                "hasKLine": false,
+                "valuation": false
+              }
+            ],
+            "indexTable": false,
+            "edbThirdData": false,
+            "dataUpdate": {
+              "2025年报": false
+            },
+            "supportsTimeSeries": false,
+            "estimatedTokens": 0,
+            "summaryTips": {
+              "periodicalReport": null
+            },
+            "nestEntityListMap": {},
+            "excelTimeTruncate": false,
+            "frontendEntityName": "",
+            "frontendEntityCode": "",
+            "frontendTitle": "",
+            "frontendDesc": "",
+            "indicatorCount": 0,
+            "fieldParameterStr": "",
+            "tdayEnum": "NORMAL"
+          },
+          {
+            "code": "H5245.HK",
+            "entityName": "沪电股份(H5245.HK)(最新年结日12-31)",
+            "table": {
+              "100000000046656": [
+                "208.5亿港元",
+                "-",
+                "144.1亿港元",
+                "98.63亿港元"
+              ],
+              "100000000051343": [
+                "-",
+                "93.14亿港元",
+                "144.1亿港元",
+                "98.63亿港元"
+              ],
+              "100000000047277": [
+                "42.28亿港元",
+                "-",
+                "27.71亿港元",
+                "16.44亿港元"
+              ],
+              "100000000046675": [
+                "42.32亿港元",
+                "-",
+                "27.94亿港元",
+                "16.69亿港元"
+              ],
+              "100000000046754": [
+                "42.87亿港元",
+                "-",
+                "24.6亿港元",
+                "24.5亿港元"
+              ],
+              "100000000046852": [
+                "0.762",
+                "-",
+                "0.717",
+                "0.6264"
+              ],
+              "100000000046860": [
+                "-",
+                "0.965港元",
+                "1.458港元",
+                "0.8718港元"
+              ],
+              "100000000046903": [
+                "28.36",
+                "-",
+                "23.93",
+                "16.76"
+              ],
+              "100000000046905": [
+                "15.46",
+                "-",
+                "13.9",
+                "10.6"
+              ],
+              "100000000046942": [
+                "46.46",
+                "-",
+                "43.81",
+                "38.65"
+              ],
+              "100000000046897": [
+                "35.09",
+                "-",
+                "31.75",
+                "28.45"
+              ],
+              "100000000046899": [
+                "20.28",
+                "-",
+                "19.24",
+                "16.66"
+              ],
+              "headName": [
+                "2025年报",
+                "2025中报",
+                "2024年报",
+                "2023年报"
+              ]
+            },
+            "rawTable": {
+              "100000000046656": [
+                "20851856900.8658",
+                "-",
+                "14407089326.594965",
+                "9863288164.021982"
+              ],
+              "100000000051343": [
+                "-",
+                "9313966774.494215",
+                "14407089326.594965",
+                "9863288164.021982"
+              ],
+              "100000000047277": [
+                "4227843834.281794",
+                "-",
+                "2771278778.454495",
+                "1643660479.7951932"
+              ],
+              "100000000046675": [
+                "4231866291.7118773",
+                "-",
+                "2793871754.9997845",
+                "1669062700.006621"
+              ],
+              "100000000046754": [
+                "4286849042.315274",
+                "-",
+                "2459528746.058486",
+                "2450238352.717883"
+              ],
+              "100000000046852": [
+                "0.761974938251",
+                "-",
+                "0.716990023704",
+                "0.626440766582"
+              ],
+              "100000000046860": [
+                "-",
+                "0.9649651844947639",
+                "1.4578203965271481",
+                "0.8717529959612457"
+              ],
+              "100000000046903": [
+                "28.3622441134",
+                "-",
+                "23.9276657181",
+                "16.7579318561"
+              ],
+              "100000000046905": [
+                "15.4642153533",
+                "-",
+                "13.9041143595",
+                "10.6006120867"
+              ],
+              "100000000046942": [
+                "46.457351343999996",
+                "-",
+                "43.808014519400004",
+                "38.653389942"
+              ],
+              "100000000046897": [
+                "35.0938843259",
+                "-",
+                "31.749278437900003",
+                "28.445302125900003"
+              ],
+              "100000000046899": [
+                "20.275622715",
+                "-",
+                "19.2355215938",
+                "16.6644272423"
+              ],
+              "headName": [
+                "2025年报",
+                "2025中报",
+                "2024年报",
+                "2023年报"
+              ]
+            },
+            "truncateRawTable": {},
+            "nameMap": {
+              "100000000046656": "营业总收入",
+              "headNameSub": "数据来源",
+              "100000000051343": "营业收入",
+              "100000000047277": "净利润",
+              "100000000046675": "归属于母公司股东的净利润",
+              "100000000046754": "经营活动产生的现金流量净额",
+              "100000000046852": "总资产周转率(次)",
+              "100000000046860": "每股收益EPS(基本)",
+              "100000000046903": "净资产收益率(年化)(%)",
+              "100000000046905": "总资产净利率(%)",
+              "100000000046942": "资产负债率(%)",
+              "100000000046897": "销售毛利率(%)",
+              "100000000046899": "销售净利率(%)"
+            },
+            "headNameMap": {},
+            "field": {
+              "returnCode": "100000000046656",
+              "returnName": "营业总收入",
+              "classCode": "007101",
+              "checkedRelatedIndicators": false,
+              "startDate": "2023-01-01 00:00:00",
+              "endDate": "2023-12-31 00:00:00",
+              "fuzzy": false,
+              "dateGranularity": "FISCAL_YEAR",
+              "defineType": -1,
+              "isLoopN": false,
+              "fixedParamValue": "type=1,CurType=4",
+              "quantType": "1",
+              "isGroup": false,
+              "returnSourceCode": "TOTALREVENUE",
+              "returnSourceName": "营业总收入",
+              "graph": "1",
+              "unit": "1",
+              "tableType": "1",
+              "unitName": "元",
+              "unitDesc": "101:元:元"
+            },
+            "entityCodes": [
+              "H5245.HK"
+            ],
+            "macroAttributeExcelMap": {},
+            "fieldSet": [
+              {
+                "returnCode": "100000000046897",
+                "returnName": "销售毛利率(%)",
+                "classCode": "007101",
+                "checkedRelatedIndicators": false,
+                "startDate": "2023-01-01 00:00:00",
+                "endDate": "2025-12-31 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "FISCAL_YEAR",
+                "defineType": -1,
+                "isLoopN": false,
+                "quantType": "1",
+                "isGroup": false,
+                "returnSourceCode": "GROSSPROFITMARGIN",
+                "returnSourceName": "销售毛利率(%)",
+                "graph": "2",
+                "unit": "1",
+                "tableType": "1"
+              },
+              {
+                "returnCode": "100000000046905",
+                "returnName": "总资产净利率(%)",
+                "classCode": "007101",
+                "checkedRelatedIndicators": false,
+                "startDate": "2023-01-01 00:00:00",
+                "endDate": "2025-12-31 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "FISCAL_YEAR",
+                "defineType": -1,
+                "isLoopN": false,
+                "quantType": "1",
+                "isGroup": false,
+                "returnSourceCode": "ROA",
+                "returnSourceName": "总资产净利率(%)",
+                "graph": "2",
+                "unit": "1",
+                "tableType": "1"
+              },
+              {
+                "returnCode": "100000000046852",
+                "returnName": "总资产周转率(次)",
+                "classCode": "007101",
+                "checkedRelatedIndicators": false,
+                "startDate": "2023-01-01 00:00:00",
+                "endDate": "2025-12-31 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "FISCAL_YEAR",
+                "defineType": -1,
+                "isLoopN": false,
+                "quantType": "1",
+                "isGroup": false,
+                "returnSourceCode": "ASSETSTURN",
+                "returnSourceName": "总资产周转率(次)",
+                "graph": "2",
+                "unit": "1",
+                "tableType": "1"
+              },
+              {
+                "returnCode": "100000000046754",
+                "returnName": "经营活动产生的现金流量净额",
+                "classCode": "007101",
+                "checkedRelatedIndicators": false,
+                "startDate": "2023-01-01 00:00:00",
+                "endDate": "2025-12-31 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "FISCAL_YEAR",
+                "defineType": -1,
+                "isLoopN": false,
+                "fixedParamValue": "type=1,CurType=4",
+                "quantType": "1",
+                "isGroup": false,
+                "returnSourceCode": "NETCF_OP",
+                "returnSourceName": "经营活动产生的现金流量净额",
+                "graph": "1",
+                "unit": "1",
+                "tableType": "1",
+                "unitName": "元",
+                "unitDesc": "101:元:元"
+              },
+              {
+                "returnCode": "100000000046942",
+                "returnName": "资产负债率(%)",
+                "classCode": "007101",
+                "checkedRelatedIndicators": false,
+                "startDate": "2023-01-01 00:00:00",
+                "endDate": "2025-12-31 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "FISCAL_YEAR",
+                "defineType": -1,
+                "isLoopN": false,
+                "quantType": "1",
+                "isGroup": false,
+                "returnSourceCode": "DEBTTOASSETS",
+                "returnSourceName": "资产负债率(%)",
+                "graph": "2",
+                "unit": "1",
+                "tableType": "1"
+              },
+              {
+                "returnCode": "100000000046899",
+                "returnName": "销售净利率(%)",
+                "classCode": "007101",
+                "checkedRelatedIndicators": false,
+                "startDate": "2023-01-01 00:00:00",
+                "endDate": "2025-12-31 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "FISCAL_YEAR",
+                "defineType": -1,
+                "isLoopN": false,
+                "quantType": "1",
+                "isGroup": false,
+                "returnSourceCode": "NETPROFITMARGIN",
+                "returnSourceName": "销售净利率(%)",
+                "graph": "2",
+                "unit": "1",
+                "tableType": "1"
+              },
+              {
+                "returnCode": "100000000051343",
+                "returnName": "营业收入",
+                "classCode": "007101",
+                "checkedRelatedIndicators": false,
+                "startDate": "2023-01-01 00:00:00",
+                "endDate": "2025-12-31 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "FISCAL_YEAR",
+                "defineType": -1,
+                "isLoopN": false,
+                "fixedParamValue": "type=1,CurType=4",
+                "quantType": "1",
+                "isGroup": false,
+                "returnSourceCode": "OPREVENUE",
+                "returnSourceName": "营业收入",
+                "graph": "0",
+                "unit": "1",
+                "tableType": "1",
+                "unitName": "元",
+                "unitDesc": "101:元:元"
+              },
+              {
+                "returnCode": "100000000046675",
+                "returnName": "归属于母公司股东的净利润",
+                "classCode": "007101",
+                "checkedRelatedIndicators": false,
+                "startDate": "2023-01-01 00:00:00",
+                "endDate": "2025-12-31 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "FISCAL_YEAR",
+                "defineType": -1,
+                "isLoopN": false,
+                "fixedParamValue": "type=1,CurType=4",
+                "quantType": "1",
+                "isGroup": false,
+                "returnSourceCode": "NETPROFIT",
+                "returnSourceName": "归属于母公司股东的净利润",
+                "graph": "1",
+                "unit": "1",
+                "tableType": "1",
+                "unitName": "元",
+                "unitDesc": "101:元:元"
+              },
+              {
+                "returnCode": "100000000046656",
+                "returnName": "营业总收入",
+                "classCode": "007101",
+                "checkedRelatedIndicators": false,
+                "startDate": "2023-01-01 00:00:00",
+                "endDate": "2025-12-31 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "FISCAL_YEAR",
+                "defineType": -1,
+                "isLoopN": false,
+                "fixedParamValue": "type=1,CurType=4",
+                "quantType": "1",
+                "isGroup": false,
+                "returnSourceCode": "TOTALREVENUE",
+                "returnSourceName": "营业总收入",
+                "graph": "1",
+                "unit": "1",
+                "tableType": "1",
+                "unitName": "元",
+                "unitDesc": "101:元:元"
+              },
+              {
+                "returnCode": "100000000046860",
+                "returnName": "每股收益EPS(基本)",
+                "classCode": "007101",
+                "checkedRelatedIndicators": false,
+                "startDate": "2023-01-01 00:00:00",
+                "endDate": "2025-12-31 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "FISCAL_YEAR",
+                "defineType": -1,
+                "isLoopN": false,
+                "fixedParamValue": "CurType=4",
+                "quantType": "1",
+                "isGroup": false,
+                "returnSourceCode": "EPS_BASIC",
+                "returnSourceName": "每股收益EPS(基本)",
+                "graph": "2",
+                "unit": "1",
+                "tableType": "1",
+                "unitName": "元",
+                "unitDesc": "101:元:元"
+              },
+              {
+                "returnCode": "100000000047277",
+                "returnName": "净利润",
+                "classCode": "007101",
+                "checkedRelatedIndicators": false,
+                "startDate": "2023-01-01 00:00:00",
+                "endDate": "2025-12-31 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "FISCAL_YEAR",
+                "defineType": -1,
+                "isLoopN": false,
+                "fixedParamValue": "type=1,CurType=4",
+                "quantType": "1",
+                "isGroup": false,
+                "returnSourceCode": "NI",
+                "returnSourceName": "净利润",
+                "graph": "1",
+                "unit": "1",
+                "tableType": "1",
+                "unitName": "元",
+                "unitDesc": "101:元:元"
+              },
+              {
+                "returnCode": "100000000046903",
+                "returnName": "净资产收益率(年化)(%)",
+                "classCode": "007101",
+                "checkedRelatedIndicators": false,
+                "startDate": "2023-01-01 00:00:00",
+                "endDate": "2025-12-31 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "FISCAL_YEAR",
+                "defineType": -1,
+                "isLoopN": false,
+                "quantType": "1",
+                "isGroup": false,
+                "returnSourceCode": "ROE_YEARLY",
+                "returnSourceName": "净资产收益率(年化)(%)",
+                "graph": "2",
+                "unit": "1",
+                "tableType": "1"
+              }
+            ],
+            "dataTableType": "NORM_TABLE",
+            "rowInfo": {},
+            "colInfo": {},
+            "indicatorOrder": [
+              "100000000046656",
+              "100000000051343",
+              "100000000047277",
+              "100000000046675",
+              "100000000046754",
+              "100000000046852",
+              "100000000046860",
+              "100000000046903",
+              "100000000046905",
+              "100000000046942",
+              "100000000046897",
+              "100000000046899"
+            ],
+            "tipFlags": [],
+            "dataType": "数据浏览器",
+            "title": "沪电股份(H5245.HK)(最新年结日12-31)的营业总收入、营业收入等",
+            "hasThumbnail": true,
+            "indicatorLimited": false,
+            "dataPositionEnum": "MetricLeftTimeTop",
+            "orderCol": {},
+            "jumpUrlList": [
+              {
+                "choiceUrl": "EM://stockdatacenter?type=browser&modType=STOCK&code=H5245.HK&indId=100000000046656|100:2023-12-31|115:1|453:4,100000000046656|100:2024-12-31|115:1|453:4,100000000046656|100:2025-12-31|115:1|453:4,100000000051343|100:2023-12-31|115:1|453:4,100000000051343|100:2024-12-31|115:1|453:4,100000000051343|100:2025-06-30|115:1|453:4,100000000047277|100:2023-12-31|115:1|453:4,100000000047277|100:2024-12-31|115:1|453:4,100000000047277|100:2025-12-31|115:1|453:4,100000000046675|100:2023-12-31|115:1|453:4,100000000046675|100:2024-12-31|115:1|453:4,100000000046675|100:2025-12-31|115:1|453:4,100000000046754|100:2023-12-31|115:1|453:4,100000000046754|100:2024-12-31|115:1|453:4,100000000046754|100:2025-12-31|115:1|453:4,100000000046852|100:2023-12-31,100000000046852|100:2024-12-31,100000000046852|100:2025-12-31,100000000046860|100:2023-12-31|652:4,100000000046860|100:2024-12-31|652:4,100000000046860|100:2025-06-30|652:4,100000000046903|100:2023-12-31,100000000046903|100:2024-12-31,100000000046903|100:2025-12-31,100000000046905|100:2023-12-31,100000000046905|100:2024-12-31,100000000046905|100:2025-12-31,100000000046942|100:2023-12-31,100000000046942|100:2024-12-31,100000000046942|100:2025-12-31,100000000046897|100:2023-12-31,100000000046897|100:2024-12-31,100000000046897|100:2025-12-31,100000000046899|100:2023-12-31,100000000046899|100:2024-12-31,100000000046899|100:2025-12-31",
+                "typeName": "股票数据浏览器"
+              }
+            ],
+            "dataTypeEnum": "DATA_BROWSER",
+            "dateRuleSet": [],
+            "freqConvert": false,
+            "deleteInfo": [],
+            "macroCodeMap": {},
+            "entityTagDTO": {
+              "entityId": "1004487962",
+              "entityType": "SEC",
+              "entityTypeCode": "058001003001",
+              "entityTypeName": "H股",
+              "classCode": "002003",
+              "className": "港股",
+              "fullName": "沪电股份",
+              "secuCode": "H5245",
+              "marketChar": ".HK",
+              "correct": false,
+              "hasKLine": false,
+              "valuation": false
+            },
+            "entityTagDTOList": [
+              {
+                "entityId": "1004487962",
+                "entityType": "SEC",
+                "entityTypeCode": "058001003001",
+                "entityTypeName": "H股",
+                "classCode": "002003",
+                "className": "港股",
+                "fullName": "沪电股份",
+                "secuCode": "H5245",
+                "marketChar": ".HK",
+                "correct": false,
+                "hasKLine": false,
+                "valuation": false
+              }
+            ],
+            "indexTable": false,
+            "edbThirdData": false,
+            "dataUpdate": {
+              "2025年报": false
+            },
+            "supportsTimeSeries": false,
+            "estimatedTokens": 0,
+            "summaryTips": {
+              "periodicalReport": null
+            },
+            "nestEntityListMap": {},
+            "excelTimeTruncate": false,
+            "frontendEntityName": "",
+            "frontendEntityCode": "",
+            "frontendTitle": "",
+            "frontendDesc": "",
+            "indicatorCount": 0,
+            "fieldParameterStr": "",
+            "tdayEnum": "NORMAL"
+          }
+        ],
+        "condition": {
+          "search_data_task_0": [
+            "沪电股份",
+            "资产负债率",
+            "2023-01-01至2025-12-31"
+          ],
+          "search_data_task_1": [
+            "沪电股份",
+            "营业总收入营业收入净利润归属于母公司股东的净利润经营活动产生的现金流量净额总资产周转率(次)每股收益EPS(基本)净资产收益率(年化)(%)总资产净利率(%)资产负债率(%)销售毛利率(%)销售净利率(%)",
+            "2023-01-01至2025-12-31"
+          ]
+        },
+        "entityTagDTOList": [
+          {
+            "entityId": "1000006938",
+            "entityType": "SEC",
+            "entityTypeCode": "058001001",
+            "entityTypeName": "A股",
+            "classCode": "002001",
+            "className": "沪深京股票",
+            "fullName": "沪电股份",
+            "secuCode": "002463",
+            "market": "0",
+            "marketChar": ".SZ",
+            "correct": false,
+            "hasKLine": false,
+            "valuation": false
+          },
+          {
+            "entityId": "1004487962",
+            "entityType": "SEC",
+            "entityTypeCode": "058001003001",
+            "entityTypeName": "H股",
+            "classCode": "002003",
+            "className": "港股",
+            "fullName": "沪电股份",
+            "secuCode": "H5245",
+            "marketChar": ".HK",
+            "correct": false,
+            "hasKLine": false,
+            "valuation": false
+          }
+        ]
+      },
+      "entityName": null,
+      "message": null,
+      "tableTruncated": false
+    },
+    "stack": null
+  },
+  "requestId": "d302fc41a2f6432899ce44ab97fecfda"
+}

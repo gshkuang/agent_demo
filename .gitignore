@@ -1,0 +1,30 @@
+# 数据文件（大量原始数据，不纳入版本控制）
+data/financial/mx_data/output/
+*.csv
+*.xlsx
+*.parquet
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.env
+venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# 日志
+*.log
+logs/
+
+# 模型文件（大文件）
+*.bin
+*.pt
+*.pth
+*.onnx
+*.safetensors

@@ -1,0 +1,1100 @@
+[
+  {
+    "strategy": "递归分块",
+    "hit_rate": 0.9,
+    "partial_hit_rate": 1.0,
+    "num_chunks": 62,
+    "avg_chunk_size": 577.5,
+    "chunk_size_std": 703.6040801565205,
+    "boundary_quality_score": 1.0,
+    "details": [
+      {
+        "question": "沪电股份的ROE和毛利率是多少？",
+        "category": "财务指标查询",
+        "description": "需要同一文档中的多个财务指标",
+        "found": [
+          "ROE"
+        ],
+        "expected": [
+          "沪电股份",
+          "ROE",
+          "毛利率"
+        ],
+        "in_single_chunk": false,
+        "hit": false,
+        "partial_hit": true
+      },
+      {
+        "question": "泰豪科技2025年的营业收入和净利润？",
+        "category": "年报数据查询",
+        "description": "需要同一股票的多项年报数据",
+        "found": [
+          "净利润",
+          "营业收入",
+          "泰豪科技"
+        ],
+        "expected": [
+          "泰豪科技",
+          "营业收入",
+          "净利润"
+        ],
+        "in_single_chunk": true,
+        "hit": true,
+        "partial_hit": true
+      },
+      {
+        "question": "芯瑞达的主力资金流向情况？",
+        "category": "资金流向查询",
+        "description": "需要特定股票的资金流向数据",
+        "found": [
+          "芯瑞达",
+          "主力资金"
+        ],
+        "expected": [
+          "芯瑞达",
+          "主力资金"
+        ],
+        "in_single_chunk": true,
+        "hit": true,
+        "partial_hit": true
+      },
+      {
+        "question": "三安光电的十大流通股东有哪些？",
+        "category": "股东信息查询",
+        "description": "需要股东列表信息",
+        "found": [
+          "三安光电",
+          "流通股东"
+        ],
+        "expected": [
+          "三安光电",
+          "流通股东"
+        ],
+        "in_single_chunk": true,
+        "hit": true,
+        "partial_hit": true
+      },
+      {
+        "question": "科瑞技术的市盈率和市净率？",
+        "category": "估值指标查询",
+        "description": "需要同一股票的多个估值指标",
+        "found": [
+          "市净率",
+          "市盈率",
+          "科瑞技术"
+        ],
+        "expected": [
+          "科瑞技术",
+          "市盈率",
+          "市净率"
+        ],
+        "in_single_chunk": true,
+        "hit": true,
+        "partial_hit": true
+      },
+      {
+        "question": "板块轮动复盘中的涨停传导路径？",
+        "category": "分析文档查询",
+        "description": "需要分析文档中的概念性内容",
+        "found": [
+          "涨停",
+          "板块",
+          "传导"
+        ],
+        "expected": [
+          "涨停",
+          "传导",
+          "板块"
+        ],
+        "in_single_chunk": true,
+        "hit": true,
+        "partial_hit": true
+      },
+      {
+        "question": "贝贝虾分析中的个股评分？",
+        "category": "分析文档查询",
+        "description": "需要特定分析方法的评分结果",
+        "found": [
+          "评分",
+          "贝贝虾"
+        ],
+        "expected": [
+          "贝贝虾",
+          "评分"
+        ],
+        "in_single_chunk": true,
+        "hit": true,
+        "partial_hit": true
+      },
+      {
+        "question": "回测系统的数据爬取逻辑？",
+        "category": "技术文档查询",
+        "description": "需要技术文档中的实现细节",
+        "found": [
+          "爬取",
+          "回测",
+          "数据"
+        ],
+        "expected": [
+          "回测",
+          "爬取",
+          "数据"
+        ],
+        "in_single_chunk": true,
+        "hit": true,
+        "partial_hit": true
+      },
+      {
+        "question": "欧菲光的资产负债率和经营现金流？",
+        "category": "财务指标查询",
+        "description": "跨文档查询：需要找到正确的文档",
+        "found": [
+          "欧菲光",
+          "经营现金流",
+          "资产负债率"
+        ],
+        "expected": [
+          "欧菲光",
+          "资产负债率",
+          "经营现金流"
+        ],
+        "in_single_chunk": true,
+        "hit": true,
+        "partial_hit": true
+      },
+      {
+        "question": "华如科技的收盘价和涨跌幅？",
+        "category": "行情数据查询",
+        "description": "需要实时行情类数据",
+        "found": [
+          "收盘价",
+          "华如科技",
+          "涨跌幅"
+        ],
+        "expected": [
+          "华如科技",
+          "收盘价",
+          "涨跌幅"
+        ],
+        "in_single_chunk": true,
+        "hit": true,
+        "partial_hit": true
+      }
+    ]
+  },
+  {
+    "strategy": "结构化感知分块",
+    "hit_rate": 0.9,
+    "partial_hit_rate": 1.0,
+    "num_chunks": 74,
+    "avg_chunk_size": 484.7162162162162,
+    "chunk_size_std": 678.3748170736712,
+    "boundary_quality_score": 1.0,
+    "details": [
+      {
+        "question": "沪电股份的ROE和毛利率是多少？",
+        "category": "财务指标查询",
+        "description": "需要同一文档中的多个财务指标",
+        "found": [
+          "ROE"
+        ],
+        "expected": [
+          "沪电股份",
+          "ROE",
+          "毛利率"
+        ],
+        "in_single_chunk": false,
+        "hit": false,
+        "partial_hit": true
+      },
+      {
+        "question": "泰豪科技2025年的营业收入和净利润？",
+        "category": "年报数据查询",
+        "description": "需要同一股票的多项年报数据",
+        "found": [
+          "净利润",
+          "营业收入",
+          "泰豪科技"
+        ],
+        "expected": [
+          "泰豪科技",
+          "营业收入",
+          "净利润"
+        ],
+        "in_single_chunk": true,
+        "hit": true,
+        "partial_hit": true
+      },
+      {
+        "question": "芯瑞达的主力资金流向情况？",
+        "category": "资金流向查询",
+        "description": "需要特定股票的资金流向数据",
+        "found": [
+          "芯瑞达",
+          "主力资金"
+        ],
+        "expected": [
+          "芯瑞达",
+          "主力资金"
+        ],
+        "in_single_chunk": true,
+        "hit": true,
+        "partial_hit": true
+      },
+      {
+        "question": "三安光电的十大流通股东有哪些？",
+        "category": "股东信息查询",
+        "description": "需要股东列表信息",
+        "found": [
+          "三安光电",
+          "流通股东"
+        ],
+        "expected": [
+          "三安光电",
+          "流通股东"
+        ],
+        "in_single_chunk": true,
+        "hit": true,
+        "partial_hit": true
+      },
+      {
+        "question": "科瑞技术的市盈率和市净率？",
+        "category": "估值指标查询",
+        "description": "需要同一股票的多个估值指标",
+        "found": [
+          "市净率",
+          "市盈率",
+          "科瑞技术"
+        ],
+        "expected": [
+          "科瑞技术",
+          "市盈率",
+          "市净率"
+        ],
+        "in_single_chunk": true,
+        "hit": true,
+        "partial_hit": true
+      },
+      {
+        "question": "板块轮动复盘中的涨停传导路径？",
+        "category": "分析文档查询",
+        "description": "需要分析文档中的概念性内容",
+        "found": [
+          "涨停",
+          "板块",
+          "传导"
+        ],
+        "expected": [
+          "涨停",
+          "传导",
+          "板块"
+        ],
+        "in_single_chunk": true,
+        "hit": true,
+        "partial_hit": true
+      },
+      {
+        "question": "贝贝虾分析中的个股评分？",
+        "category": "分析文档查询",
+        "description": "需要特定分析方法的评分结果",
+        "found": [
+          "评分",
+          "贝贝虾"
+        ],
+        "expected": [
+          "贝贝虾",
+          "评分"
+        ],
+        "in_single_chunk": true,
+        "hit": true,
+        "partial_hit": true
+      },
+      {
+        "question": "回测系统的数据爬取逻辑？",
+        "category": "技术文档查询",
+        "description": "需要技术文档中的实现细节",
+        "found": [
+          "爬取",
+          "回测",
+          "数据"
+        ],
+        "expected": [
+          "回测",
+          "爬取",
+          "数据"
+        ],
+        "in_single_chunk": true,
+        "hit": true,
+        "partial_hit": true
+      },
+      {
+        "question": "欧菲光的资产负债率和经营现金流？",
+        "category": "财务指标查询",
+        "description": "跨文档查询：需要找到正确的文档",
+        "found": [
+          "欧菲光",
+          "经营现金流",
+          "资产负债率"
+        ],
+        "expected": [
+          "欧菲光",
+          "资产负债率",
+          "经营现金流"
+        ],
+        "in_single_chunk": true,
+        "hit": true,
+        "partial_hit": true
+      },
+      {
+        "question": "华如科技的收盘价和涨跌幅？",
+        "category": "行情数据查询",
+        "description": "需要实时行情类数据",
+        "found": [
+          "收盘价",
+          "华如科技",
+          "涨跌幅"
+        ],
+        "expected": [
+          "华如科技",
+          "收盘价",
+          "涨跌幅"
+        ],
+        "in_single_chunk": true,
+        "hit": true,
+        "partial_hit": true
+      }
+    ]
+  },
+  {
+    "strategy": "固定长度分块 (400+50)",
+    "hit_rate": 0.9,
+    "partial_hit_rate": 1.0,
+    "num_chunks": 103,
+    "avg_chunk_size": 397.75728155339806,
+    "chunk_size_std": 22.650346026812038,
+    "boundary_quality_score": 0.7401960784313726,
+    "details": [
+      {
+        "question": "沪电股份的ROE和毛利率是多少？",
+        "category": "财务指标查询",
+        "description": "需要同一文档中的多个财务指标",
+        "found": [
+          "ROE"
+        ],
+        "expected": [
+          "沪电股份",
+          "ROE",
+          "毛利率"
+        ],
+        "in_single_chunk": false,
+        "hit": false,
+        "partial_hit": true
+      },
+      {
+        "question": "泰豪科技2025年的营业收入和净利润？",
+        "category": "年报数据查询",
+        "description": "需要同一股票的多项年报数据",
+        "found": [
+          "净利润",
+          "营业收入",
+          "泰豪科技"
+        ],
+        "expected": [
+          "泰豪科技",
+          "营业收入",
+          "净利润"
+        ],
+        "in_single_chunk": true,
+        "hit": true,
+        "partial_hit": true
+      },
+      {
+        "question": "芯瑞达的主力资金流向情况？",
+        "category": "资金流向查询",
+        "description": "需要特定股票的资金流向数据",
+        "found": [
+          "芯瑞达",
+          "主力资金"
+        ],
+        "expected": [
+          "芯瑞达",
+          "主力资金"
+        ],
+        "in_single_chunk": true,
+        "hit": true,
+        "partial_hit": true
+      },
+      {
+        "question": "三安光电的十大流通股东有哪些？",
+        "category": "股东信息查询",
+        "description": "需要股东列表信息",
+        "found": [
+          "三安光电",
+          "流通股东"
+        ],
+        "expected": [
+          "三安光电",
+          "流通股东"
+        ],
+        "in_single_chunk": true,
+        "hit": true,
+        "partial_hit": true
+      },
+      {
+        "question": "科瑞技术的市盈率和市净率？",
+        "category": "估值指标查询",
+        "description": "需要同一股票的多个估值指标",
+        "found": [
+          "市净率",
+          "市盈率",
+          "科瑞技术"
+        ],
+        "expected": [
+          "科瑞技术",
+          "市盈率",
+          "市净率"
+        ],
+        "in_single_chunk": true,
+        "hit": true,
+        "partial_hit": true
+      },
+      {
+        "question": "板块轮动复盘中的涨停传导路径？",
+        "category": "分析文档查询",
+        "description": "需要分析文档中的概念性内容",
+        "found": [
+          "涨停",
+          "板块",
+          "传导"
+        ],
+        "expected": [
+          "涨停",
+          "传导",
+          "板块"
+        ],
+        "in_single_chunk": true,
+        "hit": true,
+        "partial_hit": true
+      },
+      {
+        "question": "贝贝虾分析中的个股评分？",
+        "category": "分析文档查询",
+        "description": "需要特定分析方法的评分结果",
+        "found": [
+          "评分",
+          "贝贝虾"
+        ],
+        "expected": [
+          "贝贝虾",
+          "评分"
+        ],
+        "in_single_chunk": true,
+        "hit": true,
+        "partial_hit": true
+      },
+      {
+        "question": "回测系统的数据爬取逻辑？",
+        "category": "技术文档查询",
+        "description": "需要技术文档中的实现细节",
+        "found": [
+          "爬取",
+          "回测",
+          "数据"
+        ],
+        "expected": [
+          "回测",
+          "爬取",
+          "数据"
+        ],
+        "in_single_chunk": true,
+        "hit": true,
+        "partial_hit": true
+      },
+      {
+        "question": "欧菲光的资产负债率和经营现金流？",
+        "category": "财务指标查询",
+        "description": "跨文档查询：需要找到正确的文档",
+        "found": [
+          "欧菲光",
+          "经营现金流",
+          "资产负债率"
+        ],
+        "expected": [
+          "欧菲光",
+          "资产负债率",
+          "经营现金流"
+        ],
+        "in_single_chunk": true,
+        "hit": true,
+        "partial_hit": true
+      },
+      {
+        "question": "华如科技的收盘价和涨跌幅？",
+        "category": "行情数据查询",
+        "description": "需要实时行情类数据",
+        "found": [
+          "收盘价",
+          "华如科技",
+          "涨跌幅"
+        ],
+        "expected": [
+          "华如科技",
+          "收盘价",
+          "涨跌幅"
+        ],
+        "in_single_chunk": true,
+        "hit": true,
+        "partial_hit": true
+      }
+    ]
+  },
+  {
+    "strategy": "固定长度分块 (200+20)",
+    "hit_rate": 0.9,
+    "partial_hit_rate": 1.0,
+    "num_chunks": 200,
+    "avg_chunk_size": 199.245,
+    "chunk_size_std": 10.650585664647743,
+    "boundary_quality_score": 0.7236180904522613,
+    "details": [
+      {
+        "question": "沪电股份的ROE和毛利率是多少？",
+        "category": "财务指标查询",
+        "description": "需要同一文档中的多个财务指标",
+        "found": [
+          "ROE"
+        ],
+        "expected": [
+          "沪电股份",
+          "ROE",
+          "毛利率"
+        ],
+        "in_single_chunk": false,
+        "hit": false,
+        "partial_hit": true
+      },
+      {
+        "question": "泰豪科技2025年的营业收入和净利润？",
+        "category": "年报数据查询",
+        "description": "需要同一股票的多项年报数据",
+        "found": [
+          "净利润",
+          "营业收入",
+          "泰豪科技"
+        ],
+        "expected": [
+          "泰豪科技",
+          "营业收入",
+          "净利润"
+        ],
+        "in_single_chunk": true,
+        "hit": true,
+        "partial_hit": true
+      },
+      {
+        "question": "芯瑞达的主力资金流向情况？",
+        "category": "资金流向查询",
+        "description": "需要特定股票的资金流向数据",
+        "found": [
+          "芯瑞达",
+          "主力资金"
+        ],
+        "expected": [
+          "芯瑞达",
+          "主力资金"
+        ],
+        "in_single_chunk": true,
+        "hit": true,
+        "partial_hit": true
+      },
+      {
+        "question": "三安光电的十大流通股东有哪些？",
+        "category": "股东信息查询",
+        "description": "需要股东列表信息",
+        "found": [
+          "三安光电",
+          "流通股东"
+        ],
+        "expected": [
+          "三安光电",
+          "流通股东"
+        ],
+        "in_single_chunk": true,
+        "hit": true,
+        "partial_hit": true
+      },
+      {
+        "question": "科瑞技术的市盈率和市净率？",
+        "category": "估值指标查询",
+        "description": "需要同一股票的多个估值指标",
+        "found": [
+          "市净率",
+          "市盈率",
+          "科瑞技术"
+        ],
+        "expected": [
+          "科瑞技术",
+          "市盈率",
+          "市净率"
+        ],
+        "in_single_chunk": true,
+        "hit": true,
+        "partial_hit": true
+      },
+      {
+        "question": "板块轮动复盘中的涨停传导路径？",
+        "category": "分析文档查询",
+        "description": "需要分析文档中的概念性内容",
+        "found": [
+          "涨停",
+          "板块",
+          "传导"
+        ],
+        "expected": [
+          "涨停",
+          "传导",
+          "板块"
+        ],
+        "in_single_chunk": true,
+        "hit": true,
+        "partial_hit": true
+      },
+      {
+        "question": "贝贝虾分析中的个股评分？",
+        "category": "分析文档查询",
+        "description": "需要特定分析方法的评分结果",
+        "found": [
+          "评分",
+          "贝贝虾"
+        ],
+        "expected": [
+          "贝贝虾",
+          "评分"
+        ],
+        "in_single_chunk": true,
+        "hit": true,
+        "partial_hit": true
+      },
+      {
+        "question": "回测系统的数据爬取逻辑？",
+        "category": "技术文档查询",
+        "description": "需要技术文档中的实现细节",
+        "found": [
+          "爬取",
+          "回测",
+          "数据"
+        ],
+        "expected": [
+          "回测",
+          "爬取",
+          "数据"
+        ],
+        "in_single_chunk": true,
+        "hit": true,
+        "partial_hit": true
+      },
+      {
+        "question": "欧菲光的资产负债率和经营现金流？",
+        "category": "财务指标查询",
+        "description": "跨文档查询：需要找到正确的文档",
+        "found": [
+          "欧菲光",
+          "经营现金流",
+          "资产负债率"
+        ],
+        "expected": [
+          "欧菲光",
+          "资产负债率",
+          "经营现金流"
+        ],
+        "in_single_chunk": true,
+        "hit": true,
+        "partial_hit": true
+      },
+      {
+        "question": "华如科技的收盘价和涨跌幅？",
+        "category": "行情数据查询",
+        "description": "需要实时行情类数据",
+        "found": [
+          "收盘价",
+          "华如科技",
+          "涨跌幅"
+        ],
+        "expected": [
+          "华如科技",
+          "收盘价",
+          "涨跌幅"
+        ],
+        "in_single_chunk": true,
+        "hit": true,
+        "partial_hit": true
+      }
+    ]
+  },
+  {
+    "strategy": "语义分块 (低阈值)",
+    "hit_rate": 0.9,
+    "partial_hit_rate": 1.0,
+    "num_chunks": 23,
+    "avg_chunk_size": 1559.5217391304348,
+    "chunk_size_std": 7222.578106908709,
+    "boundary_quality_score": 0.31818181818181823,
+    "details": [
+      {
+        "question": "沪电股份的ROE和毛利率是多少？",
+        "category": "财务指标查询",
+        "description": "需要同一文档中的多个财务指标",
+        "found": [
+          "ROE"
+        ],
+        "expected": [
+          "沪电股份",
+          "ROE",
+          "毛利率"
+        ],
+        "in_single_chunk": false,
+        "hit": false,
+        "partial_hit": true
+      },
+      {
+        "question": "泰豪科技2025年的营业收入和净利润？",
+        "category": "年报数据查询",
+        "description": "需要同一股票的多项年报数据",
+        "found": [
+          "净利润",
+          "营业收入",
+          "泰豪科技"
+        ],
+        "expected": [
+          "泰豪科技",
+          "营业收入",
+          "净利润"
+        ],
+        "in_single_chunk": true,
+        "hit": true,
+        "partial_hit": true
+      },
+      {
+        "question": "芯瑞达的主力资金流向情况？",
+        "category": "资金流向查询",
+        "description": "需要特定股票的资金流向数据",
+        "found": [
+          "芯瑞达",
+          "主力资金"
+        ],
+        "expected": [
+          "芯瑞达",
+          "主力资金"
+        ],
+        "in_single_chunk": true,
+        "hit": true,
+        "partial_hit": true
+      },
+      {
+        "question": "三安光电的十大流通股东有哪些？",
+        "category": "股东信息查询",
+        "description": "需要股东列表信息",
+        "found": [
+          "三安光电",
+          "流通股东"
+        ],
+        "expected": [
+          "三安光电",
+          "流通股东"
+        ],
+        "in_single_chunk": true,
+        "hit": true,
+        "partial_hit": true
+      },
+      {
+        "question": "科瑞技术的市盈率和市净率？",
+        "category": "估值指标查询",
+        "description": "需要同一股票的多个估值指标",
+        "found": [
+          "市净率",
+          "市盈率",
+          "科瑞技术"
+        ],
+        "expected": [
+          "科瑞技术",
+          "市盈率",
+          "市净率"
+        ],
+        "in_single_chunk": true,
+        "hit": true,
+        "partial_hit": true
+      },
+      {
+        "question": "板块轮动复盘中的涨停传导路径？",
+        "category": "分析文档查询",
+        "description": "需要分析文档中的概念性内容",
+        "found": [
+          "涨停",
+          "板块",
+          "传导"
+        ],
+        "expected": [
+          "涨停",
+          "传导",
+          "板块"
+        ],
+        "in_single_chunk": true,
+        "hit": true,
+        "partial_hit": true
+      },
+      {
+        "question": "贝贝虾分析中的个股评分？",
+        "category": "分析文档查询",
+        "description": "需要特定分析方法的评分结果",
+        "found": [
+          "评分",
+          "贝贝虾"
+        ],
+        "expected": [
+          "贝贝虾",
+          "评分"
+        ],
+        "in_single_chunk": true,
+        "hit": true,
+        "partial_hit": true
+      },
+      {
+        "question": "回测系统的数据爬取逻辑？",
+        "category": "技术文档查询",
+        "description": "需要技术文档中的实现细节",
+        "found": [
+          "爬取",
+          "回测",
+          "数据"
+        ],
+        "expected": [
+          "回测",
+          "爬取",
+          "数据"
+        ],
+        "in_single_chunk": true,
+        "hit": true,
+        "partial_hit": true
+      },
+      {
+        "question": "欧菲光的资产负债率和经营现金流？",
+        "category": "财务指标查询",
+        "description": "跨文档查询：需要找到正确的文档",
+        "found": [
+          "欧菲光",
+          "经营现金流",
+          "资产负债率"
+        ],
+        "expected": [
+          "欧菲光",
+          "资产负债率",
+          "经营现金流"
+        ],
+        "in_single_chunk": true,
+        "hit": true,
+        "partial_hit": true
+      },
+      {
+        "question": "华如科技的收盘价和涨跌幅？",
+        "category": "行情数据查询",
+        "description": "需要实时行情类数据",
+        "found": [
+          "收盘价",
+          "华如科技",
+          "涨跌幅"
+        ],
+        "expected": [
+          "华如科技",
+          "收盘价",
+          "涨跌幅"
+        ],
+        "in_single_chunk": true,
+        "hit": true,
+        "partial_hit": true
+      }
+    ]
+  },
+  {
+    "strategy": "语义分块 (高阈值)",
+    "hit_rate": 0.9,
+    "partial_hit_rate": 1.0,
+    "num_chunks": 23,
+    "avg_chunk_size": 1559.5217391304348,
+    "chunk_size_std": 7222.578106908709,
+    "boundary_quality_score": 0.31818181818181823,
+    "details": [
+      {
+        "question": "沪电股份的ROE和毛利率是多少？",
+        "category": "财务指标查询",
+        "description": "需要同一文档中的多个财务指标",
+        "found": [
+          "ROE"
+        ],
+        "expected": [
+          "沪电股份",
+          "ROE",
+          "毛利率"
+        ],
+        "in_single_chunk": false,
+        "hit": false,
+        "partial_hit": true
+      },
+      {
+        "question": "泰豪科技2025年的营业收入和净利润？",
+        "category": "年报数据查询",
+        "description": "需要同一股票的多项年报数据",
+        "found": [
+          "净利润",
+          "营业收入",
+          "泰豪科技"
+        ],
+        "expected": [
+          "泰豪科技",
+          "营业收入",
+          "净利润"
+        ],
+        "in_single_chunk": true,
+        "hit": true,
+        "partial_hit": true
+      },
+      {
+        "question": "芯瑞达的主力资金流向情况？",
+        "category": "资金流向查询",
+        "description": "需要特定股票的资金流向数据",
+        "found": [
+          "芯瑞达",
+          "主力资金"
+        ],
+        "expected": [
+          "芯瑞达",
+          "主力资金"
+        ],
+        "in_single_chunk": true,
+        "hit": true,
+        "partial_hit": true
+      },
+      {
+        "question": "三安光电的十大流通股东有哪些？",
+        "category": "股东信息查询",
+        "description": "需要股东列表信息",
+        "found": [
+          "三安光电",
+          "流通股东"
+        ],
+        "expected": [
+          "三安光电",
+          "流通股东"
+        ],
+        "in_single_chunk": true,
+        "hit": true,
+        "partial_hit": true
+      },
+      {
+        "question": "科瑞技术的市盈率和市净率？",
+        "category": "估值指标查询",
+        "description": "需要同一股票的多个估值指标",
+        "found": [
+          "市净率",
+          "市盈率",
+          "科瑞技术"
+        ],
+        "expected": [
+          "科瑞技术",
+          "市盈率",
+          "市净率"
+        ],
+        "in_single_chunk": true,
+        "hit": true,
+        "partial_hit": true
+      },
+      {
+        "question": "板块轮动复盘中的涨停传导路径？",
+        "category": "分析文档查询",
+        "description": "需要分析文档中的概念性内容",
+        "found": [
+          "涨停",
+          "板块",
+          "传导"
+        ],
+        "expected": [
+          "涨停",
+          "传导",
+          "板块"
+        ],
+        "in_single_chunk": true,
+        "hit": true,
+        "partial_hit": true
+      },
+      {
+        "question": "贝贝虾分析中的个股评分？",
+        "category": "分析文档查询",
+        "description": "需要特定分析方法的评分结果",
+        "found": [
+          "评分",
+          "贝贝虾"
+        ],
+        "expected": [
+          "贝贝虾",
+          "评分"
+        ],
+        "in_single_chunk": true,
+        "hit": true,
+        "partial_hit": true
+      },
+      {
+        "question": "回测系统的数据爬取逻辑？",
+        "category": "技术文档查询",
+        "description": "需要技术文档中的实现细节",
+        "found": [
+          "爬取",
+          "回测",
+          "数据"
+        ],
+        "expected": [
+          "回测",
+          "爬取",
+          "数据"
+        ],
+        "in_single_chunk": true,
+        "hit": true,
+        "partial_hit": true
+      },
+      {
+        "question": "欧菲光的资产负债率和经营现金流？",
+        "category": "财务指标查询",
+        "description": "跨文档查询：需要找到正确的文档",
+        "found": [
+          "欧菲光",
+          "经营现金流",
+          "资产负债率"
+        ],
+        "expected": [
+          "欧菲光",
+          "资产负债率",
+          "经营现金流"
+        ],
+        "in_single_chunk": true,
+        "hit": true,
+        "partial_hit": true
+      },
+      {
+        "question": "华如科技的收盘价和涨跌幅？",
+        "category": "行情数据查询",
+        "description": "需要实时行情类数据",
+        "found": [
+          "收盘价",
+          "华如科技",
+          "涨跌幅"
+        ],
+        "expected": [
+          "华如科技",
+          "收盘价",
+          "涨跌幅"
+        ],
+        "in_single_chunk": true,
+        "hit": true,
+        "partial_hit": true
+      }
+    ]
+  }
+]

@@ -1,0 +1,1361 @@
+{
+  "success": true,
+  "status": 0,
+  "code": 0,
+  "message": "ok",
+  "data": {
+    "requestId": null,
+    "message": "OK",
+    "status": 0,
+    "code": 0,
+    "data": {
+      "protocolType": "SEARCH_DATA",
+      "id": "79674a9d-4609-4cbc-810b-a37c44acfab4",
+      "refSeq": null,
+      "keyEntityList": null,
+      "searchDataResultDTO": {
+        "questionId": "8e8f2959-6264-4ad5-a702-1458fc72adc6",
+        "dataTableDTOList": [
+          {
+            "code": "002463.SZ",
+            "entityName": "股东名称",
+            "table": {
+              "BIGGERING(BVI)HOLDINGS CO.,LTD.": [
+                "其它",
+                "A股",
+                "3.718亿",
+                "19.34%",
+                "-",
+                "-"
+              ],
+              "WUS GROUP HOLDINGS CO.,LTD.": [
+                "其它",
+                "A股",
+                "2.167亿",
+                "11.27%",
+                "-",
+                "-"
+              ],
+              "香港中央结算有限公司": [
+                "其它",
+                "A股",
+                "1.432亿",
+                "7.45%",
+                "262.8万",
+                "1.87%"
+              ],
+              "中国工商银行股份有限公司-华泰柏瑞沪深300交易型开放式指数证券投资基金": [
+                "证券投资基金",
+                "A股",
+                "2223万",
+                "1.16%",
+                "-77.08万",
+                "-3.35%"
+              ],
+              "HAPPY UNION INVESTMENT LIMITED": [
+                "其它",
+                "A股",
+                "1981万",
+                "1.03%",
+                "-",
+                "-"
+              ],
+              "平安银行股份有限公司-永赢科技智选混合型发起式证券投资基金": [
+                "证券投资基金",
+                "A股",
+                "1872万",
+                "0.97%",
+                "572.1万",
+                "44.00%"
+              ],
+              "交通银行股份有限公司-易方达上证50指数增强型证券投资基金": [
+                "证券投资基金",
+                "A股",
+                "1779万",
+                "0.93%",
+                "19.3万",
+                "1.10%"
+              ],
+              "中国建设银行股份有限公司-易方达沪深300交易型开放式指数发起式证券投资基金": [
+                "证券投资基金",
+                "A股",
+                "1587万",
+                "0.83%",
+                "-69.61万",
+                "-4.20%"
+              ],
+              "中国工商银行股份有限公司-华夏沪深300交易型开放式指数证券投资基金": [
+                "证券投资基金",
+                "A股",
+                "1210万",
+                "0.63%",
+                "-26.01万",
+                "-2.10%"
+              ],
+              "全国社保基金一零九组合": [
+                "全国社保基金",
+                "A股",
+                "1158万",
+                "0.60%",
+                "-",
+                "-"
+              ],
+              "headName": [
+                "股东性质",
+                "股份类型",
+                "持股数(股)",
+                "持股占流通股比例",
+                "持股变动数(股)",
+                "持股变动幅度"
+              ]
+            },
+            "rawTable": {
+              "BIGGERING(BVI)HOLDINGS CO.,LTD.": [
+                "其它",
+                "A股",
+                "371799937",
+                "19.336275712405",
+                "-",
+                "-"
+              ],
+              "WUS GROUP HOLDINGS CO.,LTD.": [
+                "其它",
+                "A股",
+                "216711023",
+                "11.270534697927",
+                "-",
+                "-"
+              ],
+              "香港中央结算有限公司": [
+                "其它",
+                "A股",
+                "143209875",
+                "7.447945392576",
+                "2627543",
+                "1.86904212"
+              ],
+              "中国工商银行股份有限公司-华泰柏瑞沪深300交易型开放式指数证券投资基金": [
+                "证券投资基金",
+                "A股",
+                "22233131",
+                "1.156283011866",
+                "-770819",
+                "-3.35081149"
+              ],
+              "HAPPY UNION INVESTMENT LIMITED": [
+                "其它",
+                "A股",
+                "19811263",
+                "1.030328425201",
+                "-",
+                "-"
+              ],
+              "平安银行股份有限公司-永赢科技智选混合型发起式证券投资基金": [
+                "证券投资基金",
+                "A股",
+                "18721660",
+                "0.973661218113",
+                "5720800",
+                "44.00324286"
+              ],
+              "交通银行股份有限公司-易方达上证50指数增强型证券投资基金": [
+                "证券投资基金",
+                "A股",
+                "17794610",
+                "0.925447938295",
+                "193000",
+                "1.09649061"
+              ],
+              "中国建设银行股份有限公司-易方达沪深300交易型开放式指数发起式证券投资基金": [
+                "证券投资基金",
+                "A股",
+                "15872911",
+                "0.825505743575",
+                "-696089",
+                "-4.20115276"
+              ],
+              "中国工商银行股份有限公司-华夏沪深300交易型开放式指数证券投资基金": [
+                "证券投资基金",
+                "A股",
+                "12104940",
+                "0.629544101623",
+                "-260100",
+                "-2.10351119"
+              ],
+              "全国社保基金一零九组合": [
+                "全国社保基金",
+                "A股",
+                "11580547",
+                "0.602271887132",
+                "-",
+                "-"
+              ],
+              "headName": [
+                "股东性质",
+                "股份类型",
+                "持股数(股)",
+                "持股占流通股比例",
+                "持股变动数(股)",
+                "持股变动幅度"
+              ]
+            },
+            "truncateRawTable": {},
+            "nameMap": {
+              "BIGGERING(BVI)HOLDINGS CO.,LTD.": "BIGGERING(BVI)HOLDINGS CO.,LTD.",
+              "WUS GROUP HOLDINGS CO.,LTD.": "WUS GROUP HOLDINGS CO.,LTD.",
+              "香港中央结算有限公司": "香港中央结算有限公司",
+              "中国工商银行股份有限公司-华泰柏瑞沪深300交易型开放式指数证券投资基金": "中国工商银行股份有限公司-华泰柏瑞沪深300交易型开放式指数证券投资基金",
+              "HAPPY UNION INVESTMENT LIMITED": "HAPPY UNION INVESTMENT LIMITED",
+              "平安银行股份有限公司-永赢科技智选混合型发起式证券投资基金": "平安银行股份有限公司-永赢科技智选混合型发起式证券投资基金",
+              "交通银行股份有限公司-易方达上证50指数增强型证券投资基金": "交通银行股份有限公司-易方达上证50指数增强型证券投资基金",
+              "中国建设银行股份有限公司-易方达沪深300交易型开放式指数发起式证券投资基金": "中国建设银行股份有限公司-易方达沪深300交易型开放式指数发起式证券投资基金",
+              "中国工商银行股份有限公司-华夏沪深300交易型开放式指数证券投资基金": "中国工商银行股份有限公司-华夏沪深300交易型开放式指数证券投资基金",
+              "全国社保基金一零九组合": "全国社保基金一零九组合",
+              "headName": "headName"
+            },
+            "headNameMap": {},
+            "field": {
+              "returnCode": "RPT_F10_EH_FREEHOLDERS",
+              "returnName": "十大流通股东明细",
+              "classCode": "007202",
+              "checkedRelatedIndicators": false,
+              "startDate": "2025-01-01 00:00:00",
+              "endDate": "2025-12-31 00:00:00",
+              "fuzzy": false,
+              "dateGranularity": "FISCAL_YEAR",
+              "defineType": -1,
+              "isLoopN": false,
+              "isGroup": false,
+              "returnSourceCode": "END_DATE,HOLDER_NAME,HOLDER_TYPE,SHARES_TYPE,HOLD_NUM,FREE_HOLDNUM_RATIO,HOLD_NUM_CHANGE,CHANGE_RATIO",
+              "returnSourceName": "截止日期,股东名称,股东性质,股份类型,持股数(股),持股占流通股比例,持股变动数(股),持股变动幅度",
+              "tableType": "10"
+            },
+            "macroAttributeExcelMap": {},
+            "fieldSet": [
+              {
+                "returnCode": "RPT_F10_EH_FREEHOLDERS",
+                "returnName": "十大流通股东明细",
+                "classCode": "007202",
+                "checkedRelatedIndicators": false,
+                "startDate": "2025-01-01 00:00:00",
+                "endDate": "2025-12-31 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "FISCAL_YEAR",
+                "defineType": -1,
+                "isLoopN": false,
+                "isGroup": false,
+                "returnSourceCode": "END_DATE,HOLDER_NAME,HOLDER_TYPE,SHARES_TYPE,HOLD_NUM,FREE_HOLDNUM_RATIO,HOLD_NUM_CHANGE,CHANGE_RATIO",
+                "returnSourceName": "截止日期,股东名称,股东性质,股份类型,持股数(股),持股占流通股比例,持股变动数(股),持股变动幅度",
+                "tableType": "10"
+              }
+            ],
+            "dataTableType": "F10_TABLE",
+            "inputTitle": "沪电股份(002463.SZ)十大流通股东明细(截止日期：2025-12-31)",
+            "rowInfo": {},
+            "colInfo": {},
+            "indicatorOrder": [
+              "BIGGERING(BVI)HOLDINGS CO.,LTD.",
+              "WUS GROUP HOLDINGS CO.,LTD.",
+              "香港中央结算有限公司",
+              "中国工商银行股份有限公司-华泰柏瑞沪深300交易型开放式指数证券投资基金",
+              "HAPPY UNION INVESTMENT LIMITED",
+              "平安银行股份有限公司-永赢科技智选混合型发起式证券投资基金",
+              "交通银行股份有限公司-易方达上证50指数增强型证券投资基金",
+              "中国建设银行股份有限公司-易方达沪深300交易型开放式指数发起式证券投资基金",
+              "中国工商银行股份有限公司-华夏沪深300交易型开放式指数证券投资基金",
+              "全国社保基金一零九组合"
+            ],
+            "tipFlags": [],
+            "hasThumbnail": true,
+            "indicatorLimited": false,
+            "dataPositionEnum": "MetricLeftTimeTop",
+            "orderCol": {},
+            "jumpUrlList": [
+              {
+                "choiceUrl": "EM://quoteloader?view=quotestockview&securitycode=002463.SZ&type=f10&weburlposition=#/gdyj/sdltgd",
+                "typeName": "F10基本资料",
+                "securityName": "沪电股份"
+              }
+            ],
+            "dataTypeEnum": "F10",
+            "dateRuleSet": [],
+            "freqConvert": false,
+            "deleteInfo": [],
+            "macroCodeMap": {},
+            "entityTagDTO": {
+              "entityId": "1000006938",
+              "entityType": "SEC",
+              "entityTypeCode": "058001001",
+              "entityTypeName": "A股",
+              "classCode": "002001",
+              "className": "沪深京股票",
+              "fullName": "沪电股份",
+              "secuCode": "002463",
+              "market": "0",
+              "marketChar": ".SZ",
+              "correct": false,
+              "hasKLine": false,
+              "valuation": false
+            },
+            "entityTagDTOList": [
+              {
+                "entityId": "1000006938",
+                "entityType": "SEC",
+                "entityTypeCode": "058001001",
+                "entityTypeName": "A股",
+                "classCode": "002001",
+                "className": "沪深京股票",
+                "fullName": "沪电股份",
+                "secuCode": "002463",
+                "market": "0",
+                "marketChar": ".SZ",
+                "correct": false,
+                "hasKLine": false,
+                "valuation": false
+              }
+            ],
+            "indexTable": false,
+            "edbThirdData": false,
+            "dataUpdate": {},
+            "supportsTimeSeries": false,
+            "estimatedTokens": 0,
+            "summaryTips": {
+              "periodicalReport": null
+            },
+            "nestEntityListMap": {},
+            "excelTimeTruncate": false,
+            "frontendEntityName": "沪电股份",
+            "frontendEntityCode": "002463.SZ",
+            "frontendTitle": "十大流通股东明细(截止日期：2025-12-31)",
+            "frontendDesc": "",
+            "indicatorCount": 0,
+            "fieldParameterStr": "",
+            "tdayEnum": "NORMAL"
+          },
+          {
+            "code": "002463.SZ",
+            "entityName": "股东名称",
+            "table": {
+              "BIGGERING(BVI)HOLDINGS CO.,LTD.": [
+                "其它",
+                "A股",
+                "3.718亿",
+                "19.34%",
+                "-",
+                "-"
+              ],
+              "WUS GROUP HOLDINGS CO.,LTD.": [
+                "其它",
+                "A股",
+                "2.167亿",
+                "11.27%",
+                "-458.5万",
+                "-2.07%"
+              ],
+              "香港中央结算有限公司": [
+                "其它",
+                "A股",
+                "1.406亿",
+                "7.31%",
+                "1724万",
+                "13.98%"
+              ],
+              "中国工商银行股份有限公司-华泰柏瑞沪深300交易型开放式指数证券投资基金": [
+                "证券投资基金",
+                "A股",
+                "2300万",
+                "1.20%",
+                "-103.7万",
+                "-4.31%"
+              ],
+              "HAPPY UNION INVESTMENT LIMITED": [
+                "其它",
+                "A股",
+                "1981万",
+                "1.03%",
+                "-",
+                "-"
+              ],
+              "交通银行股份有限公司-易方达上证50指数增强型证券投资基金": [
+                "证券投资基金",
+                "A股",
+                "1760万",
+                "0.92%",
+                "301.4万",
+                "20.66%"
+              ],
+              "中国建设银行股份有限公司-易方达沪深300交易型开放式指数发起式证券投资基金": [
+                "证券投资基金",
+                "A股",
+                "1657万",
+                "0.86%",
+                "-54.22万",
+                "-3.17%"
+              ],
+              "平安银行股份有限公司-永赢科技智选混合型发起式证券投资基金": [
+                "证券投资基金",
+                "A股",
+                "1300万",
+                "0.68%",
+                "-",
+                "-"
+              ],
+              "中国工商银行股份有限公司-华夏沪深300交易型开放式指数证券投资基金": [
+                "证券投资基金",
+                "A股",
+                "1237万",
+                "0.64%",
+                "-17.83万",
+                "-1.42%"
+              ],
+              "全国社保基金一零九组合": [
+                "全国社保基金",
+                "A股",
+                "1158万",
+                "0.60%",
+                "-140.5万",
+                "-10.82%"
+              ],
+              "headName": [
+                "股东性质",
+                "股份类型",
+                "持股数(股)",
+                "持股占流通股比例",
+                "持股变动数(股)",
+                "持股变动幅度"
+              ]
+            },
+            "rawTable": {
+              "BIGGERING(BVI)HOLDINGS CO.,LTD.": [
+                "其它",
+                "A股",
+                "371799937",
+                "19.336275712405",
+                "-",
+                "-"
+              ],
+              "WUS GROUP HOLDINGS CO.,LTD.": [
+                "其它",
+                "A股",
+                "216711023",
+                "11.270534697927",
+                "-4585050",
+                "-2.07190753"
+              ],
+              "香港中央结算有限公司": [
+                "其它",
+                "A股",
+                "140582332",
+                "7.311294223928",
+                "17244229",
+                "13.9812666"
+              ],
+              "中国工商银行股份有限公司-华泰柏瑞沪深300交易型开放式指数证券投资基金": [
+                "证券投资基金",
+                "A股",
+                "23003950",
+                "1.196371153969",
+                "-1036600",
+                "-4.31188138"
+              ],
+              "HAPPY UNION INVESTMENT LIMITED": [
+                "其它",
+                "A股",
+                "19811263",
+                "1.030328425201",
+                "-",
+                "-"
+              ],
+              "交通银行股份有限公司-易方达上证50指数增强型证券投资基金": [
+                "证券投资基金",
+                "A股",
+                "17601610",
+                "0.915410547641",
+                "3013800",
+                "20.6597152"
+              ],
+              "中国建设银行股份有限公司-易方达沪深300交易型开放式指数发起式证券投资基金": [
+                "证券投资基金",
+                "A股",
+                "16569000",
+                "0.861707387215",
+                "-542200",
+                "-3.16868484"
+              ],
+              "平安银行股份有限公司-永赢科技智选混合型发起式证券投资基金": [
+                "证券投资基金",
+                "A股",
+                "13000860",
+                "0.676138397136",
+                "-",
+                "-"
+              ],
+              "中国工商银行股份有限公司-华夏沪深300交易型开放式指数证券投资基金": [
+                "证券投资基金",
+                "A股",
+                "12365040",
+                "0.643071175762",
+                "-178300",
+                "-1.42147147"
+              ],
+              "全国社保基金一零九组合": [
+                "全国社保基金",
+                "A股",
+                "11580547",
+                "0.602271887132",
+                "-1404842",
+                "-10.81863624"
+              ],
+              "headName": [
+                "股东性质",
+                "股份类型",
+                "持股数(股)",
+                "持股占流通股比例",
+                "持股变动数(股)",
+                "持股变动幅度"
+              ]
+            },
+            "truncateRawTable": {},
+            "nameMap": {
+              "BIGGERING(BVI)HOLDINGS CO.,LTD.": "BIGGERING(BVI)HOLDINGS CO.,LTD.",
+              "WUS GROUP HOLDINGS CO.,LTD.": "WUS GROUP HOLDINGS CO.,LTD.",
+              "香港中央结算有限公司": "香港中央结算有限公司",
+              "中国工商银行股份有限公司-华泰柏瑞沪深300交易型开放式指数证券投资基金": "中国工商银行股份有限公司-华泰柏瑞沪深300交易型开放式指数证券投资基金",
+              "HAPPY UNION INVESTMENT LIMITED": "HAPPY UNION INVESTMENT LIMITED",
+              "交通银行股份有限公司-易方达上证50指数增强型证券投资基金": "交通银行股份有限公司-易方达上证50指数增强型证券投资基金",
+              "中国建设银行股份有限公司-易方达沪深300交易型开放式指数发起式证券投资基金": "中国建设银行股份有限公司-易方达沪深300交易型开放式指数发起式证券投资基金",
+              "平安银行股份有限公司-永赢科技智选混合型发起式证券投资基金": "平安银行股份有限公司-永赢科技智选混合型发起式证券投资基金",
+              "中国工商银行股份有限公司-华夏沪深300交易型开放式指数证券投资基金": "中国工商银行股份有限公司-华夏沪深300交易型开放式指数证券投资基金",
+              "全国社保基金一零九组合": "全国社保基金一零九组合",
+              "headName": "headName"
+            },
+            "headNameMap": {},
+            "field": {
+              "returnCode": "RPT_F10_EH_FREEHOLDERS",
+              "returnName": "十大流通股东明细",
+              "classCode": "007202",
+              "checkedRelatedIndicators": false,
+              "startDate": "2025-01-01 00:00:00",
+              "endDate": "2025-12-31 00:00:00",
+              "fuzzy": false,
+              "dateGranularity": "FISCAL_YEAR",
+              "defineType": -1,
+              "isLoopN": false,
+              "isGroup": false,
+              "returnSourceCode": "END_DATE,HOLDER_NAME,HOLDER_TYPE,SHARES_TYPE,HOLD_NUM,FREE_HOLDNUM_RATIO,HOLD_NUM_CHANGE,CHANGE_RATIO",
+              "returnSourceName": "截止日期,股东名称,股东性质,股份类型,持股数(股),持股占流通股比例,持股变动数(股),持股变动幅度",
+              "tableType": "10"
+            },
+            "macroAttributeExcelMap": {},
+            "fieldSet": [
+              {
+                "returnCode": "RPT_F10_EH_FREEHOLDERS",
+                "returnName": "十大流通股东明细",
+                "classCode": "007202",
+                "checkedRelatedIndicators": false,
+                "startDate": "2025-01-01 00:00:00",
+                "endDate": "2025-12-31 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "FISCAL_YEAR",
+                "defineType": -1,
+                "isLoopN": false,
+                "isGroup": false,
+                "returnSourceCode": "END_DATE,HOLDER_NAME,HOLDER_TYPE,SHARES_TYPE,HOLD_NUM,FREE_HOLDNUM_RATIO,HOLD_NUM_CHANGE,CHANGE_RATIO",
+                "returnSourceName": "截止日期,股东名称,股东性质,股份类型,持股数(股),持股占流通股比例,持股变动数(股),持股变动幅度",
+                "tableType": "10"
+              }
+            ],
+            "dataTableType": "F10_TABLE",
+            "inputTitle": "沪电股份(002463.SZ)十大流通股东明细(截止日期：2025-09-30)",
+            "rowInfo": {},
+            "colInfo": {},
+            "indicatorOrder": [
+              "BIGGERING(BVI)HOLDINGS CO.,LTD.",
+              "WUS GROUP HOLDINGS CO.,LTD.",
+              "香港中央结算有限公司",
+              "中国工商银行股份有限公司-华泰柏瑞沪深300交易型开放式指数证券投资基金",
+              "HAPPY UNION INVESTMENT LIMITED",
+              "交通银行股份有限公司-易方达上证50指数增强型证券投资基金",
+              "中国建设银行股份有限公司-易方达沪深300交易型开放式指数发起式证券投资基金",
+              "平安银行股份有限公司-永赢科技智选混合型发起式证券投资基金",
+              "中国工商银行股份有限公司-华夏沪深300交易型开放式指数证券投资基金",
+              "全国社保基金一零九组合"
+            ],
+            "tipFlags": [],
+            "hasThumbnail": true,
+            "indicatorLimited": false,
+            "dataPositionEnum": "MetricLeftTimeTop",
+            "orderCol": {},
+            "jumpUrlList": [
+              {
+                "choiceUrl": "EM://quoteloader?view=quotestockview&securitycode=002463.SZ&type=f10&weburlposition=#/gdyj/sdltgd",
+                "typeName": "F10基本资料",
+                "securityName": "沪电股份"
+              }
+            ],
+            "dataTypeEnum": "F10",
+            "dateRuleSet": [],
+            "freqConvert": false,
+            "deleteInfo": [],
+            "macroCodeMap": {},
+            "entityTagDTO": {
+              "entityId": "1000006938",
+              "entityType": "SEC",
+              "entityTypeCode": "058001001",
+              "entityTypeName": "A股",
+              "classCode": "002001",
+              "className": "沪深京股票",
+              "fullName": "沪电股份",
+              "secuCode": "002463",
+              "market": "0",
+              "marketChar": ".SZ",
+              "correct": false,
+              "hasKLine": false,
+              "valuation": false
+            },
+            "entityTagDTOList": [
+              {
+                "entityId": "1000006938",
+                "entityType": "SEC",
+                "entityTypeCode": "058001001",
+                "entityTypeName": "A股",
+                "classCode": "002001",
+                "className": "沪深京股票",
+                "fullName": "沪电股份",
+                "secuCode": "002463",
+                "market": "0",
+                "marketChar": ".SZ",
+                "correct": false,
+                "hasKLine": false,
+                "valuation": false
+              }
+            ],
+            "indexTable": false,
+            "edbThirdData": false,
+            "dataUpdate": {},
+            "supportsTimeSeries": false,
+            "estimatedTokens": 0,
+            "summaryTips": {
+              "periodicalReport": null
+            },
+            "nestEntityListMap": {},
+            "excelTimeTruncate": false,
+            "frontendEntityName": "沪电股份",
+            "frontendEntityCode": "002463.SZ",
+            "frontendTitle": "十大流通股东明细(截止日期：2025-09-30)",
+            "frontendDesc": "",
+            "indicatorCount": 0,
+            "fieldParameterStr": "",
+            "tdayEnum": "NORMAL"
+          },
+          {
+            "code": "002463.SZ",
+            "entityName": "股东名称",
+            "table": {
+              "BIGGERING(BVI) HOLDINGS CO., LTD.": [
+                "其它",
+                "A股",
+                "3.718亿",
+                "19.34%",
+                "-",
+                "-"
+              ],
+              "WUS GROUP HOLDINGS CO.,LTD.": [
+                "其它",
+                "A股",
+                "2.213亿",
+                "11.51%",
+                "-741.5万",
+                "-3.24%"
+              ],
+              "香港中央结算有限公司": [
+                "其它",
+                "A股",
+                "1.233亿",
+                "6.42%",
+                "4720万",
+                "61.99%"
+              ],
+              "中国工商银行股份有限公司-华泰柏瑞沪深300交易型开放式指数证券投资基金": [
+                "证券投资基金",
+                "A股",
+                "2404万",
+                "1.25%",
+                "211.7万",
+                "9.65%"
+              ],
+              "HAPPY UNION INVESTMENT LIMITED": [
+                "其它",
+                "A股",
+                "1981万",
+                "1.03%",
+                "-",
+                "-"
+              ],
+              "中国建设银行股份有限公司-易方达沪深300交易型开放式指数发起式证券投资基金": [
+                "证券投资基金",
+                "A股",
+                "1711万",
+                "0.89%",
+                "171.3万",
+                "11.12%"
+              ],
+              "交通银行股份有限公司-易方达上证50指数增强型证券投资基金": [
+                "证券投资基金",
+                "A股",
+                "1459万",
+                "0.76%",
+                "-",
+                "-"
+              ],
+              "全国社保基金一零九组合": [
+                "全国社保基金",
+                "A股",
+                "1299万",
+                "0.68%",
+                "211.3万",
+                "19.44%"
+              ],
+              "中国工商银行股份有限公司-华夏沪深300交易型开放式指数证券投资基金": [
+                "证券投资基金",
+                "A股",
+                "1254万",
+                "0.65%",
+                "214.7万",
+                "20.65%"
+              ],
+              "中国银行股份有限公司-嘉实沪深300交易型开放式指数证券投资基金": [
+                "证券投资基金",
+                "A股",
+                "1081万",
+                "0.56%",
+                "-",
+                "-"
+              ],
+              "headName": [
+                "股东性质",
+                "股份类型",
+                "持股数(股)",
+                "持股占流通股比例",
+                "持股变动数(股)",
+                "持股变动幅度"
+              ]
+            },
+            "rawTable": {
+              "BIGGERING(BVI) HOLDINGS CO., LTD.": [
+                "其它",
+                "A股",
+                "371799937",
+                "19.342826082284",
+                "-",
+                "-"
+              ],
+              "WUS GROUP HOLDINGS CO.,LTD.": [
+                "其它",
+                "A股",
+                "221296073",
+                "11.51288912868",
+                "-7414950",
+                "-3.24206062"
+              ],
+              "香港中央结算有限公司": [
+                "其它",
+                "A股",
+                "123338103",
+                "6.41664303361",
+                "47197126",
+                "61.98649907"
+              ],
+              "中国工商银行股份有限公司-华泰柏瑞沪深300交易型开放式指数证券投资基金": [
+                "证券投资基金",
+                "A股",
+                "24040550",
+                "1.250705369464",
+                "2116700",
+                "9.65478235"
+              ],
+              "HAPPY UNION INVESTMENT LIMITED": [
+                "其它",
+                "A股",
+                "19811263",
+                "1.030677459957",
+                "-",
+                "-"
+              ],
+              "中国建设银行股份有限公司-易方达沪深300交易型开放式指数发起式证券投资基金": [
+                "证券投资基金",
+                "A股",
+                "17111200",
+                "0.89020715907",
+                "1712900",
+                "11.12395524"
+              ],
+              "交通银行股份有限公司-易方达上证50指数增强型证券投资基金": [
+                "证券投资基金",
+                "A股",
+                "14587810",
+                "0.758928239817",
+                "-",
+                "-"
+              ],
+              "全国社保基金一零九组合": [
+                "全国社保基金",
+                "A股",
+                "12985389",
+                "0.675562570194",
+                "2113486",
+                "19.43989015"
+              ],
+              "中国工商银行股份有限公司-华夏沪深300交易型开放式指数证券投资基金": [
+                "证券投资基金",
+                "A股",
+                "12543340",
+                "0.652565049012",
+                "2147300",
+                "20.65498017"
+              ],
+              "中国银行股份有限公司-嘉实沪深300交易型开放式指数证券投资基金": [
+                "证券投资基金",
+                "A股",
+                "10811390",
+                "0.562460656032",
+                "-",
+                "-"
+              ],
+              "headName": [
+                "股东性质",
+                "股份类型",
+                "持股数(股)",
+                "持股占流通股比例",
+                "持股变动数(股)",
+                "持股变动幅度"
+              ]
+            },
+            "truncateRawTable": {},
+            "nameMap": {
+              "BIGGERING(BVI) HOLDINGS CO., LTD.": "BIGGERING(BVI) HOLDINGS CO., LTD.",
+              "WUS GROUP HOLDINGS CO.,LTD.": "WUS GROUP HOLDINGS CO.,LTD.",
+              "香港中央结算有限公司": "香港中央结算有限公司",
+              "中国工商银行股份有限公司-华泰柏瑞沪深300交易型开放式指数证券投资基金": "中国工商银行股份有限公司-华泰柏瑞沪深300交易型开放式指数证券投资基金",
+              "HAPPY UNION INVESTMENT LIMITED": "HAPPY UNION INVESTMENT LIMITED",
+              "中国建设银行股份有限公司-易方达沪深300交易型开放式指数发起式证券投资基金": "中国建设银行股份有限公司-易方达沪深300交易型开放式指数发起式证券投资基金",
+              "交通银行股份有限公司-易方达上证50指数增强型证券投资基金": "交通银行股份有限公司-易方达上证50指数增强型证券投资基金",
+              "全国社保基金一零九组合": "全国社保基金一零九组合",
+              "中国工商银行股份有限公司-华夏沪深300交易型开放式指数证券投资基金": "中国工商银行股份有限公司-华夏沪深300交易型开放式指数证券投资基金",
+              "中国银行股份有限公司-嘉实沪深300交易型开放式指数证券投资基金": "中国银行股份有限公司-嘉实沪深300交易型开放式指数证券投资基金",
+              "headName": "headName"
+            },
+            "headNameMap": {},
+            "field": {
+              "returnCode": "RPT_F10_EH_FREEHOLDERS",
+              "returnName": "十大流通股东明细",
+              "classCode": "007202",
+              "checkedRelatedIndicators": false,
+              "startDate": "2025-01-01 00:00:00",
+              "endDate": "2025-12-31 00:00:00",
+              "fuzzy": false,
+              "dateGranularity": "FISCAL_YEAR",
+              "defineType": -1,
+              "isLoopN": false,
+              "isGroup": false,
+              "returnSourceCode": "END_DATE,HOLDER_NAME,HOLDER_TYPE,SHARES_TYPE,HOLD_NUM,FREE_HOLDNUM_RATIO,HOLD_NUM_CHANGE,CHANGE_RATIO",
+              "returnSourceName": "截止日期,股东名称,股东性质,股份类型,持股数(股),持股占流通股比例,持股变动数(股),持股变动幅度",
+              "tableType": "10"
+            },
+            "macroAttributeExcelMap": {},
+            "fieldSet": [
+              {
+                "returnCode": "RPT_F10_EH_FREEHOLDERS",
+                "returnName": "十大流通股东明细",
+                "classCode": "007202",
+                "checkedRelatedIndicators": false,
+                "startDate": "2025-01-01 00:00:00",
+                "endDate": "2025-12-31 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "FISCAL_YEAR",
+                "defineType": -1,
+                "isLoopN": false,
+                "isGroup": false,
+                "returnSourceCode": "END_DATE,HOLDER_NAME,HOLDER_TYPE,SHARES_TYPE,HOLD_NUM,FREE_HOLDNUM_RATIO,HOLD_NUM_CHANGE,CHANGE_RATIO",
+                "returnSourceName": "截止日期,股东名称,股东性质,股份类型,持股数(股),持股占流通股比例,持股变动数(股),持股变动幅度",
+                "tableType": "10"
+              }
+            ],
+            "dataTableType": "F10_TABLE",
+            "inputTitle": "沪电股份(002463.SZ)十大流通股东明细(截止日期：2025-06-30)",
+            "rowInfo": {},
+            "colInfo": {},
+            "indicatorOrder": [
+              "BIGGERING(BVI) HOLDINGS CO., LTD.",
+              "WUS GROUP HOLDINGS CO.,LTD.",
+              "香港中央结算有限公司",
+              "中国工商银行股份有限公司-华泰柏瑞沪深300交易型开放式指数证券投资基金",
+              "HAPPY UNION INVESTMENT LIMITED",
+              "中国建设银行股份有限公司-易方达沪深300交易型开放式指数发起式证券投资基金",
+              "交通银行股份有限公司-易方达上证50指数增强型证券投资基金",
+              "全国社保基金一零九组合",
+              "中国工商银行股份有限公司-华夏沪深300交易型开放式指数证券投资基金",
+              "中国银行股份有限公司-嘉实沪深300交易型开放式指数证券投资基金"
+            ],
+            "tipFlags": [],
+            "hasThumbnail": true,
+            "indicatorLimited": false,
+            "dataPositionEnum": "MetricLeftTimeTop",
+            "orderCol": {},
+            "jumpUrlList": [
+              {
+                "choiceUrl": "EM://quoteloader?view=quotestockview&securitycode=002463.SZ&type=f10&weburlposition=#/gdyj/sdltgd",
+                "typeName": "F10基本资料",
+                "securityName": "沪电股份"
+              }
+            ],
+            "dataTypeEnum": "F10",
+            "dateRuleSet": [],
+            "freqConvert": false,
+            "deleteInfo": [],
+            "macroCodeMap": {},
+            "entityTagDTO": {
+              "entityId": "1000006938",
+              "entityType": "SEC",
+              "entityTypeCode": "058001001",
+              "entityTypeName": "A股",
+              "classCode": "002001",
+              "className": "沪深京股票",
+              "fullName": "沪电股份",
+              "secuCode": "002463",
+              "market": "0",
+              "marketChar": ".SZ",
+              "correct": false,
+              "hasKLine": false,
+              "valuation": false
+            },
+            "entityTagDTOList": [
+              {
+                "entityId": "1000006938",
+                "entityType": "SEC",
+                "entityTypeCode": "058001001",
+                "entityTypeName": "A股",
+                "classCode": "002001",
+                "className": "沪深京股票",
+                "fullName": "沪电股份",
+                "secuCode": "002463",
+                "market": "0",
+                "marketChar": ".SZ",
+                "correct": false,
+                "hasKLine": false,
+                "valuation": false
+              }
+            ],
+            "indexTable": false,
+            "edbThirdData": false,
+            "dataUpdate": {},
+            "supportsTimeSeries": false,
+            "estimatedTokens": 0,
+            "summaryTips": {
+              "periodicalReport": null
+            },
+            "nestEntityListMap": {},
+            "excelTimeTruncate": false,
+            "frontendEntityName": "沪电股份",
+            "frontendEntityCode": "002463.SZ",
+            "frontendTitle": "十大流通股东明细(截止日期：2025-06-30)",
+            "frontendDesc": "",
+            "indicatorCount": 0,
+            "fieldParameterStr": "",
+            "tdayEnum": "NORMAL"
+          },
+          {
+            "code": "002463.SZ",
+            "entityName": "股东名称",
+            "table": {
+              "BIGGERING(BVI)HOLDINGS CO.,LTD.": [
+                "其它",
+                "A股",
+                "3.718亿",
+                "19.35%",
+                "-",
+                "-"
+              ],
+              "WUS GROUP HOLDINGS CO.,LTD.": [
+                "其它",
+                "A股",
+                "2.287亿",
+                "11.90%",
+                "-",
+                "-"
+              ],
+              "香港中央结算有限公司": [
+                "其它",
+                "A股",
+                "7614万",
+                "3.96%",
+                "-1293万",
+                "-14.52%"
+              ],
+              "中国工商银行股份有限公司-华泰柏瑞沪深300交易型开放式指数证券投资基金": [
+                "证券投资基金",
+                "A股",
+                "2192万",
+                "1.14%",
+                "-46.31万",
+                "-2.07%"
+              ],
+              "HAPPY UNION INVESTMENT LIMITED": [
+                "其它",
+                "A股",
+                "1981万",
+                "1.03%",
+                "-",
+                "-"
+              ],
+              "中国建设银行股份有限公司-易方达沪深300交易型开放式指数发起式证券投资基金": [
+                "证券投资基金",
+                "A股",
+                "1540万",
+                "0.80%",
+                "-57.26万",
+                "-3.59%"
+              ],
+              "平安银行股份有限公司-东吴移动互联灵活配置混合型证券投资基金": [
+                "证券投资基金",
+                "A股",
+                "1500万",
+                "0.78%",
+                "355万",
+                "31.00%"
+              ],
+              "全国社保基金一零九组合": [
+                "全国社保基金",
+                "A股",
+                "1087万",
+                "0.57%",
+                "-174.4万",
+                "-13.82%"
+              ],
+              "中国工商银行股份有限公司-华夏沪深300交易型开放式指数证券投资基金": [
+                "证券投资基金",
+                "A股",
+                "1040万",
+                "0.54%",
+                "-20.26万",
+                "-1.91%"
+              ],
+              "中国人寿保险股份有限公司-传统-普通保险产品-005L-CT001沪": [
+                "保险产品",
+                "A股",
+                "1001万",
+                "0.52%",
+                "-",
+                "-"
+              ],
+              "headName": [
+                "股东性质",
+                "股份类型",
+                "持股数(股)",
+                "持股占流通股比例",
+                "持股变动数(股)",
+                "持股变动幅度"
+              ]
+            },
+            "rawTable": {
+              "BIGGERING(BVI)HOLDINGS CO.,LTD.": [
+                "其它",
+                "A股",
+                "371799937",
+                "19.350936744682",
+                "-",
+                "-"
+              ],
+              "WUS GROUP HOLDINGS CO.,LTD.": [
+                "其它",
+                "A股",
+                "228711023",
+                "11.903639830053",
+                "-",
+                "-"
+              ],
+              "香港中央结算有限公司": [
+                "其它",
+                "A股",
+                "76140977",
+                "3.962881870002",
+                "-12929636",
+                "-14.51616371"
+              ],
+              "中国工商银行股份有限公司-华泰柏瑞沪深300交易型开放式指数证券投资基金": [
+                "证券投资基金",
+                "A股",
+                "21923850",
+                "1.141062685414",
+                "-463100",
+                "-2.06861587"
+              ],
+              "HAPPY UNION INVESTMENT LIMITED": [
+                "其它",
+                "A股",
+                "19811263",
+                "1.031109634495",
+                "-",
+                "-"
+              ],
+              "中国建设银行股份有限公司-易方达沪深300交易型开放式指数发起式证券投资基金": [
+                "证券投资基金",
+                "A股",
+                "15398300",
+                "0.801429746546",
+                "-572600",
+                "-3.58527071"
+              ],
+              "平安银行股份有限公司-东吴移动互联灵活配置混合型证券投资基金": [
+                "证券投资基金",
+                "A股",
+                "15000000",
+                "0.780699570614",
+                "3550000",
+                "31.00436681"
+              ],
+              "全国社保基金一零九组合": [
+                "全国社保基金",
+                "A股",
+                "10871903",
+                "0.565846000257",
+                "-1743590",
+                "-13.8210215"
+              ],
+              "中国工商银行股份有限公司-华夏沪深300交易型开放式指数证券投资基金": [
+                "证券投资基金",
+                "A股",
+                "10396040",
+                "0.541078930939",
+                "-202600",
+                "-1.91156601"
+              ],
+              "中国人寿保险股份有限公司-传统-普通保险产品-005L-CT001沪": [
+                "保险产品",
+                "A股",
+                "10012234",
+                "0.521103118979",
+                "-",
+                "-"
+              ],
+              "headName": [
+                "股东性质",
+                "股份类型",
+                "持股数(股)",
+                "持股占流通股比例",
+                "持股变动数(股)",
+                "持股变动幅度"
+              ]
+            },
+            "truncateRawTable": {},
+            "nameMap": {
+              "BIGGERING(BVI)HOLDINGS CO.,LTD.": "BIGGERING(BVI)HOLDINGS CO.,LTD.",
+              "WUS GROUP HOLDINGS CO.,LTD.": "WUS GROUP HOLDINGS CO.,LTD.",
+              "香港中央结算有限公司": "香港中央结算有限公司",
+              "中国工商银行股份有限公司-华泰柏瑞沪深300交易型开放式指数证券投资基金": "中国工商银行股份有限公司-华泰柏瑞沪深300交易型开放式指数证券投资基金",
+              "HAPPY UNION INVESTMENT LIMITED": "HAPPY UNION INVESTMENT LIMITED",
+              "中国建设银行股份有限公司-易方达沪深300交易型开放式指数发起式证券投资基金": "中国建设银行股份有限公司-易方达沪深300交易型开放式指数发起式证券投资基金",
+              "平安银行股份有限公司-东吴移动互联灵活配置混合型证券投资基金": "平安银行股份有限公司-东吴移动互联灵活配置混合型证券投资基金",
+              "全国社保基金一零九组合": "全国社保基金一零九组合",
+              "中国工商银行股份有限公司-华夏沪深300交易型开放式指数证券投资基金": "中国工商银行股份有限公司-华夏沪深300交易型开放式指数证券投资基金",
+              "中国人寿保险股份有限公司-传统-普通保险产品-005L-CT001沪": "中国人寿保险股份有限公司-传统-普通保险产品-005L-CT001沪",
+              "headName": "headName"
+            },
+            "headNameMap": {},
+            "field": {
+              "returnCode": "RPT_F10_EH_FREEHOLDERS",
+              "returnName": "十大流通股东明细",
+              "classCode": "007202",
+              "checkedRelatedIndicators": false,
+              "startDate": "2025-01-01 00:00:00",
+              "endDate": "2025-12-31 00:00:00",
+              "fuzzy": false,
+              "dateGranularity": "FISCAL_YEAR",
+              "defineType": -1,
+              "isLoopN": false,
+              "isGroup": false,
+              "returnSourceCode": "END_DATE,HOLDER_NAME,HOLDER_TYPE,SHARES_TYPE,HOLD_NUM,FREE_HOLDNUM_RATIO,HOLD_NUM_CHANGE,CHANGE_RATIO",
+              "returnSourceName": "截止日期,股东名称,股东性质,股份类型,持股数(股),持股占流通股比例,持股变动数(股),持股变动幅度",
+              "tableType": "10"
+            },
+            "macroAttributeExcelMap": {},
+            "fieldSet": [
+              {
+                "returnCode": "RPT_F10_EH_FREEHOLDERS",
+                "returnName": "十大流通股东明细",
+                "classCode": "007202",
+                "checkedRelatedIndicators": false,
+                "startDate": "2025-01-01 00:00:00",
+                "endDate": "2025-12-31 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "FISCAL_YEAR",
+                "defineType": -1,
+                "isLoopN": false,
+                "isGroup": false,
+                "returnSourceCode": "END_DATE,HOLDER_NAME,HOLDER_TYPE,SHARES_TYPE,HOLD_NUM,FREE_HOLDNUM_RATIO,HOLD_NUM_CHANGE,CHANGE_RATIO",
+                "returnSourceName": "截止日期,股东名称,股东性质,股份类型,持股数(股),持股占流通股比例,持股变动数(股),持股变动幅度",
+                "tableType": "10"
+              }
+            ],
+            "dataTableType": "F10_TABLE",
+            "inputTitle": "沪电股份(002463.SZ)十大流通股东明细(截止日期：2025-03-31)",
+            "rowInfo": {},
+            "colInfo": {},
+            "indicatorOrder": [
+              "BIGGERING(BVI)HOLDINGS CO.,LTD.",
+              "WUS GROUP HOLDINGS CO.,LTD.",
+              "香港中央结算有限公司",
+              "中国工商银行股份有限公司-华泰柏瑞沪深300交易型开放式指数证券投资基金",
+              "HAPPY UNION INVESTMENT LIMITED",
+              "中国建设银行股份有限公司-易方达沪深300交易型开放式指数发起式证券投资基金",
+              "平安银行股份有限公司-东吴移动互联灵活配置混合型证券投资基金",
+              "全国社保基金一零九组合",
+              "中国工商银行股份有限公司-华夏沪深300交易型开放式指数证券投资基金",
+              "中国人寿保险股份有限公司-传统-普通保险产品-005L-CT001沪"
+            ],
+            "tipFlags": [],
+            "hasThumbnail": true,
+            "indicatorLimited": false,
+            "dataPositionEnum": "MetricLeftTimeTop",
+            "orderCol": {},
+            "jumpUrlList": [
+              {
+                "choiceUrl": "EM://quoteloader?view=quotestockview&securitycode=002463.SZ&type=f10&weburlposition=#/gdyj/sdltgd",
+                "typeName": "F10基本资料",
+                "securityName": "沪电股份"
+              }
+            ],
+            "dataTypeEnum": "F10",
+            "dateRuleSet": [],
+            "freqConvert": false,
+            "deleteInfo": [],
+            "macroCodeMap": {},
+            "entityTagDTO": {
+              "entityId": "1000006938",
+              "entityType": "SEC",
+              "entityTypeCode": "058001001",
+              "entityTypeName": "A股",
+              "classCode": "002001",
+              "className": "沪深京股票",
+              "fullName": "沪电股份",
+              "secuCode": "002463",
+              "market": "0",
+              "marketChar": ".SZ",
+              "correct": false,
+              "hasKLine": false,
+              "valuation": false
+            },
+            "entityTagDTOList": [
+              {
+                "entityId": "1000006938",
+                "entityType": "SEC",
+                "entityTypeCode": "058001001",
+                "entityTypeName": "A股",
+                "classCode": "002001",
+                "className": "沪深京股票",
+                "fullName": "沪电股份",
+                "secuCode": "002463",
+                "market": "0",
+                "marketChar": ".SZ",
+                "correct": false,
+                "hasKLine": false,
+                "valuation": false
+              }
+            ],
+            "indexTable": false,
+            "edbThirdData": false,
+            "dataUpdate": {},
+            "supportsTimeSeries": false,
+            "estimatedTokens": 0,
+            "summaryTips": {
+              "periodicalReport": null
+            },
+            "nestEntityListMap": {},
+            "excelTimeTruncate": false,
+            "frontendEntityName": "沪电股份",
+            "frontendEntityCode": "002463.SZ",
+            "frontendTitle": "十大流通股东明细(截止日期：2025-03-31)",
+            "frontendDesc": "",
+            "indicatorCount": 0,
+            "fieldParameterStr": "",
+            "tdayEnum": "NORMAL"
+          }
+        ],
+        "condition": {
+          "search_data_task_0": [
+            "沪电股份",
+            "十大流通股东明细",
+            "2025-01-01至2025-12-31"
+          ]
+        },
+        "entityTagDTOList": [
+          {
+            "entityId": "1000006938",
+            "entityType": "SEC",
+            "entityTypeCode": "058001001",
+            "entityTypeName": "A股",
+            "classCode": "002001",
+            "className": "沪深京股票",
+            "fullName": "沪电股份",
+            "secuCode": "002463",
+            "market": "0",
+            "marketChar": ".SZ",
+            "correct": false,
+            "hasKLine": false,
+            "valuation": false
+          },
+          {
+            "entityId": "1000006938",
+            "entityType": "SEC",
+            "entityTypeCode": "058001001",
+            "entityTypeName": "A股",
+            "classCode": "002001",
+            "className": "沪深京股票",
+            "fullName": "沪电股份",
+            "secuCode": "002463",
+            "market": "0",
+            "marketChar": ".SZ",
+            "correct": false,
+            "hasKLine": false,
+            "valuation": false
+          },
+          {
+            "entityId": "1000006938",
+            "entityType": "SEC",
+            "entityTypeCode": "058001001",
+            "entityTypeName": "A股",
+            "classCode": "002001",
+            "className": "沪深京股票",
+            "fullName": "沪电股份",
+            "secuCode": "002463",
+            "market": "0",
+            "marketChar": ".SZ",
+            "correct": false,
+            "hasKLine": false,
+            "valuation": false
+          },
+          {
+            "entityId": "1000006938",
+            "entityType": "SEC",
+            "entityTypeCode": "058001001",
+            "entityTypeName": "A股",
+            "classCode": "002001",
+            "className": "沪深京股票",
+            "fullName": "沪电股份",
+            "secuCode": "002463",
+            "market": "0",
+            "marketChar": ".SZ",
+            "correct": false,
+            "hasKLine": false,
+            "valuation": false
+          }
+        ]
+      },
+      "entityName": null,
+      "message": null,
+      "tableTruncated": false
+    },
+    "stack": null
+  },
+  "requestId": "0984748ac6b34723aa353d2bc3362173"
+}

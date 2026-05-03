@@ -1,0 +1,415 @@
+{
+  "success": true,
+  "status": 0,
+  "code": 0,
+  "message": "ok",
+  "data": {
+    "requestId": null,
+    "message": "OK",
+    "status": 0,
+    "code": 0,
+    "data": {
+      "protocolType": "SEARCH_DATA",
+      "id": "486c9f30-d012-404c-af8b-4407ffea425f",
+      "refSeq": null,
+      "keyEntityList": null,
+      "searchDataResultDTO": {
+        "questionId": "3299208d-de65-4119-8a95-45206b37654e",
+        "dataTableDTOList": [
+          {
+            "code": "002463.SZ",
+            "entityName": "沪电股份(002463.SZ)",
+            "table": {
+              "100000000003466": [
+                "28.36%",
+                "23.93%",
+                "16.76%"
+              ],
+              "100000000002972": [
+                "35.48%",
+                "34.54%",
+                "31.17%"
+              ],
+              "headName": [
+                "2025年报",
+                "2024年报",
+                "2023年报"
+              ]
+            },
+            "rawTable": {
+              "100000000003466": [
+                "28.362243596800",
+                "23.927662741700",
+                "16.757935136100"
+              ],
+              "100000000002972": [
+                "35.475561400",
+                "34.539735784800",
+                "31.170390171900"
+              ],
+              "headName": [
+                "2025年报",
+                "2024年报",
+                "2023年报"
+              ]
+            },
+            "truncateRawTable": {},
+            "nameMap": {
+              "100000000003466": "净资产收益率ROE",
+              "headNameSub": "数据来源",
+              "100000000002972": "销售毛利率"
+            },
+            "headNameMap": {},
+            "field": {
+              "returnCode": "100000000003466",
+              "returnName": "净资产收益率ROE",
+              "classCode": "007101",
+              "checkedRelatedIndicators": false,
+              "startDate": "2023-01-01 00:00:00",
+              "endDate": "2023-12-31 00:00:00",
+              "fuzzy": false,
+              "dateGranularity": "FISCAL_YEAR",
+              "defineType": -1,
+              "isLoopN": false,
+              "fixedParamValue": "DataAdjustType=1",
+              "quantType": "1",
+              "isGroup": false,
+              "returnSourceCode": "ROEPJ",
+              "returnSourceName": "净资产收益率ROE",
+              "graph": "2",
+              "unit": "1",
+              "tableType": "1",
+              "unitName": "%",
+              "unitDesc": "10802:%:%"
+            },
+            "entityCodes": [
+              "002463.SZ"
+            ],
+            "macroAttributeExcelMap": {},
+            "fieldSet": [
+              {
+                "returnCode": "100000000002972",
+                "returnName": "销售毛利率",
+                "classCode": "007101",
+                "checkedRelatedIndicators": false,
+                "startDate": "2023-01-01 00:00:00",
+                "endDate": "2025-12-31 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "FISCAL_YEAR",
+                "defineType": -1,
+                "isLoopN": false,
+                "fixedParamValue": "DataAdjustType=1",
+                "quantType": "1",
+                "isGroup": false,
+                "returnSourceCode": "XSMLL",
+                "returnSourceName": "销售毛利率",
+                "graph": "2",
+                "unit": "1",
+                "tableType": "1",
+                "unitName": "%",
+                "unitDesc": "10802:%:%"
+              },
+              {
+                "returnCode": "100000000003466",
+                "returnName": "净资产收益率ROE",
+                "classCode": "007101",
+                "checkedRelatedIndicators": false,
+                "startDate": "2023-01-01 00:00:00",
+                "endDate": "2025-12-31 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "FISCAL_YEAR",
+                "defineType": -1,
+                "isLoopN": false,
+                "fixedParamValue": "DataAdjustType=1",
+                "quantType": "1",
+                "isGroup": false,
+                "returnSourceCode": "ROEPJ",
+                "returnSourceName": "净资产收益率ROE",
+                "graph": "2",
+                "unit": "1",
+                "tableType": "1",
+                "unitName": "%",
+                "unitDesc": "10802:%:%"
+              }
+            ],
+            "dataTableType": "NORM_TABLE",
+            "rowInfo": {},
+            "colInfo": {},
+            "indicatorOrder": [
+              "100000000003466",
+              "100000000002972"
+            ],
+            "tipFlags": [],
+            "dataType": "数据浏览器",
+            "title": "沪电股份(002463.SZ)的净资产收益率ROE、销售毛利率",
+            "hasThumbnail": true,
+            "indicatorLimited": false,
+            "dataPositionEnum": "MetricLeftTimeTop",
+            "orderCol": {},
+            "jumpUrlList": [
+              {
+                "choiceUrl": "EM://stockdatacenter?type=browser&modType=STOCK&code=002463.SZ&indId=100000000003466|100:2023-12-31,100000000003466|100:2024-12-31,100000000003466|100:2025-12-31,100000000002972|100:2023-12-31|314:1,100000000002972|100:2024-12-31|314:1,100000000002972|100:2025-12-31|314:1",
+                "typeName": "股票数据浏览器"
+              }
+            ],
+            "dataTypeEnum": "DATA_BROWSER",
+            "dateRuleSet": [],
+            "freqConvert": false,
+            "deleteInfo": [],
+            "macroCodeMap": {},
+            "entityTagDTO": {
+              "entityId": "1000006938",
+              "entityType": "SEC",
+              "entityTypeCode": "058001001",
+              "entityTypeName": "A股",
+              "classCode": "002001",
+              "className": "沪深京股票",
+              "fullName": "沪电股份",
+              "secuCode": "002463",
+              "market": "0",
+              "marketChar": ".SZ",
+              "correct": false,
+              "hasKLine": false,
+              "valuation": false
+            },
+            "entityTagDTOList": [
+              {
+                "entityId": "1000006938",
+                "entityType": "SEC",
+                "entityTypeCode": "058001001",
+                "entityTypeName": "A股",
+                "classCode": "002001",
+                "className": "沪深京股票",
+                "fullName": "沪电股份",
+                "secuCode": "002463",
+                "market": "0",
+                "marketChar": ".SZ",
+                "correct": false,
+                "hasKLine": false,
+                "valuation": false
+              }
+            ],
+            "indexTable": false,
+            "edbThirdData": false,
+            "dataUpdate": {
+              "2025年报": false
+            },
+            "supportsTimeSeries": false,
+            "estimatedTokens": 0,
+            "summaryTips": {
+              "periodicalReport": null
+            },
+            "nestEntityListMap": {},
+            "excelTimeTruncate": false,
+            "frontendEntityName": "",
+            "frontendEntityCode": "",
+            "frontendTitle": "",
+            "frontendDesc": "",
+            "indicatorCount": 0,
+            "fieldParameterStr": "",
+            "tdayEnum": "NORMAL"
+          },
+          {
+            "code": "H5245.HK",
+            "entityName": "沪电股份(H5245.HK)(最新年结日12-31)",
+            "table": {
+              "100000000047139": [
+                "25.29",
+                "21.85",
+                "15.46"
+              ],
+              "headName": [
+                "2025年报",
+                "2024年报",
+                "2023年报"
+              ]
+            },
+            "rawTable": {
+              "100000000047139": [
+                "25.2920067092",
+                "21.8502280847",
+                "15.458182298299999"
+              ],
+              "headName": [
+                "2025年报",
+                "2024年报",
+                "2023年报"
+              ]
+            },
+            "truncateRawTable": {},
+            "nameMap": {
+              "100000000047139": "净资产收益率ROE(摊薄)(%)",
+              "headNameSub": "数据来源"
+            },
+            "headNameMap": {},
+            "field": {
+              "returnCode": "100000000047139",
+              "returnName": "净资产收益率ROE(摊薄)(%)",
+              "classCode": "007101",
+              "checkedRelatedIndicators": false,
+              "startDate": "2023-01-01 00:00:00",
+              "endDate": "2023-12-31 00:00:00",
+              "fuzzy": false,
+              "dateGranularity": "FISCAL_YEAR",
+              "defineType": -1,
+              "isLoopN": false,
+              "quantType": "1",
+              "isGroup": false,
+              "returnSourceCode": "ROE_DILUTED",
+              "returnSourceName": "净资产收益率ROE(摊薄)(%)",
+              "graph": "2",
+              "unit": "1",
+              "tableType": "1"
+            },
+            "entityCodes": [
+              "H5245.HK"
+            ],
+            "macroAttributeExcelMap": {},
+            "fieldSet": [
+              {
+                "returnCode": "100000000047139",
+                "returnName": "净资产收益率ROE(摊薄)(%)",
+                "classCode": "007101",
+                "checkedRelatedIndicators": false,
+                "startDate": "2023-01-01 00:00:00",
+                "endDate": "2025-12-31 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "FISCAL_YEAR",
+                "defineType": -1,
+                "isLoopN": false,
+                "quantType": "1",
+                "isGroup": false,
+                "returnSourceCode": "ROE_DILUTED",
+                "returnSourceName": "净资产收益率ROE(摊薄)(%)",
+                "graph": "2",
+                "unit": "1",
+                "tableType": "1"
+              }
+            ],
+            "dataTableType": "NORM_TABLE",
+            "rowInfo": {},
+            "colInfo": {},
+            "indicatorOrder": [
+              "100000000047139"
+            ],
+            "tipFlags": [],
+            "dataType": "数据浏览器",
+            "title": "沪电股份(H5245.HK)(最新年结日12-31)的净资产收益率ROE(摊薄)(%)",
+            "hasThumbnail": true,
+            "indicatorLimited": false,
+            "dataPositionEnum": "MetricLeftTimeTop",
+            "orderCol": {},
+            "jumpUrlList": [
+              {
+                "choiceUrl": "EM://stockdatacenter?type=browser&modType=STOCK&code=H5245.HK&indId=100000000047139|100:2023-12-31,100000000047139|100:2024-12-31,100000000047139|100:2025-12-31",
+                "typeName": "股票数据浏览器"
+              }
+            ],
+            "dataTypeEnum": "DATA_BROWSER",
+            "dateRuleSet": [],
+            "freqConvert": false,
+            "deleteInfo": [],
+            "macroCodeMap": {},
+            "entityTagDTO": {
+              "entityId": "1004487962",
+              "entityType": "SEC",
+              "entityTypeCode": "058001003001",
+              "entityTypeName": "H股",
+              "classCode": "002003",
+              "className": "港股",
+              "fullName": "沪电股份",
+              "secuCode": "H5245",
+              "marketChar": ".HK",
+              "correct": false,
+              "hasKLine": false,
+              "valuation": false
+            },
+            "entityTagDTOList": [
+              {
+                "entityId": "1004487962",
+                "entityType": "SEC",
+                "entityTypeCode": "058001003001",
+                "entityTypeName": "H股",
+                "classCode": "002003",
+                "className": "港股",
+                "fullName": "沪电股份",
+                "secuCode": "H5245",
+                "marketChar": ".HK",
+                "correct": false,
+                "hasKLine": false,
+                "valuation": false
+              }
+            ],
+            "indexTable": false,
+            "edbThirdData": false,
+            "dataUpdate": {
+              "2025年报": false
+            },
+            "supportsTimeSeries": false,
+            "estimatedTokens": 0,
+            "summaryTips": {
+              "periodicalReport": null
+            },
+            "nestEntityListMap": {},
+            "excelTimeTruncate": false,
+            "frontendEntityName": "",
+            "frontendEntityCode": "",
+            "frontendTitle": "",
+            "frontendDesc": "",
+            "indicatorCount": 0,
+            "fieldParameterStr": "",
+            "tdayEnum": "NORMAL"
+          }
+        ],
+        "condition": {
+          "search_data_task_0": [
+            "沪电股份",
+            "净资产收益率ROE销售毛利率",
+            "2023-01-01至2025-12-31"
+          ],
+          "search_data_task_1": [
+            "沪电股份",
+            "净资产收益率ROE(摊薄)(%)",
+            "2023-01-01至2025-12-31"
+          ]
+        },
+        "entityTagDTOList": [
+          {
+            "entityId": "1000006938",
+            "entityType": "SEC",
+            "entityTypeCode": "058001001",
+            "entityTypeName": "A股",
+            "classCode": "002001",
+            "className": "沪深京股票",
+            "fullName": "沪电股份",
+            "secuCode": "002463",
+            "market": "0",
+            "marketChar": ".SZ",
+            "correct": false,
+            "hasKLine": false,
+            "valuation": false
+          },
+          {
+            "entityId": "1004487962",
+            "entityType": "SEC",
+            "entityTypeCode": "058001003001",
+            "entityTypeName": "H股",
+            "classCode": "002003",
+            "className": "港股",
+            "fullName": "沪电股份",
+            "secuCode": "H5245",
+            "marketChar": ".HK",
+            "correct": false,
+            "hasKLine": false,
+            "valuation": false
+          }
+        ]
+      },
+      "entityName": null,
+      "message": null,
+      "tableTruncated": false
+    },
+    "stack": null
+  },
+  "requestId": "e43521dca0e44aafb11e30fed9928468"
+}

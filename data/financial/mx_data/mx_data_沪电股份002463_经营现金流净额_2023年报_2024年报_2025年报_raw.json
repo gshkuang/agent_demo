@@ -1,0 +1,387 @@
+{
+  "success": true,
+  "status": 0,
+  "code": 0,
+  "message": "ok",
+  "data": {
+    "requestId": null,
+    "message": "OK",
+    "status": 0,
+    "code": 0,
+    "data": {
+      "protocolType": "SEARCH_DATA",
+      "id": "3bbee099-70d5-4b05-b127-6640c28d5397",
+      "refSeq": null,
+      "keyEntityList": null,
+      "searchDataResultDTO": {
+        "questionId": "69ce407b-fb74-4e12-aff7-3a4f2bfe90a6",
+        "dataTableDTOList": [
+          {
+            "code": "002463.SZ",
+            "entityName": "沪电股份(002463.SZ)",
+            "table": {
+              "100000000000259": [
+                "38.72亿元",
+                "23.25亿元",
+                "22.43亿元"
+              ],
+              "headName": [
+                "2025年报",
+                "2024年报",
+                "2023年报"
+              ]
+            },
+            "rawTable": {
+              "100000000000259": [
+                "3871967792",
+                "2325184965",
+                "2243311100"
+              ],
+              "headName": [
+                "2025年报",
+                "2024年报",
+                "2023年报"
+              ]
+            },
+            "truncateRawTable": {},
+            "nameMap": {
+              "100000000000259": "经营活动产生的现金流量净额",
+              "headNameSub": "数据来源"
+            },
+            "headNameMap": {},
+            "field": {
+              "returnCode": "100000000000259",
+              "returnName": "经营活动产生的现金流量净额",
+              "classCode": "007101",
+              "checkedRelatedIndicators": false,
+              "startDate": "2023-01-01 00:00:00",
+              "endDate": "2023-12-31 00:00:00",
+              "fuzzy": false,
+              "dateGranularity": "FISCAL_YEAR",
+              "defineType": -1,
+              "isLoopN": false,
+              "fixedParamValue": "type=1,ItemsCode=39",
+              "quantType": "1",
+              "isGroup": false,
+              "returnSourceCode": "NETOPERATECASHFLOW",
+              "returnSourceName": "经营活动产生的现金流量净额",
+              "graph": "1",
+              "unit": "1",
+              "tableType": "1",
+              "unitName": "元",
+              "unitDesc": "101:元:元"
+            },
+            "entityCodes": [
+              "002463.SZ"
+            ],
+            "macroAttributeExcelMap": {},
+            "fieldSet": [
+              {
+                "returnCode": "100000000000259",
+                "returnName": "经营活动产生的现金流量净额",
+                "classCode": "007101",
+                "checkedRelatedIndicators": false,
+                "startDate": "2023-01-01 00:00:00",
+                "endDate": "2025-12-31 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "FISCAL_YEAR",
+                "defineType": -1,
+                "isLoopN": false,
+                "fixedParamValue": "type=1,ItemsCode=39",
+                "quantType": "1",
+                "isGroup": false,
+                "returnSourceCode": "NETOPERATECASHFLOW",
+                "returnSourceName": "经营活动产生的现金流量净额",
+                "graph": "1",
+                "unit": "1",
+                "tableType": "1",
+                "unitName": "元",
+                "unitDesc": "101:元:元"
+              }
+            ],
+            "dataTableType": "NORM_TABLE",
+            "rowInfo": {},
+            "colInfo": {},
+            "indicatorOrder": [
+              "100000000000259"
+            ],
+            "tipFlags": [],
+            "dataType": "数据浏览器",
+            "title": "沪电股份(002463.SZ)的经营活动产生的现金流量净额",
+            "hasThumbnail": true,
+            "indicatorLimited": false,
+            "dataPositionEnum": "MetricLeftTimeTop",
+            "orderCol": {},
+            "jumpUrlList": [
+              {
+                "choiceUrl": "EM://stockdatacenter?type=browser&modType=STOCK&code=002463.SZ&indId=100000000000259|100:2023-12-31|115:1,100000000000259|100:2024-12-31|115:1,100000000000259|100:2025-12-31|115:1",
+                "typeName": "股票数据浏览器"
+              }
+            ],
+            "dataTypeEnum": "DATA_BROWSER",
+            "dateRuleSet": [],
+            "freqConvert": false,
+            "deleteInfo": [],
+            "macroCodeMap": {},
+            "entityTagDTO": {
+              "entityId": "1000006938",
+              "entityType": "SEC",
+              "entityTypeCode": "058001001",
+              "entityTypeName": "A股",
+              "classCode": "002001",
+              "className": "沪深京股票",
+              "fullName": "沪电股份",
+              "secuCode": "002463",
+              "market": "0",
+              "marketChar": ".SZ",
+              "correct": false,
+              "hasKLine": false,
+              "valuation": false
+            },
+            "entityTagDTOList": [
+              {
+                "entityId": "1000006938",
+                "entityType": "SEC",
+                "entityTypeCode": "058001001",
+                "entityTypeName": "A股",
+                "classCode": "002001",
+                "className": "沪深京股票",
+                "fullName": "沪电股份",
+                "secuCode": "002463",
+                "market": "0",
+                "marketChar": ".SZ",
+                "correct": false,
+                "hasKLine": false,
+                "valuation": false
+              }
+            ],
+            "indexTable": false,
+            "edbThirdData": false,
+            "dataUpdate": {
+              "2025年报": false
+            },
+            "supportsTimeSeries": false,
+            "estimatedTokens": 0,
+            "summaryTips": {
+              "periodicalReport": null
+            },
+            "nestEntityListMap": {},
+            "excelTimeTruncate": false,
+            "frontendEntityName": "",
+            "frontendEntityCode": "",
+            "frontendTitle": "",
+            "frontendDesc": "",
+            "indicatorCount": 0,
+            "fieldParameterStr": "",
+            "tdayEnum": "NORMAL"
+          },
+          {
+            "code": "H5245.HK",
+            "entityName": "沪电股份(H5245.HK)(最新年结日12-31)",
+            "table": {
+              "100000000046754": [
+                "42.87亿港元",
+                "24.6亿港元",
+                "24.5亿港元"
+              ],
+              "headName": [
+                "2025年报",
+                "2024年报",
+                "2023年报"
+              ]
+            },
+            "rawTable": {
+              "100000000046754": [
+                "4286849042.315274",
+                "2459528746.058486",
+                "2450238352.717883"
+              ],
+              "headName": [
+                "2025年报",
+                "2024年报",
+                "2023年报"
+              ]
+            },
+            "truncateRawTable": {},
+            "nameMap": {
+              "100000000046754": "经营活动产生的现金流量净额",
+              "headNameSub": "数据来源"
+            },
+            "headNameMap": {},
+            "field": {
+              "returnCode": "100000000046754",
+              "returnName": "经营活动产生的现金流量净额",
+              "classCode": "007101",
+              "checkedRelatedIndicators": false,
+              "startDate": "2023-01-01 00:00:00",
+              "endDate": "2023-12-31 00:00:00",
+              "fuzzy": false,
+              "dateGranularity": "FISCAL_YEAR",
+              "defineType": -1,
+              "isLoopN": false,
+              "fixedParamValue": "type=1,CurType=4",
+              "quantType": "1",
+              "isGroup": false,
+              "returnSourceCode": "NETCF_OP",
+              "returnSourceName": "经营活动产生的现金流量净额",
+              "graph": "1",
+              "unit": "1",
+              "tableType": "1",
+              "unitName": "元",
+              "unitDesc": "101:元:元"
+            },
+            "entityCodes": [
+              "H5245.HK"
+            ],
+            "macroAttributeExcelMap": {},
+            "fieldSet": [
+              {
+                "returnCode": "100000000046754",
+                "returnName": "经营活动产生的现金流量净额",
+                "classCode": "007101",
+                "checkedRelatedIndicators": false,
+                "startDate": "2023-01-01 00:00:00",
+                "endDate": "2025-12-31 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "FISCAL_YEAR",
+                "defineType": -1,
+                "isLoopN": false,
+                "fixedParamValue": "type=1,CurType=4",
+                "quantType": "1",
+                "isGroup": false,
+                "returnSourceCode": "NETCF_OP",
+                "returnSourceName": "经营活动产生的现金流量净额",
+                "graph": "1",
+                "unit": "1",
+                "tableType": "1",
+                "unitName": "元",
+                "unitDesc": "101:元:元"
+              }
+            ],
+            "dataTableType": "NORM_TABLE",
+            "rowInfo": {},
+            "colInfo": {},
+            "indicatorOrder": [
+              "100000000046754"
+            ],
+            "tipFlags": [],
+            "dataType": "数据浏览器",
+            "title": "沪电股份(H5245.HK)(最新年结日12-31)的经营活动产生的现金流量净额",
+            "hasThumbnail": true,
+            "indicatorLimited": false,
+            "dataPositionEnum": "MetricLeftTimeTop",
+            "orderCol": {},
+            "jumpUrlList": [
+              {
+                "choiceUrl": "EM://stockdatacenter?type=browser&modType=STOCK&code=H5245.HK&indId=100000000046754|100:2023-12-31|115:1|453:4,100000000046754|100:2024-12-31|115:1|453:4,100000000046754|100:2025-12-31|115:1|453:4",
+                "typeName": "股票数据浏览器"
+              }
+            ],
+            "dataTypeEnum": "DATA_BROWSER",
+            "dateRuleSet": [],
+            "freqConvert": false,
+            "deleteInfo": [],
+            "macroCodeMap": {},
+            "entityTagDTO": {
+              "entityId": "1004487962",
+              "entityType": "SEC",
+              "entityTypeCode": "058001003001",
+              "entityTypeName": "H股",
+              "classCode": "002003",
+              "className": "港股",
+              "fullName": "沪电股份",
+              "secuCode": "H5245",
+              "marketChar": ".HK",
+              "correct": false,
+              "hasKLine": false,
+              "valuation": false
+            },
+            "entityTagDTOList": [
+              {
+                "entityId": "1004487962",
+                "entityType": "SEC",
+                "entityTypeCode": "058001003001",
+                "entityTypeName": "H股",
+                "classCode": "002003",
+                "className": "港股",
+                "fullName": "沪电股份",
+                "secuCode": "H5245",
+                "marketChar": ".HK",
+                "correct": false,
+                "hasKLine": false,
+                "valuation": false
+              }
+            ],
+            "indexTable": false,
+            "edbThirdData": false,
+            "dataUpdate": {
+              "2025年报": false
+            },
+            "supportsTimeSeries": false,
+            "estimatedTokens": 0,
+            "summaryTips": {
+              "periodicalReport": null
+            },
+            "nestEntityListMap": {},
+            "excelTimeTruncate": false,
+            "frontendEntityName": "",
+            "frontendEntityCode": "",
+            "frontendTitle": "",
+            "frontendDesc": "",
+            "indicatorCount": 0,
+            "fieldParameterStr": "",
+            "tdayEnum": "NORMAL"
+          }
+        ],
+        "condition": {
+          "search_data_task_0": [
+            "沪电股份",
+            "经营活动产生的现金流量净额",
+            "2023-01-01至2025-12-31"
+          ],
+          "search_data_task_1": [
+            "沪电股份",
+            "经营活动产生的现金流量净额",
+            "2023-01-01至2025-12-31"
+          ]
+        },
+        "entityTagDTOList": [
+          {
+            "entityId": "1000006938",
+            "entityType": "SEC",
+            "entityTypeCode": "058001001",
+            "entityTypeName": "A股",
+            "classCode": "002001",
+            "className": "沪深京股票",
+            "fullName": "沪电股份",
+            "secuCode": "002463",
+            "market": "0",
+            "marketChar": ".SZ",
+            "correct": false,
+            "hasKLine": false,
+            "valuation": false
+          },
+          {
+            "entityId": "1004487962",
+            "entityType": "SEC",
+            "entityTypeCode": "058001003001",
+            "entityTypeName": "H股",
+            "classCode": "002003",
+            "className": "港股",
+            "fullName": "沪电股份",
+            "secuCode": "H5245",
+            "marketChar": ".HK",
+            "correct": false,
+            "hasKLine": false,
+            "valuation": false
+          }
+        ]
+      },
+      "entityName": null,
+      "message": null,
+      "tableTruncated": false
+    },
+    "stack": null
+  },
+  "requestId": "28cbf42386454e3a93291a94143ef40d"
+}

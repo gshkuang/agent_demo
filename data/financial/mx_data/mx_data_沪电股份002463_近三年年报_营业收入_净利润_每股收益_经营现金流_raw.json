@@ -1,0 +1,1261 @@
+{
+  "success": true,
+  "status": 0,
+  "code": 0,
+  "message": "ok",
+  "data": {
+    "requestId": null,
+    "message": "OK",
+    "status": 0,
+    "code": 0,
+    "data": {
+      "protocolType": "SEARCH_DATA",
+      "id": "c58948e6-ef2f-4edb-89c3-581d9ba876fb",
+      "refSeq": null,
+      "keyEntityList": null,
+      "searchDataResultDTO": {
+        "questionId": "dc7c8fd4-4fe9-4599-857b-86a4f39e5383",
+        "dataTableDTOList": [
+          {
+            "code": "002463.SZ",
+            "entityName": "沪电股份(002463.SZ)",
+            "table": {
+              "100000000000189": [
+                "38.19亿元",
+                "25.66亿元",
+                "14.9亿元"
+              ],
+              "100000000000200": [
+                "38.22亿元",
+                "25.87亿元",
+                "15.13亿元"
+              ],
+              "100000000002941": [
+                "2.012元",
+                "1.212元",
+                "1.175元"
+              ],
+              "100000000002934": [
+                "1.988元",
+                "1.352元",
+                "0.7944元"
+              ],
+              "100000000000415": [
+                "189.5亿元",
+                "133.4亿元",
+                "89.38亿元"
+              ],
+              "100000000000210": [
+                "189.5亿元",
+                "133.4亿元",
+                "89.38亿元"
+              ],
+              "100000000004682": [
+                "42%",
+                "49.26%",
+                "7.225%"
+              ],
+              "100000000000688": [
+                "54.33亿元",
+                "43.31亿元",
+                "28.56亿元"
+              ],
+              "100000000003199": [
+                "25.45%",
+                "51.64%",
+                "11.02%"
+              ],
+              "100000000004686": [
+                "47.74%",
+                "71.05%",
+                "11.09%"
+              ],
+              "100000000000626": [
+                "11.05亿元",
+                "7.388亿元",
+                "5.595亿元"
+              ],
+              "100000000003207": [
+                "49.52%",
+                "32.07%",
+                "27.16%"
+              ],
+              "100000000003520": [
+                "37.61亿元",
+                "25.46亿元",
+                "14.08亿元"
+              ],
+              "100000000004687": [
+                "47.69%",
+                "80.8%",
+                "11.36%"
+              ],
+              "100000000003177": [
+                "10.84亿元",
+                "7.4亿元",
+                "5.307亿元"
+              ],
+              "100000000015540": [
+                "46.51%",
+                "39.45%",
+                "35.8%"
+              ],
+              "headName": [
+                "2025年报",
+                "2024年报",
+                "2023年报"
+              ]
+            },
+            "rawTable": {
+              "100000000000189": [
+                "3818673108",
+                "2566315235",
+                "1489518520"
+              ],
+              "100000000000200": [
+                "3822306272",
+                "2587236693",
+                "1512538227"
+              ],
+              "100000000002941": [
+                "2.012077093311",
+                "1.211917955334",
+                "1.175383394564"
+              ],
+              "100000000002934": [
+                "1.9875",
+                "1.3516",
+                "0.7944"
+              ],
+              "100000000000415": [
+                "18945220585",
+                "13341541440",
+                "8938309250"
+              ],
+              "100000000000210": [
+                "18945220585",
+                "13341541440",
+                "8938309250"
+              ],
+              "100000000004682": [
+                "42.001736982200",
+                "49.262473101400",
+                "7.225010953500"
+              ],
+              "100000000000688": [
+                "5432830354",
+                "4330627418",
+                "2855852339"
+              ],
+              "100000000003199": [
+                "25.451345258200",
+                "51.640452794400",
+                "11.017353961100"
+              ],
+              "100000000004686": [
+                "47.7370154165481300",
+                "71.0526482449028400",
+                "11.08739774797508900"
+              ],
+              "100000000000626": [
+                "1104688277",
+                "738847308",
+                "559455963"
+              ],
+              "100000000003207": [
+                "49.515098050500",
+                "32.065320036600",
+                "27.160757013500"
+              ],
+              "100000000003520": [
+                "3760567906",
+                "2546301588",
+                "1408380964"
+              ],
+              "100000000004687": [
+                "47.687450839385804",
+                "80.79636498125801",
+                "11.363975979329174"
+              ],
+              "100000000003177": [
+                "1084147646",
+                "739989443",
+                "530663829"
+              ],
+              "100000000015540": [
+                "46.50852877100",
+                "39.445992464700",
+                "35.798643188200"
+              ],
+              "headName": [
+                "2025年报",
+                "2024年报",
+                "2023年报"
+              ]
+            },
+            "truncateRawTable": {},
+            "nameMap": {
+              "100000000000189": "净利润",
+              "headNameSub": "数据来源",
+              "100000000000200": "归属于母公司股东的净利润",
+              "100000000002941": "每股经营活动产生的现金流量净额",
+              "100000000002934": "每股收益EPS(基本)",
+              "100000000000415": "营业收入",
+              "100000000000210": "营业总收入",
+              "100000000004682": "营业总收入同比增长率",
+              "100000000000688": "单季度.营业总收入",
+              "100000000003199": "单季度.营业总收入同比增长率",
+              "100000000004686": "归属母公司股东的净利润同比增长率",
+              "100000000000626": "单季度.归属母公司股东的净利润",
+              "100000000003207": "单季度.归属母公司股东的净利润同比增长率",
+              "100000000003520": "扣除非经常性损益后归属于母公司股东的净利润",
+              "100000000004687": "归属母公司股东的净利润同比增长率(扣除非经常性损益)",
+              "100000000003177": "单季度.扣除非经常损益后的净利润",
+              "100000000015540": "单季度.扣除非经常损益后的净利润同比增长率"
+            },
+            "headNameMap": {},
+            "field": {
+              "returnCode": "100000000000189",
+              "returnName": "净利润",
+              "classCode": "007101",
+              "checkedRelatedIndicators": false,
+              "startDate": "2023-04-19 00:00:00",
+              "endDate": "2026-04-19 00:00:00",
+              "fuzzy": false,
+              "dateGranularity": "FISCAL_YEAR",
+              "defineType": -1,
+              "rangeCount": -3,
+              "isLoopN": false,
+              "fixedParamValue": "type=1,ItemsCode=60",
+              "quantType": "1",
+              "isGroup": false,
+              "returnSourceCode": "NETPROFIT",
+              "returnSourceName": "净利润",
+              "graph": "1",
+              "unit": "1",
+              "tableType": "1",
+              "unitName": "元",
+              "unitDesc": "101:元:元"
+            },
+            "entityCodes": [
+              "002463.SZ"
+            ],
+            "macroAttributeExcelMap": {},
+            "fieldSet": [
+              {
+                "returnCode": "100000000002934",
+                "returnName": "每股收益EPS(基本)",
+                "classCode": "007101",
+                "checkedRelatedIndicators": false,
+                "startDate": "2023-04-19 00:00:00",
+                "endDate": "2026-04-19 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "FISCAL_YEAR",
+                "defineType": -1,
+                "rangeCount": -3,
+                "isLoopN": false,
+                "fixedParamValue": "DataAdjustType=1",
+                "quantType": "1",
+                "isGroup": false,
+                "returnSourceCode": "EPSJB",
+                "returnSourceName": "每股收益EPS(基本)",
+                "graph": "2",
+                "unit": "1",
+                "tableType": "1",
+                "unitName": "元",
+                "unitDesc": "10104:元:元"
+              },
+              {
+                "returnCode": "100000000004682",
+                "returnName": "营业总收入同比增长率",
+                "classCode": "007101",
+                "checkedRelatedIndicators": false,
+                "startDate": "2023-04-19 00:00:00",
+                "endDate": "2026-04-19 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "FISCAL_YEAR",
+                "defineType": -1,
+                "rangeCount": -3,
+                "isLoopN": false,
+                "quantType": "1",
+                "isGroup": false,
+                "returnSourceCode": "TYSTZ",
+                "returnSourceName": "营业总收入同比增长率",
+                "graph": "2",
+                "unit": "1",
+                "tableType": "1",
+                "unitName": "%",
+                "unitDesc": "10802:%:%"
+              },
+              {
+                "returnCode": "100000000015540",
+                "returnName": "单季度.扣除非经常损益后的净利润同比增长率",
+                "classCode": "007101",
+                "checkedRelatedIndicators": false,
+                "startDate": "2023-04-19 00:00:00",
+                "endDate": "2026-04-19 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "FISCAL_YEAR",
+                "defineType": -1,
+                "rangeCount": -3,
+                "isLoopN": false,
+                "quantType": "1",
+                "isGroup": false,
+                "returnSourceCode": "DJDKCFJCSYHDJLRTBZCL",
+                "returnSourceName": "单季度.扣除非经常损益后的净利润同比增长率",
+                "graph": "2",
+                "unit": "1",
+                "tableType": "1",
+                "unitName": "%",
+                "unitDesc": "10802:%:%"
+              },
+              {
+                "returnCode": "100000000000210",
+                "returnName": "营业总收入",
+                "classCode": "007101",
+                "checkedRelatedIndicators": false,
+                "startDate": "2023-04-19 00:00:00",
+                "endDate": "2026-04-19 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "FISCAL_YEAR",
+                "defineType": -1,
+                "rangeCount": -3,
+                "isLoopN": false,
+                "fixedParamValue": "type=1,ItemsCode=83",
+                "quantType": "1",
+                "isGroup": false,
+                "returnSourceCode": "TOTALOPERATEREVE",
+                "returnSourceName": "营业总收入",
+                "graph": "1",
+                "unit": "1",
+                "tableType": "1",
+                "unitName": "元",
+                "unitDesc": "101:元:元"
+              },
+              {
+                "returnCode": "100000000002941",
+                "returnName": "每股经营活动产生的现金流量净额",
+                "classCode": "007101",
+                "checkedRelatedIndicators": false,
+                "startDate": "2023-04-19 00:00:00",
+                "endDate": "2026-04-19 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "FISCAL_YEAR",
+                "defineType": -1,
+                "rangeCount": -3,
+                "isLoopN": false,
+                "fixedParamValue": "DataAdjustType=1",
+                "quantType": "1",
+                "isGroup": false,
+                "returnSourceCode": "MGJYXJJE",
+                "returnSourceName": "每股经营活动产生的现金流量净额",
+                "graph": "2",
+                "unit": "1",
+                "tableType": "1",
+                "unitName": "元",
+                "unitDesc": "10104:元:元"
+              },
+              {
+                "returnCode": "100000000000688",
+                "returnName": "单季度.营业总收入",
+                "classCode": "007101",
+                "checkedRelatedIndicators": false,
+                "startDate": "2023-04-19 00:00:00",
+                "endDate": "2026-04-19 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "FISCAL_YEAR",
+                "defineType": -1,
+                "rangeCount": -3,
+                "isLoopN": false,
+                "fixedParamValue": "Type=1,ItemsCode=83",
+                "quantType": "1",
+                "isGroup": false,
+                "returnSourceCode": "TOTALOPERATEREVE_S",
+                "returnSourceName": "单季度.营业总收入",
+                "graph": "1",
+                "unit": "1",
+                "tableType": "1",
+                "unitName": "元",
+                "unitDesc": "101:元:元"
+              },
+              {
+                "returnCode": "100000000003520",
+                "returnName": "扣除非经常性损益后归属于母公司股东的净利润",
+                "classCode": "007101",
+                "checkedRelatedIndicators": false,
+                "startDate": "2023-04-19 00:00:00",
+                "endDate": "2026-04-19 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "FISCAL_YEAR",
+                "defineType": -1,
+                "rangeCount": -3,
+                "isLoopN": false,
+                "fixedParamValue": "DataAdjustType=1",
+                "quantType": "1",
+                "isGroup": false,
+                "returnSourceCode": "KCFJCXSYJLR",
+                "returnSourceName": "扣除非经常性损益后归属于母公司股东的净利润",
+                "graph": "1",
+                "unit": "1",
+                "tableType": "1",
+                "unitName": "元",
+                "unitDesc": "101:元:元"
+              },
+              {
+                "returnCode": "100000000004687",
+                "returnName": "归属母公司股东的净利润同比增长率(扣除非经常性损益)",
+                "classCode": "007101",
+                "checkedRelatedIndicators": false,
+                "startDate": "2023-04-19 00:00:00",
+                "endDate": "2026-04-19 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "FISCAL_YEAR",
+                "defineType": -1,
+                "rangeCount": -3,
+                "isLoopN": false,
+                "quantType": "1",
+                "isGroup": false,
+                "returnSourceCode": "SJLKTZ",
+                "returnSourceName": "归属母公司股东的净利润同比增长率(扣除非经常性损益)",
+                "graph": "2",
+                "unit": "1",
+                "tableType": "1",
+                "unitName": "%",
+                "unitDesc": "108:%:%"
+              },
+              {
+                "returnCode": "100000000004686",
+                "returnName": "归属母公司股东的净利润同比增长率",
+                "classCode": "007101",
+                "checkedRelatedIndicators": false,
+                "startDate": "2023-04-19 00:00:00",
+                "endDate": "2026-04-19 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "FISCAL_YEAR",
+                "defineType": -1,
+                "rangeCount": -3,
+                "isLoopN": false,
+                "quantType": "1",
+                "isGroup": false,
+                "returnSourceCode": "SJLTZ",
+                "returnSourceName": "归属母公司股东的净利润同比增长率",
+                "graph": "2",
+                "unit": "1",
+                "tableType": "1",
+                "unitName": "%",
+                "unitDesc": "10802:%:%"
+              },
+              {
+                "returnCode": "100000000000200",
+                "returnName": "归属于母公司股东的净利润",
+                "classCode": "007101",
+                "checkedRelatedIndicators": false,
+                "startDate": "2023-04-19 00:00:00",
+                "endDate": "2026-04-19 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "FISCAL_YEAR",
+                "defineType": -1,
+                "rangeCount": -3,
+                "isLoopN": false,
+                "fixedParamValue": "type=1,ItemsCode=61",
+                "quantType": "1",
+                "isGroup": false,
+                "returnSourceCode": "PARENTNETPROFIT",
+                "returnSourceName": "归属于母公司股东的净利润",
+                "graph": "1",
+                "unit": "1",
+                "tableType": "1",
+                "unitName": "元",
+                "unitDesc": "101:元:元"
+              },
+              {
+                "returnCode": "100000000000415",
+                "returnName": "营业收入",
+                "classCode": "007101",
+                "checkedRelatedIndicators": false,
+                "startDate": "2023-04-19 00:00:00",
+                "endDate": "2026-04-19 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "FISCAL_YEAR",
+                "defineType": -1,
+                "rangeCount": -3,
+                "isLoopN": false,
+                "fixedParamValue": "type=1,ItemsCode=9",
+                "quantType": "1",
+                "isGroup": false,
+                "returnSourceCode": "OPERATEREVE",
+                "returnSourceName": "营业收入",
+                "graph": "1",
+                "unit": "1",
+                "tableType": "1",
+                "unitName": "元",
+                "unitDesc": "101:元:元"
+              },
+              {
+                "returnCode": "100000000003199",
+                "returnName": "单季度.营业总收入同比增长率",
+                "classCode": "007101",
+                "checkedRelatedIndicators": false,
+                "startDate": "2023-04-19 00:00:00",
+                "endDate": "2026-04-19 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "FISCAL_YEAR",
+                "defineType": -1,
+                "rangeCount": -3,
+                "isLoopN": false,
+                "quantType": "1",
+                "isGroup": false,
+                "returnSourceCode": "DJDYZSTZ",
+                "returnSourceName": "单季度.营业总收入同比增长率",
+                "graph": "2",
+                "unit": "1",
+                "tableType": "1",
+                "unitName": "%",
+                "unitDesc": "10802:%:%"
+              },
+              {
+                "returnCode": "100000000003207",
+                "returnName": "单季度.归属母公司股东的净利润同比增长率",
+                "classCode": "007101",
+                "checkedRelatedIndicators": false,
+                "startDate": "2023-04-19 00:00:00",
+                "endDate": "2026-04-19 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "FISCAL_YEAR",
+                "defineType": -1,
+                "rangeCount": -3,
+                "isLoopN": false,
+                "quantType": "1",
+                "isGroup": false,
+                "returnSourceCode": "DJDSJLTZ",
+                "returnSourceName": "单季度.归属母公司股东的净利润同比增长率",
+                "graph": "2",
+                "unit": "1",
+                "tableType": "1",
+                "unitName": "%",
+                "unitDesc": "10802:%:%"
+              },
+              {
+                "returnCode": "100000000003177",
+                "returnName": "单季度.扣除非经常损益后的净利润",
+                "classCode": "007101",
+                "checkedRelatedIndicators": false,
+                "startDate": "2023-04-19 00:00:00",
+                "endDate": "2026-04-19 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "FISCAL_YEAR",
+                "defineType": -1,
+                "rangeCount": -3,
+                "isLoopN": false,
+                "fixedParamValue": "DataAdjustType=1",
+                "quantType": "1",
+                "isGroup": false,
+                "returnSourceCode": "DJDKCFJSJLR",
+                "returnSourceName": "单季度.扣除非经常损益后的净利润",
+                "graph": "1",
+                "unit": "1",
+                "tableType": "1",
+                "unitName": "元",
+                "unitDesc": "101:元:元"
+              },
+              {
+                "returnCode": "100000000000626",
+                "returnName": "单季度.归属母公司股东的净利润",
+                "classCode": "007101",
+                "checkedRelatedIndicators": false,
+                "startDate": "2023-04-19 00:00:00",
+                "endDate": "2026-04-19 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "FISCAL_YEAR",
+                "defineType": -1,
+                "rangeCount": -3,
+                "isLoopN": false,
+                "fixedParamValue": "Type=1,ItemsCode=61",
+                "quantType": "1",
+                "isGroup": false,
+                "returnSourceCode": "PARENTNETPROFIT_S",
+                "returnSourceName": "单季度.归属母公司股东的净利润",
+                "graph": "1",
+                "unit": "1",
+                "tableType": "1",
+                "unitName": "元",
+                "unitDesc": "101:元:元"
+              },
+              {
+                "returnCode": "100000000000189",
+                "returnName": "净利润",
+                "classCode": "007101",
+                "checkedRelatedIndicators": false,
+                "startDate": "2023-04-19 00:00:00",
+                "endDate": "2026-04-19 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "FISCAL_YEAR",
+                "defineType": -1,
+                "rangeCount": -3,
+                "isLoopN": false,
+                "fixedParamValue": "type=1,ItemsCode=60",
+                "quantType": "1",
+                "isGroup": false,
+                "returnSourceCode": "NETPROFIT",
+                "returnSourceName": "净利润",
+                "graph": "1",
+                "unit": "1",
+                "tableType": "1",
+                "unitName": "元",
+                "unitDesc": "101:元:元"
+              }
+            ],
+            "dataTableType": "NORM_TABLE",
+            "rowInfo": {},
+            "colInfo": {},
+            "indicatorOrder": [
+              "100000000000189",
+              "100000000000200",
+              "100000000002941",
+              "100000000002934",
+              "100000000000415",
+              "100000000000210",
+              "100000000004682",
+              "100000000000688",
+              "100000000003199",
+              "100000000004686",
+              "100000000000626",
+              "100000000003207",
+              "100000000003520",
+              "100000000004687",
+              "100000000003177",
+              "100000000015540"
+            ],
+            "tipFlags": [],
+            "dataType": "数据浏览器",
+            "title": "沪电股份(002463.SZ)的净利润、归属于母公司股东的净利润等",
+            "hasThumbnail": true,
+            "indicatorLimited": false,
+            "dataPositionEnum": "MetricLeftTimeTop",
+            "orderCol": {},
+            "jumpUrlList": [
+              {
+                "choiceUrl": "EM://stockdatacenter?type=browser&modType=STOCK&code=002463.SZ&indId=100000000000189|100:2025-12-31|115:1,100000000000189|100:2024-12-31|115:1,100000000000189|100:2023-12-31|115:1,100000000000200|100:2025-12-31|115:1,100000000000200|100:2024-12-31|115:1,100000000000200|100:2023-12-31|115:1,100000000002941|100:2025-12-31,100000000002941|100:2024-12-31,100000000002941|100:2023-12-31,100000000002934|100:2025-12-31,100000000002934|100:2024-12-31,100000000002934|100:2023-12-31,100000000000415|100:2025-12-31|115:1,100000000000415|100:2024-12-31|115:1,100000000000415|100:2023-12-31|115:1,100000000000210|100:2025-12-31|115:1,100000000000210|100:2024-12-31|115:1,100000000000210|100:2023-12-31|115:1,100000000004682|100:2025-12-31,100000000004682|100:2024-12-31,100000000004682|100:2023-12-31,100000000000688|115:1|451:2025-12-31,100000000000688|115:1|451:2024-12-31,100000000000688|115:1|451:2023-12-31,100000000003199|451:2025-12-31,100000000003199|451:2024-12-31,100000000003199|451:2023-12-31,100000000004686|100:2025-12-31,100000000004686|100:2024-12-31,100000000004686|100:2023-12-31,100000000000626|115:1|451:2025-12-31,100000000000626|115:1|451:2024-12-31,100000000000626|115:1|451:2023-12-31,100000000003207|451:2025-12-31,100000000003207|451:2024-12-31,100000000003207|451:2023-12-31,100000000003520|100:2025-12-31|314:1,100000000003520|100:2024-12-31|314:1,100000000003520|100:2023-12-31|314:1,100000000004687|100:2025-12-31,100000000004687|100:2024-12-31,100000000004687|100:2023-12-31,100000000003177|451:2025-12-31|314:1,100000000003177|451:2024-12-31|314:1,100000000003177|451:2023-12-31|314:1,100000000015540|451:2025-12-31,100000000015540|451:2024-12-31,100000000015540|451:2023-12-31",
+                "typeName": "股票数据浏览器"
+              }
+            ],
+            "dataTypeEnum": "DATA_BROWSER",
+            "dateRuleSet": [],
+            "freqConvert": false,
+            "deleteInfo": [],
+            "macroCodeMap": {},
+            "entityTagDTO": {
+              "entityId": "1000006938",
+              "entityType": "SEC",
+              "entityTypeCode": "058001001",
+              "entityTypeName": "A股",
+              "classCode": "002001",
+              "className": "沪深京股票",
+              "fullName": "沪电股份",
+              "secuCode": "002463",
+              "market": "0",
+              "marketChar": ".SZ",
+              "correct": false,
+              "hasKLine": false,
+              "valuation": false
+            },
+            "entityTagDTOList": [
+              {
+                "entityId": "1000006938",
+                "entityType": "SEC",
+                "entityTypeCode": "058001001",
+                "entityTypeName": "A股",
+                "classCode": "002001",
+                "className": "沪深京股票",
+                "fullName": "沪电股份",
+                "secuCode": "002463",
+                "market": "0",
+                "marketChar": ".SZ",
+                "correct": false,
+                "hasKLine": false,
+                "valuation": false
+              }
+            ],
+            "indexTable": false,
+            "edbThirdData": false,
+            "dataUpdate": {
+              "2025年报": false
+            },
+            "supportsTimeSeries": false,
+            "estimatedTokens": 0,
+            "summaryTips": {
+              "periodicalReport": null
+            },
+            "nestEntityListMap": {},
+            "excelTimeTruncate": false,
+            "frontendEntityName": "",
+            "frontendEntityCode": "",
+            "frontendTitle": "",
+            "frontendDesc": "",
+            "indicatorCount": 0,
+            "fieldParameterStr": "",
+            "tdayEnum": "NORMAL"
+          },
+          {
+            "code": "H5245.HK",
+            "entityName": "沪电股份(H5245.HK)(最新年结日12-31)",
+            "table": {
+              "100000000047277": [
+                "42.28亿港元",
+                "-",
+                "27.71亿港元",
+                "16.44亿港元"
+              ],
+              "100000000046675": [
+                "42.32亿港元",
+                "-",
+                "27.94亿港元",
+                "16.69亿港元"
+              ],
+              "100000000046860": [
+                "-",
+                "0.965港元",
+                "1.458港元",
+                "0.8718港元"
+              ],
+              "100000000051343": [
+                "-",
+                "93.14亿港元",
+                "144.1亿港元",
+                "98.63亿港元"
+              ],
+              "100000000046874": [
+                "2.228港元",
+                "-",
+                "1.282港元",
+                "1.284港元"
+              ],
+              "headName": [
+                "2025年报",
+                "2025中报",
+                "2024年报",
+                "2023年报"
+              ]
+            },
+            "rawTable": {
+              "100000000047277": [
+                "4227843834.281794",
+                "-",
+                "2771278778.454495",
+                "1643660479.7951932"
+              ],
+              "100000000046675": [
+                "4231866291.7118773",
+                "-",
+                "2793871754.9997845",
+                "1669062700.006621"
+              ],
+              "100000000046860": [
+                "-",
+                "0.9649651844947639",
+                "1.4578203965271481",
+                "0.8717529959612457"
+              ],
+              "100000000051343": [
+                "-",
+                "9313966774.494215",
+                "14407089326.594965",
+                "9863288164.021982"
+              ],
+              "100000000046874": [
+                "2.227671102622839",
+                "-",
+                "1.281939970811196",
+                "1.2838030998565468"
+              ],
+              "headName": [
+                "2025年报",
+                "2025中报",
+                "2024年报",
+                "2023年报"
+              ]
+            },
+            "truncateRawTable": {},
+            "nameMap": {
+              "100000000047277": "净利润",
+              "headNameSub": "数据来源",
+              "100000000046675": "归属于母公司股东的净利润",
+              "100000000046860": "每股收益EPS(基本)",
+              "100000000051343": "营业收入",
+              "100000000046874": "每股经营现金净流量"
+            },
+            "headNameMap": {},
+            "field": {
+              "returnCode": "100000000047277",
+              "returnName": "净利润",
+              "classCode": "007101",
+              "checkedRelatedIndicators": false,
+              "startDate": "2023-04-19 00:00:00",
+              "endDate": "2026-04-19 00:00:00",
+              "fuzzy": false,
+              "dateGranularity": "FISCAL_YEAR",
+              "defineType": -1,
+              "rangeCount": -3,
+              "isLoopN": false,
+              "fixedParamValue": "type=1,CurType=4",
+              "quantType": "1",
+              "isGroup": false,
+              "returnSourceCode": "NI",
+              "returnSourceName": "净利润",
+              "graph": "1",
+              "unit": "1",
+              "tableType": "1",
+              "unitName": "元",
+              "unitDesc": "101:元:元"
+            },
+            "entityCodes": [
+              "H5245.HK"
+            ],
+            "macroAttributeExcelMap": {},
+            "fieldSet": [
+              {
+                "returnCode": "100000000046874",
+                "returnName": "每股经营现金净流量",
+                "classCode": "007101",
+                "checkedRelatedIndicators": false,
+                "startDate": "2023-04-19 00:00:00",
+                "endDate": "2026-04-19 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "FISCAL_YEAR",
+                "defineType": -1,
+                "rangeCount": -3,
+                "isLoopN": false,
+                "fixedParamValue": "CurType=4",
+                "quantType": "1",
+                "isGroup": false,
+                "returnSourceCode": "OCFPS",
+                "returnSourceName": "每股经营现金净流量",
+                "graph": "2",
+                "unit": "1",
+                "tableType": "1",
+                "unitName": "元",
+                "unitDesc": "101:元:元"
+              },
+              {
+                "returnCode": "100000000046860",
+                "returnName": "每股收益EPS(基本)",
+                "classCode": "007101",
+                "checkedRelatedIndicators": false,
+                "startDate": "2023-04-19 00:00:00",
+                "endDate": "2026-04-19 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "FISCAL_YEAR",
+                "defineType": -1,
+                "rangeCount": -3,
+                "isLoopN": false,
+                "fixedParamValue": "CurType=4",
+                "quantType": "1",
+                "isGroup": false,
+                "returnSourceCode": "EPS_BASIC",
+                "returnSourceName": "每股收益EPS(基本)",
+                "graph": "2",
+                "unit": "1",
+                "tableType": "1",
+                "unitName": "元",
+                "unitDesc": "101:元:元"
+              },
+              {
+                "returnCode": "100000000046675",
+                "returnName": "归属于母公司股东的净利润",
+                "classCode": "007101",
+                "checkedRelatedIndicators": false,
+                "startDate": "2023-04-19 00:00:00",
+                "endDate": "2026-04-19 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "FISCAL_YEAR",
+                "defineType": -1,
+                "rangeCount": -3,
+                "isLoopN": false,
+                "fixedParamValue": "type=1,CurType=4",
+                "quantType": "1",
+                "isGroup": false,
+                "returnSourceCode": "NETPROFIT",
+                "returnSourceName": "归属于母公司股东的净利润",
+                "graph": "1",
+                "unit": "1",
+                "tableType": "1",
+                "unitName": "元",
+                "unitDesc": "101:元:元"
+              },
+              {
+                "returnCode": "100000000047277",
+                "returnName": "净利润",
+                "classCode": "007101",
+                "checkedRelatedIndicators": false,
+                "startDate": "2023-04-19 00:00:00",
+                "endDate": "2026-04-19 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "FISCAL_YEAR",
+                "defineType": -1,
+                "rangeCount": -3,
+                "isLoopN": false,
+                "fixedParamValue": "type=1,CurType=4",
+                "quantType": "1",
+                "isGroup": false,
+                "returnSourceCode": "NI",
+                "returnSourceName": "净利润",
+                "graph": "1",
+                "unit": "1",
+                "tableType": "1",
+                "unitName": "元",
+                "unitDesc": "101:元:元"
+              },
+              {
+                "returnCode": "100000000051343",
+                "returnName": "营业收入",
+                "classCode": "007101",
+                "checkedRelatedIndicators": false,
+                "startDate": "2023-04-19 00:00:00",
+                "endDate": "2026-04-19 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "FISCAL_YEAR",
+                "defineType": -1,
+                "rangeCount": -3,
+                "isLoopN": false,
+                "fixedParamValue": "type=1,CurType=4",
+                "quantType": "1",
+                "isGroup": false,
+                "returnSourceCode": "OPREVENUE",
+                "returnSourceName": "营业收入",
+                "graph": "0",
+                "unit": "1",
+                "tableType": "1",
+                "unitName": "元",
+                "unitDesc": "101:元:元"
+              }
+            ],
+            "dataTableType": "NORM_TABLE",
+            "rowInfo": {},
+            "colInfo": {},
+            "indicatorOrder": [
+              "100000000047277",
+              "100000000046675",
+              "100000000046860",
+              "100000000051343",
+              "100000000046874"
+            ],
+            "tipFlags": [],
+            "dataType": "数据浏览器",
+            "title": "沪电股份(H5245.HK)(最新年结日12-31)的净利润、归属于母公司股东的净利润等",
+            "hasThumbnail": true,
+            "indicatorLimited": false,
+            "dataPositionEnum": "MetricLeftTimeTop",
+            "orderCol": {},
+            "jumpUrlList": [
+              {
+                "choiceUrl": "EM://stockdatacenter?type=browser&modType=STOCK&code=H5245.HK&indId=100000000047277|100:2025-12-31|115:1|453:4,100000000047277|100:2024-12-31|115:1|453:4,100000000047277|100:2023-12-31|115:1|453:4,100000000046675|100:2025-12-31|115:1|453:4,100000000046675|100:2024-12-31|115:1|453:4,100000000046675|100:2023-12-31|115:1|453:4,100000000046860|100:2025-06-30|652:4,100000000046860|100:2024-12-31|652:4,100000000046860|100:2023-12-31|652:4,100000000051343|100:2025-06-30|115:1|453:4,100000000051343|100:2024-12-31|115:1|453:4,100000000051343|100:2023-12-31|115:1|453:4,100000000046874|100:2025-12-31|652:4,100000000046874|100:2024-12-31|652:4,100000000046874|100:2023-12-31|652:4",
+                "typeName": "股票数据浏览器"
+              }
+            ],
+            "dataTypeEnum": "DATA_BROWSER",
+            "dateRuleSet": [],
+            "freqConvert": false,
+            "deleteInfo": [],
+            "macroCodeMap": {},
+            "entityTagDTO": {
+              "entityId": "1004487962",
+              "entityType": "SEC",
+              "entityTypeCode": "058001003001",
+              "entityTypeName": "H股",
+              "classCode": "002003",
+              "className": "港股",
+              "fullName": "沪电股份",
+              "secuCode": "H5245",
+              "marketChar": ".HK",
+              "correct": false,
+              "hasKLine": false,
+              "valuation": false
+            },
+            "entityTagDTOList": [
+              {
+                "entityId": "1004487962",
+                "entityType": "SEC",
+                "entityTypeCode": "058001003001",
+                "entityTypeName": "H股",
+                "classCode": "002003",
+                "className": "港股",
+                "fullName": "沪电股份",
+                "secuCode": "H5245",
+                "marketChar": ".HK",
+                "correct": false,
+                "hasKLine": false,
+                "valuation": false
+              }
+            ],
+            "indexTable": false,
+            "edbThirdData": false,
+            "dataUpdate": {
+              "2025年报": false
+            },
+            "supportsTimeSeries": false,
+            "estimatedTokens": 0,
+            "summaryTips": {
+              "periodicalReport": null
+            },
+            "nestEntityListMap": {},
+            "excelTimeTruncate": false,
+            "frontendEntityName": "",
+            "frontendEntityCode": "",
+            "frontendTitle": "",
+            "frontendDesc": "",
+            "indicatorCount": 0,
+            "fieldParameterStr": "",
+            "tdayEnum": "NORMAL"
+          },
+          {
+            "code": "002463.SZ",
+            "entityName": "沪电股份(002463.SZ)",
+            "table": {
+              "100000000004890": [
+                "38.78亿元"
+              ],
+              "100000000004891": [
+                "49.68%"
+              ],
+              "headName": [
+                "2025"
+              ]
+            },
+            "rawTable": {
+              "100000000004890": [
+                "3877500000"
+              ],
+              "100000000004891": [
+                "49.676465818600"
+              ],
+              "headName": [
+                "2025"
+              ]
+            },
+            "truncateRawTable": {},
+            "nameMap": {
+              "100000000004890": "预测归属于母公司的净利润中值(2026-04-18)",
+              "headNameSub": "数据来源",
+              "100000000004891": "预测归属于母公司的净利润增长率(2026-04-18)"
+            },
+            "headNameMap": {},
+            "field": {
+              "returnCode": "100000000004890",
+              "returnName": "预测归属于母公司的净利润中值",
+              "classCode": "007101",
+              "checkedRelatedIndicators": false,
+              "startDate": "2023-04-19 00:00:00",
+              "endDate": "2026-04-19 00:00:00",
+              "fuzzy": false,
+              "dateGranularity": "FISCAL_YEAR",
+              "defineType": -1,
+              "rangeCount": -3,
+              "isLoopN": false,
+              "fixedParamValue": "Cycle=180",
+              "quantType": "1",
+              "isGroup": false,
+              "returnSourceCode": "DEC_LIRUNZZ",
+              "returnSourceName": "预测归属于母公司的净利润中值",
+              "graph": "1",
+              "unit": "1",
+              "tableType": "1",
+              "unitName": "元",
+              "unitDesc": "101:元:元"
+            },
+            "entityCodes": [
+              "002463.SZ"
+            ],
+            "macroAttributeExcelMap": {},
+            "fieldSet": [
+              {
+                "returnCode": "100000000004891",
+                "returnName": "预测归属于母公司的净利润增长率",
+                "classCode": "007101",
+                "checkedRelatedIndicators": false,
+                "startDate": "2023-04-19 00:00:00",
+                "endDate": "2026-04-19 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "FISCAL_YEAR",
+                "defineType": -1,
+                "rangeCount": -3,
+                "isLoopN": false,
+                "fixedParamValue": "Cycle=180",
+                "quantType": "1",
+                "isGroup": false,
+                "returnSourceCode": "DEC_LRZZL",
+                "returnSourceName": "预测归属于母公司的净利润增长率",
+                "graph": "2",
+                "unit": "1",
+                "tableType": "1",
+                "unitName": "%",
+                "unitDesc": "10802:%:%"
+              },
+              {
+                "returnCode": "100000000004890",
+                "returnName": "预测归属于母公司的净利润中值",
+                "classCode": "007101",
+                "checkedRelatedIndicators": false,
+                "startDate": "2023-04-19 00:00:00",
+                "endDate": "2026-04-19 00:00:00",
+                "fuzzy": false,
+                "dateGranularity": "FISCAL_YEAR",
+                "defineType": -1,
+                "rangeCount": -3,
+                "isLoopN": false,
+                "fixedParamValue": "Cycle=180",
+                "quantType": "1",
+                "isGroup": false,
+                "returnSourceCode": "DEC_LIRUNZZ",
+                "returnSourceName": "预测归属于母公司的净利润中值",
+                "graph": "1",
+                "unit": "1",
+                "tableType": "1",
+                "unitName": "元",
+                "unitDesc": "101:元:元"
+              }
+            ],
+            "dataTableType": "NORM_TABLE",
+            "rowInfo": {},
+            "colInfo": {},
+            "indicatorOrder": [
+              "100000000004890",
+              "100000000004891"
+            ],
+            "tipFlags": [],
+            "dataType": "数据浏览器",
+            "title": "沪电股份(002463.SZ)的预测归属于母公司的净利润中值(2026-04-18)、预测归属于母公司的净利润增长率(2026-04-18)",
+            "hasThumbnail": true,
+            "indicatorLimited": false,
+            "dataPositionEnum": "MetricLeftTimeTop",
+            "orderCol": {},
+            "jumpUrlList": [
+              {
+                "choiceUrl": "EM://stockdatacenter?type=browser&modType=STOCK&code=002463.SZ&indId=100000000004890|117:2025|119:2026-04-18|521:180,100000000004891|117:2025|119:2026-04-18|521:180",
+                "typeName": "股票数据浏览器"
+              }
+            ],
+            "dataTypeEnum": "DATA_BROWSER",
+            "dateRuleSet": [],
+            "freqConvert": false,
+            "deleteInfo": [],
+            "macroCodeMap": {},
+            "entityTagDTO": {
+              "entityId": "1000006938",
+              "entityType": "SEC",
+              "entityTypeCode": "058001001",
+              "entityTypeName": "A股",
+              "classCode": "002001",
+              "className": "沪深京股票",
+              "fullName": "沪电股份",
+              "secuCode": "002463",
+              "market": "0",
+              "marketChar": ".SZ",
+              "correct": false,
+              "hasKLine": false,
+              "valuation": false
+            },
+            "entityTagDTOList": [
+              {
+                "entityId": "1000006938",
+                "entityType": "SEC",
+                "entityTypeCode": "058001001",
+                "entityTypeName": "A股",
+                "classCode": "002001",
+                "className": "沪深京股票",
+                "fullName": "沪电股份",
+                "secuCode": "002463",
+                "market": "0",
+                "marketChar": ".SZ",
+                "correct": false,
+                "hasKLine": false,
+                "valuation": false
+              }
+            ],
+            "indexTable": false,
+            "edbThirdData": false,
+            "dataUpdate": {
+              "2025": false
+            },
+            "supportsTimeSeries": false,
+            "estimatedTokens": 0,
+            "summaryTips": {
+              "periodicalReport": null
+            },
+            "nestEntityListMap": {},
+            "excelTimeTruncate": false,
+            "frontendEntityName": "",
+            "frontendEntityCode": "",
+            "frontendTitle": "",
+            "frontendDesc": "",
+            "indicatorCount": 0,
+            "fieldParameterStr": "",
+            "tdayEnum": "NORMAL"
+          }
+        ],
+        "condition": {
+          "search_data_task_1": [
+            "沪电股份",
+            "净利润归属于母公司股东的净利润每股经营活动产生的现金流量净额每股收益EPS(基本)营业收入营业总收入营业总收入同比增长率单季度.营业总收入单季度.营业总收入同比增长率归属母公司股东的净利润同比增长率单季度.归属母公司股东的净利润单季度.归属母公司股东的净利润同比增长率扣除非经常性损益后归属于母公司股东的净利润归属母公司股东的净利润同比增长率(扣除非经常性损益)单季度.扣除非经常损益后的净利润单季度.扣除非经常损益后的净利润同比增长率预测归属于母公司的净利润中值预测归属于母公司的净利润增长率",
+            "2023-04-19至2026-04-19"
+          ],
+          "search_data_task_0": [
+            "沪电股份",
+            "净利润归属于母公司股东的净利润每股收益EPS(基本)营业收入每股经营现金净流量",
+            "2023-04-19至2026-04-19"
+          ]
+        },
+        "entityTagDTOList": [
+          {
+            "entityId": "1000006938",
+            "entityType": "SEC",
+            "entityTypeCode": "058001001",
+            "entityTypeName": "A股",
+            "classCode": "002001",
+            "className": "沪深京股票",
+            "fullName": "沪电股份",
+            "secuCode": "002463",
+            "market": "0",
+            "marketChar": ".SZ",
+            "correct": false,
+            "hasKLine": false,
+            "valuation": false
+          },
+          {
+            "entityId": "1004487962",
+            "entityType": "SEC",
+            "entityTypeCode": "058001003001",
+            "entityTypeName": "H股",
+            "classCode": "002003",
+            "className": "港股",
+            "fullName": "沪电股份",
+            "secuCode": "H5245",
+            "marketChar": ".HK",
+            "correct": false,
+            "hasKLine": false,
+            "valuation": false
+          },
+          {
+            "entityId": "1000006938",
+            "entityType": "SEC",
+            "entityTypeCode": "058001001",
+            "entityTypeName": "A股",
+            "classCode": "002001",
+            "className": "沪深京股票",
+            "fullName": "沪电股份",
+            "secuCode": "002463",
+            "market": "0",
+            "marketChar": ".SZ",
+            "correct": false,
+            "hasKLine": false,
+            "valuation": false
+          }
+        ]
+      },
+      "entityName": null,
+      "message": null,
+      "tableTruncated": false
+    },
+    "stack": null
+  },
+  "requestId": "c35ffadc139944879042944bf5041cfd"
+}

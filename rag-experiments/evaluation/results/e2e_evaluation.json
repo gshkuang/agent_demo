@@ -1,0 +1,82 @@
+[
+  {
+    "config": "fixed+m3e-base+vector",
+    "retrieval_recall": 1.0,
+    "retrieval_precision": 0.2,
+    "faithfulness": 0.73,
+    "relevance": 0.3,
+    "completeness": 0.6,
+    "accuracy": 0.5,
+    "total_latency_ms": 2035.5198953662584
+  },
+  {
+    "config": "recursive+m3e-base+vector",
+    "retrieval_recall": 1.0,
+    "retrieval_precision": 0.2,
+    "faithfulness": 1.0,
+    "relevance": 0.3,
+    "completeness": 0.85,
+    "accuracy": 0.5,
+    "total_latency_ms": 2310.439886625629
+  },
+  {
+    "config": "structured+m3e-base+vector",
+    "retrieval_recall": 1.0,
+    "retrieval_precision": 0.2,
+    "faithfulness": 1.0,
+    "relevance": 0.3,
+    "completeness": 0.85,
+    "accuracy": 0.5,
+    "total_latency_ms": 2002.0336164229755
+  },
+  {
+    "config": "recursive+text-embedding-3-small+vector",
+    "retrieval_recall": 1.0,
+    "retrieval_precision": 0.2,
+    "faithfulness": 1.0,
+    "relevance": 0.3,
+    "completeness": 0.85,
+    "accuracy": 0.5,
+    "total_latency_ms": 2298.556666025778
+  },
+  {
+    "config": "recursive+m3e-base+bm25",
+    "retrieval_recall": 1.0,
+    "retrieval_precision": 0.2,
+    "faithfulness": 1.0,
+    "relevance": 0.3,
+    "completeness": 0.85,
+    "accuracy": 0.5,
+    "total_latency_ms": 2100.7435752933216
+  },
+  {
+    "config": "recursive+m3e-base+hybrid_rrf",
+    "retrieval_recall": 1.0,
+    "retrieval_precision": 0.2,
+    "faithfulness": 1.0,
+    "relevance": 0.3,
+    "completeness": 0.85,
+    "accuracy": 0.5,
+    "total_latency_ms": 2353.243751681209
+  },
+  {
+    "config": "recursive+m3e-base+hybrid_linear",
+    "retrieval_recall": 1.0,
+    "retrieval_precision": 0.2,
+    "faithfulness": 1.0,
+    "relevance": 0.3,
+    "completeness": 0.85,
+    "accuracy": 0.5,
+    "total_latency_ms": 2333.5001626410794
+  },
+  {
+    "config": "structured+text-embedding-3-small+hybrid_rrf",
+    "retrieval_recall": 1.0,
+    "retrieval_precision": 0.2,
+    "faithfulness": 1.0,
+    "relevance": 0.3,
+    "completeness": 0.85,
+    "accuracy": 0.5,
+    "total_latency_ms": 2307.475638016708
+  }
+]
