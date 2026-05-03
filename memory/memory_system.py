@@ -316,6 +316,114 @@ class StructuredMemoryStore:
 
 # ============== 元记忆 ==============
 
+class MemoryCompressor:
+    """
+    记忆压缩器
+    实现三种压缩策略:
+    1. 大工具结果卸载 (>20KB)
+    2. 对话摘要压缩 (上下文超限时)
+    3. 基于遗忘曲线的衰减
+    """
+    
+    def __init__(self, offload_threshold: int = 20000, 
+                 context_threshold: float = 0.85,
+                 forget_half_life: float = 86400 * 7):  # 7天半衰期
+        self.offload_threshold = offload_threshold
+        self.context_threshold = context_threshold
+        self.forget_half_life = forget_half_life
+    
+    def should_offload(self, content: str) -> bool:
+        """判断是否需要卸载大工具结果"""
+        return len(content.encode('utf-8')) > self.offload_threshold
+    
+    def offload_content(self, content: str, ref_id: str, 
+                        storage_dir: Path = None) -> Dict:
+        """
+        大工具结果卸载
+        将内容保存到文件系统，返回引用指针
+        """
+        if storage_dir is None:
+            storage_dir = Path.home() / "Desktop" / "agent_demo" / "memory" / "offload"
+        storage_dir.mkdir(parents=True, exist_ok=True)
+        
+        file_path = storage_dir / f"{ref_id}.txt"
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write(content)
+        
+        preview = content[:200] + "..." if len(content) > 200 else content
+        return {
+            "type": "offloaded",
+            "file_path": str(file_path),
+            "size": len(content.encode('utf-8')),
+            "preview": preview,
+            "ref_id": ref_id
+        }
+    
+    def summarize_conversation(self, turns: List[Dict], 
+                               max_summary_length: int = 500) -> str:
+        """
+        对话摘要压缩
+        将多轮对话压缩为结构化摘要
+        （简化版，实际可用LLM生成）
+        """
+        if not turns:
+            return ""
+        
+        # 提取关键信息
+        topics = set()
+        for turn in turns:
+            # 简单关键词提取（实际可用LLM）
+            text = turn.get('user', '') + ' ' + turn.get('agent', '')
+            # 提取可能的实体（中文/英文单词）
+            import re
+            words = re.findall(r'[\u4e00-\u9fff]{2,}|[A-Za-z_]{3,}', text)
+            topics.update(words[:5])  # 每轮取前5个
+        
+        # 生成摘要
+        summary_parts = [
+            f"会话轮数: {len(turns)}",
+            f"时间范围: {self._format_time(turns[0].get('timestamp', 0))} ~ "
+            f"{self._format_time(turns[-1].get('timestamp', 0))}",
+            f"涉及主题: {', '.join(list(topics)[:10])}",
+            f"最后交互: {turns[-1].get('user', '')[:50]}..."
+        ]
+        
+        summary = "\n".join(summary_parts)
+        return summary[:max_summary_length]
+    
+    def calculate_decay_weight(self, timestamp: float, 
+                               importance: float = 1.0) -> float:
+        """
+        基于艾宾浩斯遗忘曲线的记忆衰减权重
+        weight = importance * (0.5 ^ (elapsed_time / half_life))
+        """
+        elapsed = time.time() - timestamp
+        decay_factor = 0.5 ** (elapsed / self.forget_half_life)
+        return importance * decay_factor
+    
+    def compress_memory_pool(self, memories: List[Dict], 
+                            target_size: int = 100) -> List[Dict]:
+        """
+        记忆池压缩
+        根据衰减权重排序，保留高权重记忆
+        """
+        # 计算每条记忆的权重
+        scored = []
+        for mem in memories:
+            ts = mem.get('timestamp', time.time())
+            importance = mem.get('metadata', {}).get('importance', 1.0)
+            weight = self.calculate_decay_weight(ts, importance)
+            scored.append((weight, mem))
+        
+        # 按权重排序，保留top-K
+        scored.sort(key=lambda x: x[0], reverse=True)
+        return [mem for _, mem in scored[:target_size]]
+    
+    def _format_time(self, ts: float) -> str:
+        """格式化时间戳"""
+        return datetime.fromtimestamp(ts).strftime("%m-%d %H:%M")
+
+
 class MetaMemory:
     """
     元记忆 - 关于记忆的记忆
@@ -325,6 +433,7 @@ class MetaMemory:
     def __init__(self):
         self.reflections: List[Dict] = []
         self.patterns: Dict[str, int] = {}  # 模式 -> 出现次数
+        self.compressor = MemoryCompressor()
     
     def add_reflection(self, task: str, outcome: str, lesson: str):
         """添加反思记录"""
@@ -435,6 +544,46 @@ class AgentMemoryManager:
         """记录反思"""
         self.meta_memory.add_reflection(task, outcome, lesson)
     
+    def compress_short_term(self) -> str:
+        """
+        压缩短期记忆到摘要
+        用于上下文窗口超限时
+        """
+        compressor = self.meta_memory.compressor
+        summary = compressor.summarize_conversation(
+            self.short_term.conversation_history
+        )
+        
+        # 保存摘要到向量存储
+        self.vector_store.add(summary, {
+            "agent": self.agent_name,
+            "type": "conversation_summary",
+            "turns": len(self.short_term.conversation_history)
+        })
+        
+        # 清空短期记忆但保留摘要
+        self.short_term.clear()
+        self.short_term.context_summary = summary
+        
+        return summary
+    
+    def compress_vector_memories(self, target_size: int = 100):
+        """
+        压缩向量记忆池
+        基于遗忘曲线保留高权重记忆
+        """
+        compressor = self.meta_memory.compressor
+        all_memories = self.vector_store.get_all()
+        
+        compressed = compressor.compress_memory_pool(all_memories, target_size)
+        
+        # 重建记忆池
+        self.vector_store.memories = {
+            mem['id']: mem for mem in compressed
+        }
+        
+        return len(compressed)
+    
     def get_memory_stats(self) -> Dict:
         """获取记忆统计"""
         return {
@@ -449,44 +598,83 @@ class AgentMemoryManager:
 # ============== 测试 ==============
 
 def test_memory_system():
-    """测试记忆系统"""
+    """测试记忆系统（含压缩功能）"""
     print("=" * 60)
-    print("Agent记忆系统测试")
+    print("Agent记忆系统测试 - 含记忆压缩")
     print("=" * 60)
     
     # 初始化
     memory = AgentMemoryManager(agent_name="ethon")
     
-    # 模拟交互
-    print("\n📝 记录交互...")
-    memory.process_interaction(
-        "分析沪电股份的ROE",
-        "沪电股份2024年ROE为18.5%，高于行业平均水平...",
-        "财务分析: 沪电股份ROE分析"
-    )
-    memory.process_interaction(
-        "查看三安光电的股东信息",
-        "三安光电十大流通股东包括福建三安集团、香港中央结算有限公司...",
-        "股东分析: 三安光电十大流通股东"
-    )
-    memory.process_interaction(
-        "板块轮动复盘",
-        "今日板块轮动路径: 半导体 -> 新能源 -> 医药...",
-        "板块分析: 2026-05-03板块轮动复盘"
-    )
+    # 模拟大量交互
+    print("\n📝 记录10条交互...")
+    interactions = [
+        ("分析沪电股份的ROE", "沪电股份2024年ROE为18.5%...", "财务分析: 沪电股份ROE"),
+        ("查看三安光电股东", "十大流通股东包括福建三安集团...", "股东分析: 三安光电"),
+        ("板块轮动复盘", "半导体 -> 新能源 -> 医药...", "板块分析: 轮动复盘"),
+        ("泰豪科技年报", "2025年营收45.2亿，净利润3.8亿...", "年报分析: 泰豪科技"),
+        ("芯瑞达资金流向", "近5日主力净流入1.2亿...", "资金流向: 芯瑞达"),
+        ("科瑞技术估值", "PE 25.3倍，PB 2.1倍...", "估值分析: 科瑞技术"),
+        ("回测系统架构", "数据爬取 -> 清洗 -> 回测引擎...", "技术文档: 回测系统"),
+        ("贝贝虾评分", "情绪40%+基本面30%+技术30%...", "分析框架: 贝贝虾"),
+        ("毛毛财报分析", "ROIC 15%，自由现金流为正...", "财报分析: 毛毛"),
+        ("量化策略回测", "双均线策略，年化收益12%...", "策略回测: 双均线"),
+    ]
+    
+    for user_input, agent_output, summary in interactions:
+        memory.process_interaction(user_input, agent_output, summary)
+    
+    print(f"  短期记忆轮数: {len(memory.short_term.conversation_history)}")
+    print(f"  向量记忆数: {len(memory.vector_store.memories)}")
     
     # 测试回忆
     print("\n🔍 测试回忆功能...")
     results = memory.recall("沪电股份财务数据", top_k=3)
     print(f"  向量检索结果: {len(results['vector_results'])}条")
     for r in results['vector_results']:
-        print(f"    - {r['text'][:60]}... (score: {r['score']:.3f})")
+        print(f"    - {r['text'][:50]}... (score: {r['score']:.3f})")
+    
+    # 测试记忆压缩
+    print("\n🗜️  测试记忆压缩...")
+    
+    # 1. 短期记忆摘要压缩
+    print("  1. 短期记忆摘要压缩")
+    summary = memory.compress_short_term()
+    print(f"     摘要: {summary[:80]}...")
+    print(f"     短期记忆轮数(压缩后): {len(memory.short_term.conversation_history)}")
+    
+    # 2. 大工具结果卸载
+    print("  2. 大工具结果卸载")
+    compressor = MemoryCompressor()
+    big_content = "x" * 25000  # 25KB大内容
+    if compressor.should_offload(big_content):
+        offloaded = compressor.offload_content(big_content, "test_big_result")
+        print(f"     卸载到: {offloaded['file_path']}")
+        print(f"     大小: {offloaded['size']} bytes")
+        print(f"     预览: {offloaded['preview'][:50]}...")
+    
+    # 3. 遗忘曲线衰减
+    print("  3. 遗忘曲线衰减权重")
+    now = time.time()
+    test_cases = [
+        (now - 3600, "1小时前", 1.0),      # 1小时
+        (now - 86400, "1天前", 1.0),        # 1天
+        (now - 86400 * 7, "7天前", 1.0),    # 7天
+        (now - 86400 * 30, "30天前", 1.0),  # 30天
+    ]
+    for ts, label, importance in test_cases:
+        weight = compressor.calculate_decay_weight(ts, importance)
+        print(f"     {label}: weight={weight:.3f}")
+    
+    # 4. 向量记忆池压缩
+    print("  4. 向量记忆池压缩 (target_size=5)")
+    compressed_count = memory.compress_vector_memories(target_size=5)
+    print(f"     压缩后记忆数: {compressed_count}")
     
     # 测试目标
     print("\n🎯 测试目标管理...")
     goal_id = memory.set_goal("完成本周投资组合分析")
     print(f"  设置目标: {goal_id}")
-    
     goals = memory.get_active_goals()
     print(f"  进行中目标: {len(goals)}个")
     
@@ -496,7 +684,7 @@ def test_memory_system():
     print(f"  反思记录数: {len(memory.meta_memory.reflections)}")
     
     # 统计
-    print("\n📊 记忆统计:")
+    print("\n📊 最终记忆统计:")
     stats = memory.get_memory_stats()
     for k, v in stats.items():
         print(f"  {k}: {v}")

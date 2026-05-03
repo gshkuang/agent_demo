@@ -30,8 +30,8 @@
 | 结构化存储 | SQLite (events/goals/preferences) | ✅ |
 | 目标追踪 | 长期目标管理 | ✅ |
 | 反思机制 | 元记忆记录 | ✅ |
-| 记忆压缩 | 待实现 | 🔄 |
-| 遗忘曲线 | 待实现 | 🔄 |
+| 记忆压缩 | 大工具卸载 + 摘要压缩 + 池压缩 | ✅ |
+| 遗忘曲线 | 艾宾浩斯衰减 (7天半衰期) | ✅ |
 | 知识图谱 | 待实现 | 🔄 |
 
 ## 快速开始
@@ -58,6 +58,12 @@ memory.set_goal("完成本周投资组合分析")
 
 # 记录反思
 memory.reflect("ROE分析", "成功", "使用杜邦分析法更有效")
+
+# 记忆压缩 (上下文超限时)
+summary = memory.compress_short_term()
+
+# 向量记忆池压缩 (基于遗忘曲线)
+memory.compress_vector_memories(target_size=100)
 
 # 查看统计
 print(memory.get_memory_stats())
