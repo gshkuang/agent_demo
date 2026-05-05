@@ -1,204 +1,64 @@
 # agent_demo - AI Agent实验项目
 
-## 项目概述
-
-本项目是AI Agent实验集合，包含多个子项目。当前主要包含RAG（检索增强生成）实验，后续将扩展其他Agent能力测试。
+基于 LangChain/LangGraph 的Agent实验集合，不再重复造轮子。
 
 ## 项目结构
 
 ```
 agent_demo/
-├── README.md                  # 本文件
-├── data/                      # 数据目录
-│   ├── analysis/              # 分析文档（Markdown）
-│   ├── financial/             # 金融数据
-│   │   └── mx_data/           # 东方财富数据
-│   │       └── output/        # 原始数据文件
-│   └── raw/                   # 原始数据（待处理）
-├── memory/                    # Agent记忆系统
-│   ├── README.md
-│   ├── __init__.py
-│   └── memory_system.py       # 分层记忆架构实现
-├── planning/                  # 规划模块 (ReAct/Reflexion)
-│   ├── README.md
-│   ├── __init__.py
-│   ├── react_agent.py         # ReAct框架实现
-│   └── reflexion_agent.py     # 自我反思实现
-├── tool_safety/               # 工具安全模块
-│   ├── README.md
-│   ├── __init__.py
-│   └── safe_tool_executor.py  # 三层防护执行器
-├── multi_agent/               # 多Agent协作模块
-│   ├── README.md
-│   ├── __init__.py
-│   └── manager_worker.py      # Manager-Worker模式
-├── evaluation/                # 评估模块
-│   ├── README.md
-│   ├── __init__.py
-│   ├── evaluation_framework.py # 端到端RAG评估
-│   └── agent_evaluator.py     # Agent三维评估体系
-└── rag-experiments/           # RAG实验项目
-    ├── README.md
-    ├── chunking/              # 文本分块实验
-    ├── embedding/             # 向量嵌入实验
-    ├── retrieval/             # 检索策略实验
-    └── evaluation/            # 端到端评估实验
+├── planning/              # ReAct / Reflexion Agent (LangGraph)
+├── memory/                # 记忆系统 (LangChain Memory + Chroma)
+├── tool_safety/           # 工具安全 (BaseTool包装 + Pydantic校验)
+├── multi_agent/           # Manager-Worker (LangGraph Send)
+├── evaluation/            # 三维评估 (LangSmith + CriteriaEvalChain)
+├── rag-experiments/       # RAG实验 (保持独立，不复用)
+└── data/                  # 数据目录
 ```
 
-## 数据说明
+## 技术栈
 
-### 分析文档（data/analysis/）
-
-| 文件 | 内容 | 来源 |
-|------|------|------|
-| 5stocks-beibeixia-maomao-analysis_20260421.md | 5只个股贝贝虾+毛毛分析 | Agent生成 |
-| sector_rotation_20260418_review.md | 板块轮动复盘 | Agent生成 |
-| 四虾回测系统-数据爬取与回测_2026-05-02.md | 回测系统设计 | Agent生成 |
-| blockbeats-skill-test_20260429.md | BlockBeats技能测试 | Agent生成 |
-
-### 金融数据（data/financial/mx_data/）
-
-东方财富数据接口获取的原始数据，包含：
-
-- **个股财务数据**: ROE、资产负债率、经营现金流等
-- **行情数据**: 收盘价、市盈率、市净率、总市值
-- **资金流向**: 主力资金流向（近5日/近10日）
-- **股东信息**: 十大流通股东
-- **年报数据**: 近三年营业收入、净利润
-
-数据格式：JSON + Excel + txt（description文件）
-
-## RAG实验结果
-
-详见 [rag-experiments/README.md](./rag-experiments/README.md)
-
-### 核心结论（真实BGE模型）
-
-| 模块 | 最佳方案 | 关键指标 |
-|------|---------|---------|
-| 文本分块 | 递归分块 / 结构化感知 | 边界质量100% |
-| 向量嵌入 | **bge-large-zh-v1.5** | R@5=1.0, MRR=1.0 |
-| 检索策略 | **混合RRF** | R@1=0.5, MRR=0.52 |
-| 端到端评估 | recursive + bge-large-zh + hybrid_rrf | 忠实度100%, 延迟1989ms |
-
-> **2026-05-03更新**: 已接入真实BGE语义向量（本地部署），Mock模型结果已归档。
+- **LangGraph**: Agent工作流编排 (ReAct循环、多Agent分发、反思)
+- **LangChain**: 工具包装、Memory管理、评估器
+- **LangSmith**: 运行追踪与评估
+- **Chroma**: 向量存储
+- **OpenAI**: LLM + Embedding
 
 ## 快速开始
 
 ```bash
-# 进入项目目录
-cd ~/Desktop/agent_demo
+pip install -r requirements.txt
+export OPENAI_API_KEY='your-key'
 
-# 运行RAG分块测试
-cd rag-experiments/chunking
-python3 rag_chunking_test_v2.py
-
-# 运行Embedding对比
-cd ../embedding
-python3 embedding_benchmark.py
-
-# 运行检索策略测试
-cd ../retrieval
-python3 retrieval_benchmark.py
-
-# 运行端到端评估
-cd ../evaluation
-python3 evaluation_framework.py
+# 各模块演示
+cd planning && python3 react_agent.py
+cd planning && python3 reflexion_agent.py
+cd multi_agent && python3 manager_worker.py
+cd memory && python3 memory_system.py
+cd evaluation && python3 agent_evaluator.py
+cd tool_safety && python3 safe_tool_executor.py
 ```
-
-## 模块详解
-
-### memory/ - Agent记忆系统
-- 分层记忆架构：短期记忆 + 长期记忆 + 元记忆
-- 向量检索：BGE-large-zh-v1.5语义搜索
-- 结构化存储：SQLite持久化
-- 记忆压缩：大工具卸载 + 摘要压缩 + 遗忘曲线衰减
-
-### planning/ - 规划模块
-- **ReAct Agent**: 推理与行动交替循环，适合开放任务
-- **Reflexion Agent**: 自我反思+改进，失败学习机制
-- 面试考点：ReAct vs Plan-and-Execute选型、ToT线上化
-
-### tool_safety/ - 工具安全模块
-- **三层防护**: Schema校验 → 权限控制 → 审计追踪
-- 风险分级：LOW/MEDIUM/HIGH/CRITICAL
-- Dry-run模式、异常检测、熔断机制
-- 面试考点：工具调用安全、越权防范、可审计设计
-
-### multi_agent/ - 多Agent协作模块
-- **Manager-Worker模式**: 任务分解+并行执行+结果汇总
-- DAG任务流：支持依赖关系、死锁检测
-- 共享上下文传递、错误传播控制
-- 面试考点：多Agent通信、投研平台协作、角色分工
-
-### evaluation/ - 评估模块
-- **RAG评估**: 忠实度/完整性/准确性/相关性
-- **Agent三维评估**: 效能+质量+鲁棒性
-- 失败归因：意图/规划/工具/记忆分类
-- 面试考点：评估指标体系、失败分析、持续迭代
 
 ## 面试考点覆盖
 
-| 面试题 | 对应模块 | 文件 |
-|--------|---------|------|
+| 面试题 | 模块 | 文件 |
+|--------|------|------|
 | ReAct vs Plan-and-Execute | planning | react_agent.py |
 | 工具安全三层防护 | tool_safety | safe_tool_executor.py |
 | 多Agent协作 | multi_agent | manager_worker.py |
 | 记忆系统设计 | memory | memory_system.py |
 | Agent三维评估 | evaluation | agent_evaluator.py |
-| RAG系统设计 | rag-experiments | 全模块 |
+| RAG系统设计 | rag-experiments | 独立实验 |
 
-## 快速运行
+## RAG实验
 
-```bash
-# ReAct Agent演示
-cd planning && python3 react_agent.py
+详见 [rag-experiments/README.md](./rag-experiments/README.md)
 
-# 工具安全演示
-cd tool_safety && python3 safe_tool_executor.py
-
-# 多Agent协作演示
-cd multi_agent && python3 manager_worker.py
-
-# Agent评估演示
-cd evaluation && python3 agent_evaluator.py
-
-# 记忆系统演示
-cd memory && python3 memory_system.py
-```
-
-## 后续计划
-
-- [x] 接入真实Embedding模型（BGE本地部署）
-- [x] 构建Agent记忆系统（向量+结构化+元记忆）
-- [x] 实现记忆压缩与遗忘机制
-- [x] ReAct/Reflexion规划框架
-- [x] 工具安全三层防护
-- [x] 多Agent协作（Manager-Worker）
-- [x] Agent三维评估体系
-- [ ] 知识图谱实现
-- [ ] 构建更大规模金融QA评测集
-- [ ] 3090服务器部署模型服务
-- [ ] 领域微调实验
-
-## Git管理
-
-```bash
-# 查看状态
-git status
-
-# 提交更改
-git add -A
-git commit -m "描述信息"
-```
-
-## 注意事项
-
-- `data/financial/mx_data/output/` 包含大量原始数据文件，已加入.gitignore
-- 分析文档为Agent生成内容，仅供参考
-- 实验脚本使用模拟数据，生产环境需接入真实API
+| 模块 | 最佳方案 |
+|------|---------|
+| 文本分块 | 递归分块 / 结构化感知 |
+| 向量嵌入 | bge-large-zh-v1.5 |
+| 检索策略 | 混合RRF |
+| 端到端 | recursive + bge-large-zh + hybrid_rrf |
 
 ---
-
-*项目创建: 2026-05-03*
 *维护者: Ethon*

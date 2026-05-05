@@ -1,696 +1,177 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
-Agent记忆系统 - 分层架构实现
-
-核心设计:
-1. 短期记忆: 当前会话上下文（内存）
-2. 长期记忆: 向量存储 + 结构化存储（SQLite）
-3. 元记忆: 反思日志与执行模式
-
-参考: https://developer.aliyun.com/article/1714493
+Agent记忆系统 - LangChain版本
+核心: ConversationBufferWindowMemory + Chroma向量 + SQLite结构化
 """
-
-import json
-import sqlite3
-import time
-import hashlib
-from dataclasses import dataclass, asdict
-from typing import List, Dict, Optional, Tuple
+import json, sqlite3, time, hashlib
+from typing import List, Dict, Optional, Any
 from pathlib import Path
-import numpy as np
-from datetime import datetime
+
+from langchain.memory import ConversationBufferWindowMemory, ConversationSummaryMemory
+from langchain.memory.chat_message_histories import ChatMessageHistory
+from langchain_core.messages import HumanMessage
+from langchain_openai import ChatOpenAI, OpenAIEmbeddings
+from langchain_chroma import Chroma
 
 
-# ============== 数据模型 ==============
+class MemoryManager:
+    """统一记忆管理器 (LangChain复用)"""
 
-@dataclass
-class MemoryEvent:
-    """记忆事件"""
-    id: str
-    timestamp: float
-    agent_name: str
-    input_text: str
-    output_text: str
-    summary: str
-    embedding: Optional[List[float]] = None
-    metadata: Dict = None
-    
-    def __post_init__(self):
-        if self.metadata is None:
-            self.metadata = {}
-
-
-@dataclass
-class Goal:
-    """长期目标"""
-    id: str
-    agent_name: str
-    goal_text: str
-    status: str = "in_progress"  # in_progress / completed / failed
-    created_at: float = None
-    last_updated: float = None
-    
-    def __post_init__(self):
-        if self.created_at is None:
-            self.created_at = time.time()
-        if self.last_updated is None:
-            self.last_updated = self.created_at
-
-
-# ============== 短期记忆 ==============
-
-class ShortTermMemory:
-    """
-    短期记忆 - 工作记忆
-    保持当前会话的交互上下文
-    """
-    
-    def __init__(self, max_turns: int = 10):
-        self.max_turns = max_turns
-        self.conversation_history: List[Dict] = []
-        self.context_summary: str = ""
-    
-    def add_turn(self, user_input: str, agent_output: str):
-        """添加一轮对话"""
-        self.conversation_history.append({
-            "timestamp": time.time(),
-            "user": user_input,
-            "agent": agent_output
-        })
-        
-        # 保持最近N轮
-        if len(self.conversation_history) > self.max_turns:
-            self.conversation_history = self.conversation_history[-self.max_turns:]
-    
-    def get_context(self, n_turns: int = None) -> str:
-        """获取格式化上下文"""
-        turns = self.conversation_history[-n_turns:] if n_turns else self.conversation_history
-        context = []
-        for turn in turns:
-            context.append(f"User: {turn['user']}")
-            context.append(f"Agent: {turn['agent']}")
-        return "\n".join(context)
-    
-    def clear(self):
-        """清空短期记忆"""
-        self.conversation_history = []
-        self.context_summary = ""
-
-
-# ============== 长期记忆 - 向量存储 ==============
-
-class VectorMemoryStore:
-    """
-    向量记忆存储
-    使用BGE模型生成语义向量，支持相似度检索
-    """
-    
-    def __init__(self, model_path: str = "/tmp/models/BAAI/bge-large-zh-v1___5"):
-        try:
-            from sentence_transformers import SentenceTransformer
-            self.model = SentenceTransformer(model_path)
-            self.available = True
-        except Exception as e:
-            print(f"⚠️ BGE模型加载失败: {e}")
-            self.available = False
-            self.model = None
-        
-        self.memories: Dict[str, Dict] = {}  # id -> {text, embedding, metadata}
-    
-    def add(self, text: str, metadata: Dict = None) -> str:
-        """添加记忆"""
-        mem_id = hashlib.md5(f"{text}_{time.time()}".encode()).hexdigest()[:12]
-        
-        if self.available:
-            embedding = self.model.encode(text, normalize_embeddings=True).tolist()
-        else:
-            # Fallback: 随机向量（仅测试用）
-            embedding = np.random.randn(1024).tolist()
-        
-        self.memories[mem_id] = {
-            "id": mem_id,
-            "text": text,
-            "embedding": embedding,
-            "timestamp": time.time(),
-            "metadata": metadata or {}
-        }
-        
-        return mem_id
-    
-    def search(self, query: str, top_k: int = 5) -> List[Dict]:
-        """语义检索"""
-        if not self.memories:
-            return []
-        
-        if self.available:
-            query_vec = self.model.encode(query, normalize_embeddings=True)
-        else:
-            query_vec = np.random.randn(1024)
-        
-        # 计算相似度
-        scores = []
-        for mem_id, mem in self.memories.items():
-            mem_vec = np.array(mem["embedding"])
-            similarity = np.dot(query_vec, mem_vec) / (
-                np.linalg.norm(query_vec) * np.linalg.norm(mem_vec)
-            )
-            scores.append((mem_id, float(similarity)))
-        
-        # 排序返回
-        scores.sort(key=lambda x: x[1], reverse=True)
-        results = []
-        for mem_id, score in scores[:top_k]:
-            mem = self.memories[mem_id].copy()
-            mem["score"] = score
-            results.append(mem)
-        
-        return results
-    
-    def get_all(self) -> List[Dict]:
-        """获取所有记忆"""
-        return list(self.memories.values())
-
-
-# ============== 长期记忆 - 结构化存储 ==============
-
-class StructuredMemoryStore:
-    """
-    结构化记忆存储
-    使用SQLite存储事件、目标、偏好等
-    """
-    
-    def __init__(self, db_path: str = None):
-        if db_path is None:
-            db_path = str(Path.home() / "Desktop" / "agent_demo" / "memory" / "agent_memory.db")
-        
-        self.db_path = db_path
-        self._init_db()
-    
-    def _init_db(self):
-        """初始化数据库表"""
-        conn = sqlite3.connect(self.db_path)
-        cursor = conn.cursor()
-        
-        # 记忆事件表
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS memory_events (
-                id TEXT PRIMARY KEY,
-                timestamp REAL,
-                agent_name TEXT,
-                input_text TEXT,
-                output_text TEXT,
-                summary TEXT,
-                embedding BLOB,
-                metadata TEXT
-            )
-        """)
-        
-        # 目标表
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS goals (
-                id TEXT PRIMARY KEY,
-                agent_name TEXT,
-                goal_text TEXT,
-                status TEXT,
-                created_at REAL,
-                last_updated REAL
-            )
-        """)
-        
-        # 用户偏好表
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS preferences (
-                id TEXT PRIMARY KEY,
-                agent_name TEXT,
-                key TEXT,
-                value TEXT,
-                updated_at REAL
-            )
-        """)
-        
-        conn.commit()
-        conn.close()
-    
-    def save_event(self, event: MemoryEvent):
-        """保存记忆事件"""
-        conn = sqlite3.connect(self.db_path)
-        cursor = conn.cursor()
-        
-        embedding_blob = json.dumps(event.embedding) if event.embedding else None
-        metadata_json = json.dumps(event.metadata, ensure_ascii=False)
-        
-        cursor.execute("""
-            INSERT OR REPLACE INTO memory_events 
-            (id, timestamp, agent_name, input_text, output_text, summary, embedding, metadata)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-        """, (
-            event.id, event.timestamp, event.agent_name,
-            event.input_text, event.output_text, event.summary,
-            embedding_blob, metadata_json
-        ))
-        
-        conn.commit()
-        conn.close()
-    
-    def get_recent_events(self, agent_name: str, limit: int = 10) -> List[MemoryEvent]:
-        """获取近期事件"""
-        conn = sqlite3.connect(self.db_path)
-        cursor = conn.cursor()
-        
-        cursor.execute("""
-            SELECT * FROM memory_events 
-            WHERE agent_name = ?
-            ORDER BY timestamp DESC
-            LIMIT ?
-        """, (agent_name, limit))
-        
-        rows = cursor.fetchall()
-        conn.close()
-        
-        events = []
-        for row in rows:
-            embedding = json.loads(row[6]) if row[6] else None
-            metadata = json.loads(row[7]) if row[7] else {}
-            events.append(MemoryEvent(
-                id=row[0], timestamp=row[1], agent_name=row[2],
-                input_text=row[3], output_text=row[4], summary=row[5],
-                embedding=embedding, metadata=metadata
-            ))
-        
-        return events
-    
-    def save_goal(self, goal: Goal):
-        """保存目标"""
-        conn = sqlite3.connect(self.db_path)
-        cursor = conn.cursor()
-        
-        cursor.execute("""
-            INSERT OR REPLACE INTO goals 
-            (id, agent_name, goal_text, status, created_at, last_updated)
-            VALUES (?, ?, ?, ?, ?, ?)
-        """, (goal.id, goal.agent_name, goal.goal_text, goal.status,
-              goal.created_at, goal.last_updated))
-        
-        conn.commit()
-        conn.close()
-    
-    def get_active_goals(self, agent_name: str) -> List[Goal]:
-        """获取进行中的目标"""
-        conn = sqlite3.connect(self.db_path)
-        cursor = conn.cursor()
-        
-        cursor.execute("""
-            SELECT * FROM goals 
-            WHERE agent_name = ? AND status = 'in_progress'
-            ORDER BY created_at DESC
-        """, (agent_name,))
-        
-        rows = cursor.fetchall()
-        conn.close()
-        
-        return [Goal(id=r[0], agent_name=r[1], goal_text=r[2], 
-                     status=r[3], created_at=r[4], last_updated=r[5]) 
-                for r in rows]
-
-
-# ============== 元记忆 ==============
-
-class MemoryCompressor:
-    """
-    记忆压缩器
-    实现三种压缩策略:
-    1. 大工具结果卸载 (>20KB)
-    2. 对话摘要压缩 (上下文超限时)
-    3. 基于遗忘曲线的衰减
-    """
-    
-    def __init__(self, offload_threshold: int = 20000, 
-                 context_threshold: float = 0.85,
-                 forget_half_life: float = 86400 * 7):  # 7天半衰期
-        self.offload_threshold = offload_threshold
-        self.context_threshold = context_threshold
-        self.forget_half_life = forget_half_life
-    
-    def should_offload(self, content: str) -> bool:
-        """判断是否需要卸载大工具结果"""
-        return len(content.encode('utf-8')) > self.offload_threshold
-    
-    def offload_content(self, content: str, ref_id: str, 
-                        storage_dir: Path = None) -> Dict:
-        """
-        大工具结果卸载
-        将内容保存到文件系统，返回引用指针
-        """
-        if storage_dir is None:
-            storage_dir = Path.home() / "Desktop" / "agent_demo" / "memory" / "offload"
-        storage_dir.mkdir(parents=True, exist_ok=True)
-        
-        file_path = storage_dir / f"{ref_id}.txt"
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(content)
-        
-        preview = content[:200] + "..." if len(content) > 200 else content
-        return {
-            "type": "offloaded",
-            "file_path": str(file_path),
-            "size": len(content.encode('utf-8')),
-            "preview": preview,
-            "ref_id": ref_id
-        }
-    
-    def summarize_conversation(self, turns: List[Dict], 
-                               max_summary_length: int = 500) -> str:
-        """
-        对话摘要压缩
-        将多轮对话压缩为结构化摘要
-        （简化版，实际可用LLM生成）
-        """
-        if not turns:
-            return ""
-        
-        # 提取关键信息
-        topics = set()
-        for turn in turns:
-            # 简单关键词提取（实际可用LLM）
-            text = turn.get('user', '') + ' ' + turn.get('agent', '')
-            # 提取可能的实体（中文/英文单词）
-            import re
-            words = re.findall(r'[\u4e00-\u9fff]{2,}|[A-Za-z_]{3,}', text)
-            topics.update(words[:5])  # 每轮取前5个
-        
-        # 生成摘要
-        summary_parts = [
-            f"会话轮数: {len(turns)}",
-            f"时间范围: {self._format_time(turns[0].get('timestamp', 0))} ~ "
-            f"{self._format_time(turns[-1].get('timestamp', 0))}",
-            f"涉及主题: {', '.join(list(topics)[:10])}",
-            f"最后交互: {turns[-1].get('user', '')[:50]}..."
-        ]
-        
-        summary = "\n".join(summary_parts)
-        return summary[:max_summary_length]
-    
-    def calculate_decay_weight(self, timestamp: float, 
-                               importance: float = 1.0) -> float:
-        """
-        基于艾宾浩斯遗忘曲线的记忆衰减权重
-        weight = importance * (0.5 ^ (elapsed_time / half_life))
-        """
-        elapsed = time.time() - timestamp
-        decay_factor = 0.5 ** (elapsed / self.forget_half_life)
-        return importance * decay_factor
-    
-    def compress_memory_pool(self, memories: List[Dict], 
-                            target_size: int = 100) -> List[Dict]:
-        """
-        记忆池压缩
-        根据衰减权重排序，保留高权重记忆
-        """
-        # 计算每条记忆的权重
-        scored = []
-        for mem in memories:
-            ts = mem.get('timestamp', time.time())
-            importance = mem.get('metadata', {}).get('importance', 1.0)
-            weight = self.calculate_decay_weight(ts, importance)
-            scored.append((weight, mem))
-        
-        # 按权重排序，保留top-K
-        scored.sort(key=lambda x: x[0], reverse=True)
-        return [mem for _, mem in scored[:target_size]]
-    
-    def _format_time(self, ts: float) -> str:
-        """格式化时间戳"""
-        return datetime.fromtimestamp(ts).strftime("%m-%d %H:%M")
-
-
-class MetaMemory:
-    """
-    元记忆 - 关于记忆的记忆
-    记录反思、模式识别、学习经验
-    """
-    
-    def __init__(self):
-        self.reflections: List[Dict] = []
-        self.patterns: Dict[str, int] = {}  # 模式 -> 出现次数
-        self.compressor = MemoryCompressor()
-    
-    def add_reflection(self, task: str, outcome: str, lesson: str):
-        """添加反思记录"""
-        self.reflections.append({
-            "timestamp": time.time(),
-            "task": task,
-            "outcome": outcome,
-            "lesson": lesson
-        })
-    
-    def record_pattern(self, pattern_type: str, description: str):
-        """记录行为模式"""
-        key = f"{pattern_type}:{description}"
-        self.patterns[key] = self.patterns.get(key, 0) + 1
-    
-    def get_insights(self) -> List[str]:
-        """获取洞察（高频模式）"""
-        sorted_patterns = sorted(self.patterns.items(), key=lambda x: x[1], reverse=True)
-        return [f"{k} (出现{v}次)" for k, v in sorted_patterns[:5]]
-
-
-# ============== 统一记忆管理器 ==============
-
-class AgentMemoryManager:
-    """
-    Agent统一记忆管理器
-    整合短期、长期、元记忆三层架构
-    """
-    
-    def __init__(self, agent_name: str = "default_agent"):
+    def __init__(self, agent_name: str = "default", llm=None, max_window: int = 10,
+                 db_path: str = None, vector_path: str = None):
         self.agent_name = agent_name
-        
-        # 三层记忆
-        self.short_term = ShortTermMemory(max_turns=10)
-        self.vector_store = VectorMemoryStore()
-        self.structured_store = StructuredMemoryStore()
-        self.meta_memory = MetaMemory()
-        
-        print(f"✅ AgentMemoryManager初始化完成 [{agent_name}]")
-    
-    def process_interaction(self, user_input: str, agent_output: str, 
-                           summary: str = None):
-        """
-        处理一次交互，更新所有记忆层
-        """
-        # 1. 更新短期记忆
-        self.short_term.add_turn(user_input, agent_output)
-        
-        # 2. 生成摘要（简化版，实际可用LLM）
-        if summary is None:
-            summary = f"用户询问: {user_input[:50]}... -> Agent回答: {agent_output[:50]}..."
-        
-        # 3. 保存到向量存储
-        mem_text = f"Q: {user_input}\nA: {agent_output}"
-        mem_id = self.vector_store.add(mem_text, {
-            "agent": self.agent_name,
-            "type": "interaction"
-        })
-        
-        # 4. 保存到结构化存储
-        event = MemoryEvent(
-            id=mem_id,
-            timestamp=time.time(),
-            agent_name=self.agent_name,
-            input_text=user_input,
-            output_text=agent_output,
-            summary=summary,
-            metadata={"type": "interaction"}
-        )
-        self.structured_store.save_event(event)
-        
+        self.llm = llm or ChatOpenAI(model="gpt-4o", temperature=0)
+        self.db_path = db_path or str(Path.home() / "Desktop/agent_demo/memory/agent_memory.db")
+        self.vector_path = vector_path or str(Path.home() / "Desktop/agent_demo/memory/vector_store")
+
+        # LangChain组件
+        self.history = ChatMessageHistory()
+        self.window = ConversationBufferWindowMemory(k=max_window, return_messages=True, memory_key="chat_history")
+        self.summary = ConversationSummaryMemory(llm=self.llm, return_messages=True, memory_key="summary")
+
+        # 向量存储
+        try:
+            self.vector = Chroma(collection_name=f"agent_{agent_name}", embedding_function=OpenAIEmbeddings(),
+                                persist_directory=self.vector_path)
+            self.vector_ok = True
+        except Exception as e:
+            print(f"⚠️ 向量存储失败: {e}")
+            self.vector = None
+            self.vector_ok = False
+
+        self._init_db()
+        print(f"✅ MemoryManager [{agent_name}]")
+
+    def _init_db(self):
+        Path(self.db_path).parent.mkdir(parents=True, exist_ok=True)
+        conn = sqlite3.connect(self.db_path)
+        for sql in [
+            "CREATE TABLE IF NOT EXISTS events (id TEXT PRIMARY KEY, timestamp REAL, agent TEXT, input TEXT, output TEXT, summary TEXT)",
+            "CREATE TABLE IF NOT EXISTS goals (id TEXT PRIMARY KEY, agent TEXT, goal TEXT, status TEXT, created REAL)",
+            "CREATE TABLE IF NOT EXISTS reflections (id TEXT PRIMARY KEY, agent TEXT, task TEXT, outcome TEXT, lesson TEXT, timestamp REAL)"
+        ]:
+            conn.execute(sql)
+        conn.commit()
+        conn.close()
+
+    def save(self, user_input: str, agent_output: str, summary: str = None):
+        """保存交互到所有记忆层"""
+        # 短期记忆
+        self.history.add_user_message(user_input)
+        self.history.add_ai_message(agent_output)
+        self.window.save_context({"input": user_input}, {"output": agent_output})
+        self.summary.save_context({"input": user_input}, {"output": agent_output})
+
+        # 向量存储
+        mem_id = hashlib.md5(f"{user_input}{time.time()}".encode()).hexdigest()[:12]
+        if self.vector_ok:
+            self.vector.add_texts([f"Q: {user_input}\nA: {agent_output}"],
+                                 [{"agent": self.agent_name, "id": mem_id}])
+
+        # SQLite
+        summary = summary or f"{user_input[:40]}... -> {agent_output[:40]}..."
+        conn = sqlite3.connect(self.db_path)
+        conn.execute("INSERT OR REPLACE INTO events VALUES (?,?,?,?,?,?)",
+                    (mem_id, time.time(), self.agent_name, user_input, agent_output, summary))
+        conn.commit()
+        conn.close()
         return mem_id
-    
-    def recall(self, query: str, top_k: int = 5) -> List[Dict]:
-        """
-        回忆相关记忆（向量检索 + 结构化过滤）
-        """
-        # 向量检索
-        vector_results = self.vector_store.search(query, top_k)
-        
-        # 补充近期事件
-        recent_events = self.structured_store.get_recent_events(self.agent_name, limit=3)
-        
-        # 合并结果
-        combined = {
-            "vector_results": vector_results,
-            "recent_context": self.short_term.get_context(3),
-            "recent_events": [
-                {"summary": e.summary, "timestamp": e.timestamp} 
-                for e in recent_events
-            ]
-        }
-        
-        return combined
-    
-    def set_goal(self, goal_text: str) -> str:
-        """设置长期目标"""
-        goal_id = hashlib.md5(f"{goal_text}_{time.time()}".encode()).hexdigest()[:12]
-        goal = Goal(id=goal_id, agent_name=self.agent_name, goal_text=goal_text)
-        self.structured_store.save_goal(goal)
-        return goal_id
-    
-    def get_active_goals(self) -> List[Goal]:
-        """获取进行中的目标"""
-        return self.structured_store.get_active_goals(self.agent_name)
-    
+
+    def recall(self, query: str, top_k: int = 5) -> Dict:
+        """回忆: 向量检索 + 短期上下文"""
+        results = {"vector": [], "context": "", "summary": ""}
+        if self.vector_ok:
+            try:
+                results["vector"] = [{"content": d.page_content, "meta": d.metadata}
+                                    for d in self.vector.similarity_search(query, k=top_k)]
+            except Exception as e:
+                print(f"⚠️ 检索失败: {e}")
+        try:
+            results["context"] = self.window.load_memory_variables({}).get("chat_history", "")
+            results["summary"] = self.summary.load_memory_variables({}).get("summary", "")
+        except:
+            pass
+        return results
+
+    def get_vars(self) -> Dict[str, Any]:
+        """获取记忆变量 (注入Prompt)"""
+        try:
+            return {
+                "chat_history": self.window.load_memory_variables({}).get("chat_history", []),
+                "summary": self.summary.load_memory_variables({}).get("summary", ""),
+            }
+        except:
+            return {"chat_history": [], "summary": ""}
+
+    def goal(self, text: str) -> str:
+        gid = hashlib.md5(f"{text}{time.time()}".encode()).hexdigest()[:12]
+        conn = sqlite3.connect(self.db_path)
+        conn.execute("INSERT OR REPLACE INTO goals VALUES (?,?,?,?,?)",
+                    (gid, self.agent_name, text, "in_progress", time.time()))
+        conn.commit()
+        conn.close()
+        return gid
+
+    def active_goals(self) -> List[Dict]:
+        conn = sqlite3.connect(self.db_path)
+        rows = conn.execute("SELECT * FROM goals WHERE agent=? AND status='in_progress' ORDER BY created DESC",
+                           (self.agent_name,)).fetchall()
+        conn.close()
+        return [{"id": r[0], "goal": r[2], "status": r[3]} for r in rows]
+
     def reflect(self, task: str, outcome: str, lesson: str):
-        """记录反思"""
-        self.meta_memory.add_reflection(task, outcome, lesson)
-    
-    def compress_short_term(self) -> str:
-        """
-        压缩短期记忆到摘要
-        用于上下文窗口超限时
-        """
-        compressor = self.meta_memory.compressor
-        summary = compressor.summarize_conversation(
-            self.short_term.conversation_history
-        )
-        
-        # 保存摘要到向量存储
-        self.vector_store.add(summary, {
-            "agent": self.agent_name,
-            "type": "conversation_summary",
-            "turns": len(self.short_term.conversation_history)
-        })
-        
-        # 清空短期记忆但保留摘要
-        self.short_term.clear()
-        self.short_term.context_summary = summary
-        
-        return summary
-    
-    def compress_vector_memories(self, target_size: int = 100):
-        """
-        压缩向量记忆池
-        基于遗忘曲线保留高权重记忆
-        """
-        compressor = self.meta_memory.compressor
-        all_memories = self.vector_store.get_all()
-        
-        compressed = compressor.compress_memory_pool(all_memories, target_size)
-        
-        # 重建记忆池
-        self.vector_store.memories = {
-            mem['id']: mem for mem in compressed
+        rid = hashlib.md5(f"{task}{time.time()}".encode()).hexdigest()[:12]
+        conn = sqlite3.connect(self.db_path)
+        conn.execute("INSERT INTO reflections VALUES (?,?,?,?,?,?)",
+                    (rid, self.agent_name, task, outcome, lesson, time.time()))
+        conn.commit()
+        conn.close()
+        if self.vector_ok:
+            self.vector.add_texts([f"任务:{task}\n结果:{outcome}\n经验:{lesson}"],
+                                 [{"agent": self.agent_name, "type": "reflection"}])
+
+    def stats(self) -> Dict:
+        conn = sqlite3.connect(self.db_path)
+        stats = {
+            "messages": len(self.history.messages),
+            "vector_ok": self.vector_ok,
+            "events": conn.execute("SELECT COUNT(*) FROM events WHERE agent=?", (self.agent_name,)).fetchone()[0],
+            "goals": conn.execute("SELECT COUNT(*) FROM goals WHERE agent=? AND status='in_progress'", (self.agent_name,)).fetchone()[0],
+            "reflections": conn.execute("SELECT COUNT(*) FROM reflections WHERE agent=?", (self.agent_name,)).fetchone()[0],
         }
-        
-        return len(compressed)
-    
-    def get_memory_stats(self) -> Dict:
-        """获取记忆统计"""
-        return {
-            "short_term_turns": len(self.short_term.conversation_history),
-            "vector_memories": len(self.vector_store.memories),
-            "active_goals": len(self.get_active_goals()),
-            "reflections": len(self.meta_memory.reflections),
-            "patterns": len(self.meta_memory.patterns)
-        }
+        conn.close()
+        return stats
 
 
-# ============== 测试 ==============
+def demo():
+    print("=" * 50)
+    print("Memory System - LangChain")
+    print("=" * 50)
 
-def test_memory_system():
-    """测试记忆系统（含压缩功能）"""
-    print("=" * 60)
-    print("Agent记忆系统测试 - 含记忆压缩")
-    print("=" * 60)
-    
-    # 初始化
-    memory = AgentMemoryManager(agent_name="ethon")
-    
-    # 模拟大量交互
-    print("\n📝 记录10条交互...")
-    interactions = [
-        ("分析沪电股份的ROE", "沪电股份2024年ROE为18.5%...", "财务分析: 沪电股份ROE"),
-        ("查看三安光电股东", "十大流通股东包括福建三安集团...", "股东分析: 三安光电"),
-        ("板块轮动复盘", "半导体 -> 新能源 -> 医药...", "板块分析: 轮动复盘"),
-        ("泰豪科技年报", "2025年营收45.2亿，净利润3.8亿...", "年报分析: 泰豪科技"),
-        ("芯瑞达资金流向", "近5日主力净流入1.2亿...", "资金流向: 芯瑞达"),
-        ("科瑞技术估值", "PE 25.3倍，PB 2.1倍...", "估值分析: 科瑞技术"),
-        ("回测系统架构", "数据爬取 -> 清洗 -> 回测引擎...", "技术文档: 回测系统"),
-        ("贝贝虾评分", "情绪40%+基本面30%+技术30%...", "分析框架: 贝贝虾"),
-        ("毛毛财报分析", "ROIC 15%，自由现金流为正...", "财报分析: 毛毛"),
-        ("量化策略回测", "双均线策略，年化收益12%...", "策略回测: 双均线"),
-    ]
-    
-    for user_input, agent_output, summary in interactions:
-        memory.process_interaction(user_input, agent_output, summary)
-    
-    print(f"  短期记忆轮数: {len(memory.short_term.conversation_history)}")
-    print(f"  向量记忆数: {len(memory.vector_store.memories)}")
-    
-    # 测试回忆
-    print("\n🔍 测试回忆功能...")
-    results = memory.recall("沪电股份财务数据", top_k=3)
-    print(f"  向量检索结果: {len(results['vector_results'])}条")
-    for r in results['vector_results']:
-        print(f"    - {r['text'][:50]}... (score: {r['score']:.3f})")
-    
-    # 测试记忆压缩
-    print("\n🗜️  测试记忆压缩...")
-    
-    # 1. 短期记忆摘要压缩
-    print("  1. 短期记忆摘要压缩")
-    summary = memory.compress_short_term()
-    print(f"     摘要: {summary[:80]}...")
-    print(f"     短期记忆轮数(压缩后): {len(memory.short_term.conversation_history)}")
-    
-    # 2. 大工具结果卸载
-    print("  2. 大工具结果卸载")
-    compressor = MemoryCompressor()
-    big_content = "x" * 25000  # 25KB大内容
-    if compressor.should_offload(big_content):
-        offloaded = compressor.offload_content(big_content, "test_big_result")
-        print(f"     卸载到: {offloaded['file_path']}")
-        print(f"     大小: {offloaded['size']} bytes")
-        print(f"     预览: {offloaded['preview'][:50]}...")
-    
-    # 3. 遗忘曲线衰减
-    print("  3. 遗忘曲线衰减权重")
-    now = time.time()
-    test_cases = [
-        (now - 3600, "1小时前", 1.0),      # 1小时
-        (now - 86400, "1天前", 1.0),        # 1天
-        (now - 86400 * 7, "7天前", 1.0),    # 7天
-        (now - 86400 * 30, "30天前", 1.0),  # 30天
-    ]
-    for ts, label, importance in test_cases:
-        weight = compressor.calculate_decay_weight(ts, importance)
-        print(f"     {label}: weight={weight:.3f}")
-    
-    # 4. 向量记忆池压缩
-    print("  4. 向量记忆池压缩 (target_size=5)")
-    compressed_count = memory.compress_vector_memories(target_size=5)
-    print(f"     压缩后记忆数: {compressed_count}")
-    
-    # 测试目标
-    print("\n🎯 测试目标管理...")
-    goal_id = memory.set_goal("完成本周投资组合分析")
-    print(f"  设置目标: {goal_id}")
-    goals = memory.get_active_goals()
-    print(f"  进行中目标: {len(goals)}个")
-    
-    # 测试反思
-    print("\n💭 测试反思功能...")
-    memory.reflect("ROE分析", "成功", "使用杜邦分析法更有效")
-    print(f"  反思记录数: {len(memory.meta_memory.reflections)}")
-    
-    # 统计
-    print("\n📊 最终记忆统计:")
-    stats = memory.get_memory_stats()
-    for k, v in stats.items():
-        print(f"  {k}: {v}")
-    
-    print("\n✅ 测试完成!")
+    try:
+        import os
+        llm = ChatOpenAI(model="gpt-4o", api_key=os.environ["OPENAI_API_KEY"], temperature=0)
+        mem = MemoryManager(agent_name="ethon", llm=llm, max_window=5)
+
+        # 记录交互
+        for q, a in [("分析沪电股份ROE", "ROE 18.5%"), ("三安光电股东", "香港中央结算新进")]:
+            print(f"  ✅ 记录: {mem.save(q, a)[:8]}")
+
+        # 回忆
+        results = mem.recall("沪电股份财务", top_k=2)
+        print(f"\n向量检索: {len(results['vector'])}条")
+
+        # 目标
+        mem.goal("完成本周组合分析")
+        print(f"目标数: {len(mem.active_goals())}")
+
+        # 反思
+        mem.reflect("ROE分析", "成功", "用杜邦分析法")
+        print(f"统计: {mem.stats()}")
+
+    except Exception as e:
+        print(f"\n⚠️ 需要OPENAI_API_KEY: {e}")
 
 
 if __name__ == "__main__":
-    test_memory_system()
+    demo()
