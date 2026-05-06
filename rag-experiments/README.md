@@ -4,12 +4,14 @@
 
 ## 实验模块
 
-| 模块 | 核心LangChain组件 | 文件 |
-|------|-------------------|------|
+| 模块 | 核心组件 | 文件 |
+|------|---------|------|
 | 文本分块 | RecursiveCharacterTextSplitter, MarkdownHeaderTextSplitter | chunking/rag_chunking_test_v2.py |
 | 向量嵌入 | HuggingFaceEmbeddings, OpenAIEmbeddings, Chroma | embedding/embedding_benchmark.py |
 | 检索策略 | Chroma, BM25Retriever, EnsembleRetriever | retrieval/retrieval_benchmark.py |
-| 端到端评估 | load_evaluator(Criteria), ChatOpenAI | evaluation/evaluation_framework.py |
+| 端到端评估 (LangChain) | load_evaluator(Criteria), ChatOpenAI | evaluation/evaluation_framework.py |
+| **RAGAS评测** | **faithfulness, context_precision, answer_relevancy** | **evaluation/ragas_evaluator.py** |
+| **RAGAS对比实验** | **多配置矩阵评测** | **evaluation/ragas_experiment.py** |
 
 ## 快速开始
 
@@ -36,7 +38,8 @@ cd ../evaluation && python3 evaluation_framework.py
 | 文本分块 | RecursiveCharacterTextSplitter |
 | 向量嵌入 | bge-large-zh-v1.5 (HuggingFaceEmbeddings) |
 | 检索策略 | EnsembleRetriever (BM25 + 向量, weights=[0.5, 0.5]) |
-| 评估 | CriteriaEvalChain (faithfulness + relevance) |
+| 评估 (LangChain) | CriteriaEvalChain (faithfulness + relevance) |
+| **评估 (RAGAS)** | **7维度专业评测: faithfulness + relevance + precision + recall + entity + similarity + correctness** |
 
 ---
 *LangChain重构版*

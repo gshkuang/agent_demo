@@ -2,7 +2,8 @@
 
 ## 实验状态
 
-✅ **已完成** (2026-05-03)
+✅ **LangChain评估** (2026-05-03)
+✅ **RAGAS评测** (2026-05-06) - 新增专业RAG评估框架
 
 ## 实验目的
 
@@ -73,14 +74,27 @@
 
 | 文件 | 说明 |
 |------|------|
-| `evaluation_framework.py` | 主评估脚本 |
-| `results/e2e_evaluation.json` | 详细结果数据 |
+| `evaluation_framework.py` | LangChain评估框架 |
+| `ragas_evaluator.py` | RAGAS基础评测器 |
+| `ragas_experiment.py` | RAGAS对比实验（多配置矩阵） |
+| `README_RAGAS.md` | RAGAS详细文档 |
+| `results/e2e_evaluation.json` | LangChain评估结果 |
+| `results/ragas_evaluation.json` | RAGAS评测结果 |
+| `results/ragas_experiment.json` | RAGAS对比实验结果 |
 
 ## 运行方式
 
 ```bash
 cd ~/Desktop/rag-experiments/evaluation
+
+# LangChain评估
 python3 evaluation_framework.py
+
+# RAGAS基础评测
+python3 ragas_evaluator.py
+
+# RAGAS对比实验（配置矩阵）
+python3 ragas_experiment.py
 ```
 
 ## 优化建议
@@ -89,8 +103,21 @@ python3 evaluation_framework.py
 2. **关键优化点**: 分块质量 > 检索策略 > 嵌入模型
 3. **生产部署**: 需真实LLM和Embedding API
 
+## RAGAS vs LangChain 评估
+
+| 维度 | RAGAS | LangChain CriteriaEval |
+|------|-------|----------------------|
+| 指标数量 | 7个细粒度 | 2-3个自定义 |
+| 自动化程度 | 全自动LLM评判 | 需配置标准 |
+| 上下文分析 | 精确率/召回率拆解 | 无 |
+| 适用场景 | 深度诊断 | 日常监控 |
+
+**建议**: RAGAS用于开发调优，LangChain+LangSmith用于生产监控。
+
 ## 后续计划
 
+- [x] 集成RAGAS专业评测框架
+- [x] 构建多配置对比实验
 - [ ] 构建更大规模QA评测集
 - [ ] 接入真实LLM评估生成质量
 - [ ] 设计A/B测试框架
