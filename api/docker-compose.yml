@@ -1,0 +1,129 @@
+version: "3.8"
+
+services:
+  # Agent 服务主应用
+  agent-service:
+    build:
+      context: ..
+      dockerfile: api/Dockerfile
+    container_name: agent-service
+    ports:
+      - "8000:8000"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - OPENAI_MODEL=${OPENAI_MODEL:-gpt-4o}
+      - REDIS_URL=redis://redis:6379/0
+      - PORT=8000
+      - LOG_LEVEL=INFO
+      - OTEL_ENDPOINT=${OTEL_ENDPOINT:-}
+      - MAX_STEPS=10
+    volumes:
+      - ../data:/app/data
+      - agent-logs:/app/logs
+    depends_on:
+      redis:
+        condition: service_healthy
+      prometheus:
+        condition: service_started
+    networks:
+      - agent-network
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+        reservations:
+          memory: 512M
+
+  # Redis - 状态共享 / 任务队列
+  redis:
+    image: redis:7-alpine
+    container_name: agent-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    networks:
+      - agent-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+
+  # Prometheus - 指标收集
+  prometheus:
+    image: prom/prometheus:v2.50.0
+    container_name: agent-prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus-data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+    networks:
+      - agent-network
+    restart: unless-stopped
+
+  # Grafana - 可视化
+  grafana:
+    image: grafana/grafana:10.3.0
+    container_name: agent-grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_USERS_ALLOW_SIGN_UP=false
+    volumes:
+      - grafana-data:/var/lib/grafana
+      - ./grafana-dashboards:/etc/grafana/provisioning/dashboards:ro
+    depends_on:
+      - prometheus
+    networks:
+      - agent-network
+    restart: unless-stopped
+
+  # Jaeger - 分布式追踪
+  jaeger:
+    image: jaegertracing/all-in-one:1.50
+    container_name: agent-jaeger
+    ports:
+      - "16686:16686"   # UI
+      - "4318:4318"     # OTLP HTTP
+    environment:
+      - COLLECTOR_OTLP_ENABLED=true
+    networks:
+      - agent-network
+    restart: unless-stopped
+
+  # Celery Worker - 异步任务
+  celery-worker:
+    build:
+      context: ..
+      dockerfile: api/Dockerfile
+    container_name: agent-celery-worker
+    command: celery -A distributed.celery_worker worker --loglevel=info --concurrency=2
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - REDIS_URL=redis://redis:6379/0
+      - C_FORCE_ROOT=true
+    depends_on:
+      - redis
+    networks:
+      - agent-network
+    restart: unless-stopped
+    deploy:
+      replicas: 2
+
+volumes:
+  redis-data:
+  prometheus-data:
+  grafana-data:
+  agent-logs:
+
+networks:
+  agent-network:
+    driver: bridge

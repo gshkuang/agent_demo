@@ -1,0 +1,62 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data & Logs (运行时生成)
+data/
+logs/
+*.log
+*.db
+*.sqlite
+
+# Tests
+tests/
+pytest.ini
+.coverage
+htmlcov/
+
+# Docs
+docs/
+*.md
+!README.md
+
+# Local env
+.env
+.env.local
+.env.*.local
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+
+# Misc
+.github/
+.gitlab-ci.yml
+.pre-commit-config.yaml
